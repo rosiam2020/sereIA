@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SereIA - Sistema Regional de Inteligência Ambiental</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .card:hover { transform: scale(1.03); transition: transform 0.2s; }
+    html { scroll-behavior: smooth; }
+    /* Estilo para a imagem de fundo do cabeçalho */
+    .header-bg {
+        background-image: url("fundo.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-teal-50 via-indigo-50 to-violet-100 text-gray-800">
+
+  <!-- Cabeçalho / Capa do site -->
+  <header class="header-bg w-full h-64 relative flex items-start">
+    <!-- Logo no canto superior esquerdo -->
+    <img src="teste_logo.png" alt="SereIA Logo" class="h-48 w-auto m-4 drop-shadow-lg">
+    <!-- Conteúdo central da capa -->
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-white drop-shadow-lg">
+      <h1 class="text-5xl font-bold mb-2">SereIA</h1>
+      <h2 class="text-2xl font-semibold mb-1">Sistema Regional de Inteligência Ambiental</h2>
+      <p class="text-lg max-w-2xl mx-auto">Monitoramento hidroclimático e florestal da Amazônia com inteligência artificial.</p>
+    </div>
+  </header>
+</body>
+</html>
+
+<body class="bg-gradient-to-b from-teal-50 via-indigo-50 to-violet-100 text-gray-800">
+
+
+
+  <!-- NAV -->
+  <nav class="bg-gradient-to-r from-cyan-600 via-teal-500 to-indigo-600 shadow-md">
+    <div class="container mx-auto flex flex-wrap justify-center space-x-4 md:space-x-8 p-3">
+      <a href="#sobre" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Sobre</a>
+      <a href="#elementos" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Elementos</a>
+      <a href="#objetivos" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Objetivos</a>
+      <a href="#metodologia" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Metodologia</a>
+      <a href="#galeria" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Galeria</a>
+      <a href="#equipe" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Equipe</a>
+      <a href="#contato" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Contato</a>
+    </div>
+  </nav>
+    <main class="container mx-auto p-6">
+
+        <!-- Espaçamento reduzido -->
+        <section id="sobre" class="my-12">
+            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Sobre o Projeto</h2>
+            <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
+                <p class="text-lg leading-relaxed">
+                    O SereIA é uma rede distribuída de monitoramento ambiental, composta por núcleos locais que coletam e processam dados hidroclimáticos e florestais na Amazônia. Cada núcleo atua como uma inteligência própria, com ferramentas específicas para análise de previsão de anomalias da temperatura da superfície do mar, variabilidade das chuvas, eventos extremos, vegetação e até o fogo. A plataforma integra essas informações usando baixo custo computacional e recursos em nuvem, como Google Colab, Pacotes em Python, R studio, Matlab, Orange, QGIS, e Git/GitHub, garantindo escalabilidade e integração de dados geoespaciais. Devido à vastidão e diversidade da Amazônia, cada núcleo foca em aspectos regionais prioritários, permitindo uma abordagem inteligente e específica mesmo em regiões remotas e com poucos incentivos em TI.
+                </p>
+            </div>
+        </section>
+
+        <section id="elementos" class="my-12">
+            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Os Elementos e Núcleos de Monitoramento</h2>
+            <p class="text-center text-gray-600 mb-8">Cada núcleo representa um elemento da natureza, com nome de referência amazônica, monitorando variáveis ambientais específicas.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
+                    <div class="text-4xl mb-2">🌊</div>
+                    <h3 class="text-xl font-bold text-emerald-700">Central</h3>
+                    <h4 class="text-lg font-medium text-gray-600">Mãe d’Água</h4>
+                    <p class="mt-4 text-sm text-gray-700">Servidora central: integra dados de todos os elementos, executa IA e modelos de machine learning, gera painéis regionais e garante a interoperabilidade entre os núcleos.</p>
+                </div>
+                <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
+                    <div class="text-4xl mb-2">💨</div>
+                    <h3 class="text-xl font-bold text-emerald-700">Ar</h3>
+                    <h4 class="text-lg font-medium text-gray-600">Aruá</h4>
+                    <p class="mt-4 text-sm text-gray-700">Inteligência para o monitoramento da interação oceano-atmosfera em larga escala e seus efeitos sobre os eventos de chuva nas sub-bacias amazônicas. Monitora anomalias na temperatura da superfície do mar tropicais e seus efeitos na variabilidade das chuvas na Amazônia. Utiliza machine learning principalmente para previsões de anomalias do tipo ENOS (El Niño Oscilação Sul), Modo Atlântico Equatorial e Dipolo do Atlântico Tropical, fornecendo subsídios para a previsão de eventos hidrológicos extremos regionais.</p>
+                </div>
+                <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
+                    <div class="text-4xl mb-2">💧</div>
+                    <h3 class="text-xl font-bold text-emerald-700">Água</h3>
+                    <h4 class="text-lg font-medium text-gray-600">Iara</h4>
+                    <p class="mt-4 text-sm text-gray-700">Inteligência para o monitoramento de eventos de secas e cheias em todas as 9 sub-bacias amazônicas (Javari, Japurá, Purus, Negro, Trombetas/Uatumã, Madeira, Tapajós, Xingu e Paru/Jari). Analisa chuvas, cotas e vazões em pontos estratégicos, integrando o PDSI (Índice de Severidade de Seca de Palmer) calibrado por sub-bacias. Cada sub-bacia é avaliada individualmente, respeitando seu regime hidrológico único e permitindo retratar a vulnerabilidade hídrica de forma regionalizada.</p>
+                </div>
+                <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
+                    <div class="text-4xl mb-2">🌿</div>
+                    <h3 class="text-xl font-bold text-emerald-700">Terra</h3>
+                    <h4 class="text-lg font-medium text-gray-600">Naiá</h4>
+                    <p class="mt-4 text-sm text-gray-700">Inteligência para o monitoramento da saúde da floresta nas sub-bacias do Madeira, Tapajós e Xingu, utilizando dados de satélite MODIS para análise de NDVI, EVI, LAI, além de informações sobre umidade do solo e nas zonas de raízes. Integra dados do satélite GRACE para estimar variabilidade água nos aquíferos e a demanda florestal em anos de secas extremas. Avalia a resiliência e estabilidade da vegetação frente à mudanças climáticas, considerando o histórico de cada sub-bacia, e fornecendo subsídios para a gestão ambiental e mitigação de impactos.</p>
+                </div>
+                <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
+                    <div class="text-4xl mb-2">🔥</div>
+                    <h3 class="text-xl font-bold text-emerald-700">Fogo</h3>
+                    <h4 class="text-lg font-medium text-gray-600">Boitatá</h4>
+                    <p class="mt-4 text-sm text-gray-700">Inteligência para o monitoramento de incêndios florestais na sub-bacia do Purus, focando nos municípios mais afetados em anos de seca extrema. Analisa a umidade do solo em múltiplas camadas permitindo compreender como a disponibilidade hodroclimática influencia a ocorrência e a intensidade dos incêndios.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="objetivos" class="my-12">
+            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Objetivos do Projeto</h2>
+            <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Implementar uma rede distribuída de monitoramento ambiental na Amazônia, conectando núcleos locais de inteligência.</li>
+                    <li>Aplicar inteligência artificial e machine learning para análise preditiva, com o núcleo <strong class="font-bold text-emerald-700">Aruá</strong> prevendo anomalias oceânicas e seus efeitos na chuva, o núcleo <strong class="font-bold text-emerald-700">Iara</strong> monitorando secas e cheias, o núcleo <strong class="font-bold text-emerald-700">Naiá</strong> avaliando a saúde da floresta e o núcleo <strong class="font-bold text-emerald-700">Boitatá</strong> monitorando o risco de incêndios florestais.</li>
+                    <li>Integrar dados climáticos, hidrológicos e ecológicos de todos os núcleos, centralizando as informações na servidora <strong class="font-bold text-emerald-700">Mãe d’Água</strong> para gerar painéis interativos e análises de séries temporais.</li>
+                    <li>Fornecer suporte técnico-científico para pesquisadores e gestores, com cada núcleo respeitando a diversidade hidrológica e ecológica de sua sub-bacia.</li>
+                    <li>Documentar e disponibilizar um manual de replicação do sistema SereIA para expansão futura.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="metodologia" class="my-12">
+            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Metodologia</h2>
+            <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
+                <p class="mb-4 text-lg">O SereIA opera com núcleos locais inteligentes que coletam, processam e analisam dados regionais com pipelines específicos:</p>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong class="font-bold text-emerald-700">Mãe d’Água:</strong> Servidora central que integra dados de todos os elementos, executa modelos de IA e machine learning avançados para aprimorar as análises dos núcleos e gera painéis interativos para análise regional e interoperabilidade.</li>
+                    <li><strong class="font-bold text-emerald-700">Aruá:</strong> Analisa interações oceano-atmosfera aplicando machine learning para prever eventos ENOS, Modo Atlântico Equatorial e Dipolo do Atlântico Tropical, e seus impactos regionais na variabilidade das chuvas.</li>
+                    <li><strong class="font-bold text-emerald-700">Iara:</strong> Monitora eventos de secas e cheias nas 9 sub-bacias amazônicas, usando análise de chuvas, cotas, vazões e o PDSI calibrado para retratar a vulnerabilidade hídrica de forma regionalizada.</li>
+                    <li><strong class="font-bold text-emerald-700">Naiá:</strong> Avalia a saúde da vegetação nas sub-bacias do Madeira, Tapajós e Xingu, utilizando dados de satélite (NDVI, EVI, LAI), umidade do solo e zona de raízes, e dados do satélite GRACE para estimar variabilidade da água em aquíferos.</li>
+                    <li><strong class="font-bold text-emerald-700">Boitatá:</strong> Coleta e processa dados de incêndios florestais, umidade do solo em múltiplas camadas e focos MODIS para uma avaliação inteligente do risco de fogo na sub-bacia do Purus.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="galeria" class="my-12">
+            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Galeria</h2>
+            <p class="text-center text-gray-600 mb-8">Confira imagens de eventos extremos e da diversidade da Amazônia.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden shadow-lg card">
+                    <img src="https://f.i.uol.com.br/fotografia/2023/10/11/1697063888652723d021d36_1697063888_3x2_rt.jpg" alt="Leito de rio seco na Amazônia durante a seca" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg card">
+                    <img src="https://s2-extra.glbimg.com/kHzAOvNdQMt4EMjJzfgmu-6x-DI=/0x0:3125x2125/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f551ea7087a47f39ead75f64041559a/internal_photos/bs/2023/Z/K/RdOgPXRcicUsRnw1vN5Q/antes-e-depois.jpg" alt="Vista de antes e depois da seca na Amazônia" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg card">
+                    <img src="https://www.monteroraimafm.com.br/uploads/images/2023/10/seca-na-amazonia-quebra-recorde-de-2010-em-manaus-6f73f.jpg" alt="Seca histórica de 2023, leito do Rio Negro exposto em Manaus" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg card">
+                    <img src="https://media.gazetadopovo.com.br/2009/11/a06e970837d3d9de08e13d4e7ad8145b-gpLarge.jpg" alt="Região da seca de 2009 em Manaus, com embarcação encalhada" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg card">
+                    <img src="https://s2-g1.glbimg.com/3LHbpn9XlKhWCQqt8ZutF-HvUcU=/0x0:1920x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/n/g/cAmANoRpyNAu3IACU6IQ/globo-canal-4-20231005-1200-frame-252279.jpeg" alt="Botos mortos em Tefé, Amazonas, durante a seca extrema de 2023" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg card">
+                    <img src="https://f.i.uol.com.br/folha/cotidiano/images/12136169.jpeg" alt="Cheia de 2012 em Manaus com ruas alagadas" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg card">
+                    <img src="https://wwfbrnew.awsassets.panda.org/img/original/23052021___negro_river_flood_feira_manaus_moderna__amazonas___copyright_marcio_james_.jpg" alt="Cheia histórica do Rio Negro de 2021 em Manaus" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg card">
+                    <img src="https://i0.wp.com/revistaamazonia.com.br/wp-content/uploads/2024/08/Desmatamento-na-Amazonia-entenda-as-principais-causas-e-consequencias.webp" alt="Desmatamento na Amazônia" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg card">
+                    <img src="https://ac24horas.com/wp-content/uploads/2024/06/destacada-queimada-queimadas-995x600-1.jpg" alt="Incêndio florestal na Amazônia" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section id="equipe" class="my-12">
+            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Equipe</h2>
+            <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
+                <p class="text-lg">Coordenação e execução do projeto:</p>
+                <ul class="list-disc list-inside space-y-2 mt-4">
+                    <li><strong class="font-bold">Coordenação:</strong> Rosimeire Araújo Silva – Instituto Nacional de Pesquisas da Amazônia (INPA)</li>
+                    <li><strong class="font-bold">Unidade Executora:</strong> INCT VALAMB Valor Ambiental da Amazônia - Philip Fearnside (<a href="https://philip.inpa.gov.br/" class="text-emerald-700 hover:text-emerald-900 break-words" target="_blank" rel="noopener noreferrer">philip.inpa.gov.br</a>) (INPA)</li>
+                </ul>
+            </div>
+        </section>
+
+<section id="contato" class="my-12">
+  <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Contato</h2>
+  <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
+    <p class="text-lg">
+      Para mais informações sobre o projeto SereIA, entre em contato através dos canais abaixo:
+    </p>
+    <ul class="list-disc list-inside space-y-2 mt-4">
+      <li>
+        <strong class="font-bold">E-mail:</strong>
+        <a href="mailto:oceanostropicais@gmail.com" 
+           class="text-emerald-700 hover:text-emerald-900 break-words">
+          oceanostropicais@gmail.com
+        </a>
+      </li>
+      <li>
+        <strong class="font-bold">LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/sereia-sistema-regional-de-inteligencia-ambiental-58380a381" target="_blank"
+           class="text-emerald-700 hover:text-emerald-900 break-words">
+          linkedin.com/in/sereia-sistema-regional-de-inteligencia-ambiental-58380a381
+        </a>
+      </li>
+      <li>
+        <strong class="font-bold">Instagram:</strong>
+        <a href="https://www.instagram.com/rosi_amazonia" target="_blank"
+           class="text-emerald-700 hover:text-emerald-900 break-words">
+          @rosi_amazonia
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-emerald-700 text-white text-center py-6">
+        <p>© 2025 SereIA. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
