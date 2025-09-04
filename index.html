@@ -20,6 +20,24 @@
         background-position: center;
         background-repeat: no-repeat;
     }
+    /* Estilos para a nova seção de previsões */
+    .prediction-card {
+      transition: all 0.3s ease;
+      border-left: 4px solid;
+    }
+    .prediction-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .elnino-card {
+      border-left-color: #e53e3e;
+    }
+    .lanina-card {
+      border-left-color: #3182ce;
+    }
+    .ml-card {
+      border-left-color: #38a169;
+    }
   </style>
 </head>
 <body class="bg-gradient-to-b from-teal-50 via-indigo-50 to-violet-100 text-gray-800">
@@ -44,6 +62,8 @@
       <a href="#objetivos" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Objetivos</a>
       <a href="#metodologia" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Metodologia</a>
       <a href="#galeria" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Galeria</a>
+      <a href="#previsoes" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Previsões</a>
+      <a href="#resultados" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Resultados</a>
       <a href="#equipe" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Equipe</a>
       <a href="#contato" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Contato</a>
     </div>
@@ -116,7 +136,7 @@
                 <p class="mb-4 text-lg">O SereIA opera com núcleos locais inteligentes que coletam, processam e analisam dados regionais com pipelines específicos:</p>
                 <ul class="list-disc list-inside space-y-2">
                     <li><strong class="font-bold text-emerald-700">Mãe d’Água:</strong> Servidora central que integra dados de todos os elementos, executa modelos de IA e machine learning avançados para aprimorar as análises dos núcleos e gera painéis interativos para análise regional e interoperabilidade.</li>
-                    <li><strong class="font-bold text-emerald-700">Aruá:</strong> Analisa interações oceano-atmosfera aplicando machine learning para prever eventos ENOS, Modo Atlântico Equatorial e Dipolo do Atlântico Tropical, e seus impactos regionais na variabilidade das chuvas.</li>
+                    <li><strong class="font-bold text-emerald-700">Aruá:</strong> Analisa interações oceano-atmosfera aplicando machine learning para prever eventos ENOS, Modo Atlântico Equatorial e Dipolo do Atlântico Tropical, e seus impacts regionais na variabilidade das chuvas.</li>
                     <li><strong class="font-bold text-emerald-700">Iara:</strong> Monitora eventos de secas e cheias nas 9 sub-bacias amazônicas, usando análise de chuvas, cotas, vazões e o PDSI calibrado para retratar a vulnerabilidade hídrica de forma regionalizada.</li>
                     <li><strong class="font-bold text-emerald-700">Naiá:</strong> Avalia a saúde da vegetação nas sub-bacias do Madeira, Tapajós e Xingu, utilizando dados de satélite (NDVI, EVI, LAI), umidade do solo e zona de raízes, e dados do satélite GRACE para estimar variabilidade da água em aquíferos.</li>
                     <li><strong class="font-bold text-emerald-700">Boitatá:</strong> Coleta e processa dados de incêndios florestais, umidade do solo em múltiplas camadas e focos MODIS para uma avaliação inteligente do risco de fogo na sub-bacia do Purus.</li>
@@ -158,6 +178,85 @@
             </div>
         </section>
 
+        <!-- NOVA SEÇÃO: PREVISÕES EL NIÑO/LA NIÑA -->
+        <section id="previsoes" class="my-12">
+            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Previsões ENOS 2023-2025</h2>
+            <p class="text-center text-gray-600 mb-8">Análise de previsões para os eventos de El Niño e La Niña usando inteligência artificial</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Card El Niño -->
+                <div class="prediction-card elnino-card bg-white rounded-xl shadow-lg p-4">
+                    <h3 class="text-xl font-bold text-red-700 mb-2">El Niño 2023-2024</h3>
+                    <img src="elnino.png" alt="Padrão observado do El Niño 2023-2024" class="w-full h-48 object-contain mb-3 rounded-lg">
+                    <p class="text-sm text-gray-700">
+                        O evento de El Niño 2023-2024 caracterizou-se por anomalias positivas de temperatura na região do Pacífico equatorial, com impactos significativos no regime de chuvas na Amazônia.
+                    </p>
+                </div>
+                
+                <!-- Card La Niña -->
+                <div class="prediction-card lanina-card bg-white rounded-xl shadow-lg p-4">
+                    <h3 class="text-xl font-bold text-blue-700 mb-2">La Niña 2024-2025</h3>
+                    <img src="lanina.png" alt="Padrão observado da La Niña 2024-2025" class="w-full h-48 object-contain mb-3 rounded-lg">
+                    <p class="text-sm text-gray-700">
+                        Previsão indica a formação de um evento La Niña moderado no segundo semestre de 2024, com resfriamento anômalo no Pacífico equatorial central e oriental.
+                    </p>
+                </div>
+                
+                <!-- Card Previsão ML -->
+                <div class="prediction-card ml-card bg-white rounded-xl shadow-lg p-4">
+                    <h3 class="text-xl font-bold text-green-700 mb-2">Previsão com Machine Learning</h3>
+                    <img src="previsao_ml.png" alt="Previsão de séries temporais com Machine Learning" class="w-full h-48 object-contain mb-3 rounded-lg">
+                    <p class="text-sm text-gray-700">
+                        Modelos de machine learning aplicados às séries temporais de temperatura da superfície do mar mostram a transição de El Niño para La Niña ao longo de 2024-2025.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Análise dos Resultados</h3>
+                <p class="text-gray-700 mb-4">
+                    Nossos modelos de previsão baseados em machine learning indicam uma transição do evento El Niño (2023-2024) para condições de La Niña (2024-2025). Esta transição terá impactos significativos no regime de chuvas na Amazônia:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>El Niño 2023-2024:</strong> Associado à redução de chuvas na região norte da Amazônia, aumentando o risco de secas e incêndios florestais</li>
+                    <li><strong>Transição 2024:</strong> Período de normalização gradual das condições climáticas</li>
+                    <li><strong>La Niña 2024-2025:</strong> Previsão de aumento de chuvas na região norte, com potencial benefício para a recuperação dos níveis dos rios</li>
+                </ul>
+                <p class="text-gray-700 mt-4">
+                    Estes resultados reforçam a importância do monitoramento contínuo das condições oceânicas e atmosféricas para a previsão de eventos extremos na região amazônica.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= SEÇÃO DE RESULTADOS ================= -->
+        <section id="resultados" class="p-6 bg-white rounded-2xl shadow-lg mt-8">
+          <h2 class="text-2xl font-bold mb-4 text-center">Resultados Preliminares</h2>
+          
+          <!-- Mapa 1 -->
+          <div class="mb-6">
+            <img src="mapa1.png" alt="Mapa 1" class="rounded-xl shadow-md mx-auto">
+            <p class="mt-2 text-center text-gray-700">
+              <strong>Mapa 1:</strong> Bivariado - Temperatura x Precipitação Bacia Amazônica - Dados Chelsa Climate 1km.
+            </p>
+          </div>
+
+          <!-- Mapa 2 -->
+          <div class="mb-6">
+            <img src="mapa2.png" alt="Mapa 2" class="rounded-xl shadow-md mx-auto">
+            <p class="mt-2 text-center text-gray-700">
+              <strong>Mapa 2:</strong>  - Relevo -  Bacia Amazônica.
+            </p>
+          </div>
+
+          <!-- Link para mais resultados -->
+          <p class="text-center mt-6">
+            <a href="https://drive.google.com/drive/folders/1xBg0Jgml4sskTRf4VtAlildqw9EnJCnw?usp=drive_link" target="_blank" class="text-blue-600 font-semibold hover:underline">
+              📂 Veja mais resultados no Google Drive
+            </a>
+          </p>
+        </section>
+        <!-- ================= FIM DA SEÇÃO DE RESULTADOS ================= -->
+
         <section id="equipe" class="my-12">
             <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Equipe</h2>
             <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
@@ -169,77 +268,45 @@
             </div>
         </section>
 
-
-<!-- ================= SEÇÃO DE RESULTADOS ================= -->
-<section id="resultados" class="p-6 bg-white rounded-2xl shadow-lg mt-8">
-  <h2 class="text-2xl font-bold mb-4 text-center">Resultados Preliminares</h2>
-  
-  <!-- Mapa 1 -->
-  <div class="mb-6">
-    <img src="mapa1.png" alt="Mapa 1" class="rounded-xl shadow-md mx-auto">
-    <p class="mt-2 text-center text-gray-700">
-      <strong>Mapa 1:</strong> Bivariado - Temperatura x Precipitação Bacia Amazônica - Dados Chelsa Climate 1km.
-    </p>
-  </div>
-
-  <!-- Mapa 2 -->
-  <div class="mb-6">
-    <img src="mapa2.png" alt="Mapa 2" class="rounded-xl shadow-md mx-auto">
-    <p class="mt-2 text-center text-gray-700">
-      <strong>Mapa 2:</strong>  - Relevo -  Bacia Amazônica.
-    </p>
-  </div>
-
-  <!-- Link para mais resultados -->
-  <p class="text-center mt-6">
-    <a href="https://drive.google.com/drive/folders/1xBg0Jgml4sskTRf4VtAlildqw9EnJCnw?usp=drive_link" target="_blank" class="text-blue-600 font-semibold hover:underline">
-      📂 Veja mais resultados no Google Drive
-    </a>
-  </p>
-</section>
-<!-- ================= FIM DA SEÇÃO DE RESULTADOS ================= -->
-<section id="contato" class="my-12">
-  <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Contato</h2>
-  <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
-    <p class="text-lg">
-      Para mais informações sobre o projeto SereIA, entre em contato através dos canais abaixo:
-    </p>
-    <ul class="list-disc list-inside space-y-2 mt-4">
-      <li>
-        <strong class="font-bold">E-mail:</strong>
-        <a href="mailto:oceanostropicais@gmail.com" 
-           class="text-emerald-700 hover:text-emerald-900 break-words">
-          oceanostropicais@gmail.com
-        </a>
-      </li>
-      <li>
-        <strong class="font-bold">LinkedIn:</strong>
-        <a href="https://www.linkedin.com/in/sereia-sistema-regional-de-inteligencia-ambiental-58380a381" target="_blank"
-           class="text-emerald-700 hover:text-emerald-900 break-words">
-          linkedin.com/in/sereia-sistema-regional-de-inteligencia-ambiental-58380a381
-        </a>
-      </li>
-      <li>
-        <strong class="font-bold">Instagram:</strong>
-        <a href="https://www.instagram.com/sereiaml" target="_blank"
-           class="text-emerald-700 hover:text-emerald-900 break-words">
-          @sereiaml
-        </a>
-      </li>
-    </ul>
-  </div>
-</section>                </ul>
-            </div>
+        <section id="contato" class="my-12">
+          <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Contato</h2>
+          <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
+            <p class="text-lg">
+              Para mais informações sobre o projeto SereIA, entre em contato através dos canais abaixo:
+            </p>
+            <ul class="list-disc list-inside space-y-2 mt-4">
+              <li>
+                <strong class="font-bold">E-mail:</strong>
+                <a href="mailto:oceanostropicais@gmail.com" 
+                   class="text-emerald-700 hover:text-emerald-900 break-words">
+                  oceanostropicais@gmail.com
+                </a>
+              </li>
+              <li>
+                <strong class="font-bold">LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/sereia-sistema-regional-de-inteligencia-ambiental-58380a381" target="_blank"
+                   class="text-emerald-700 hover:text-emerald-900 break-words">
+                  linkedin.com/in/sereia-sistema-regional-de-inteligencia-ambiental-58380a381
+                </a>
+              </li>
+              <li>
+                <strong class="font-bold">Instagram:</strong>
+                <a href="https://www.instagram.com/sereiaml" target="_blank"
+                   class="text-emerald-700 hover:text-emerald-900 break-words">
+                  @sereiaml
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
      </main>
-
-   
 
     <footer class="bg-emerald-700 text-white text-center py-6">
         <p>© 2025 SereIA. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
+
 
 
 
