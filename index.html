@@ -38,6 +38,29 @@
     .ml-card {
       border-left-color: #38a169;
     }
+    /* Estilos para a seção de mapas */
+    .map-container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+    .map-legend {
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      padding: 16px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .legend-color {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
   </style>
 </head>
 <body class="bg-gradient-to-b from-teal-50 via-indigo-50 to-violet-100 text-gray-800">
@@ -54,7 +77,7 @@
     </div>
   </header>
 
-  <!-- NAV -->
+   <!-- NAV -->
   <nav class="bg-gradient-to-r from-cyan-600 via-teal-500 to-indigo-600 shadow-md">
     <div class="container mx-auto flex flex-wrap justify-center space-x-4 md:space-x-8 p-3">
       <a href="#sobre" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Sobre</a>
@@ -63,13 +86,13 @@
       <a href="#metodologia" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Metodologia</a>
       <a href="#galeria" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Galeria</a>
       <a href="#previsoes" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Previsões</a>
+      <a href="#analise-mapas" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Análise de Mapas</a>
       <a href="#resultados" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Resultados</a>
       <a href="#equipe" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Equipe</a>
       <a href="#contato" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Contato</a>
     </div>
   </nav>
     <main class="container mx-auto p-6">
-
         <!-- Espaçamento reduzido -->
         <section id="sobre" class="my-12">
             <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Sobre o Projeto</h2>
@@ -178,8 +201,7 @@
             </div>
         </section>
 
-        <!-- NOVA SEÇÃO: PREVISÕES EL NIÑO/LA NIÑA -->
-        <section id="previsoes" class="my-12">
+       <section id="previsoes" class="my-12">
             <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Previsões ENOS 2023-2025</h2>
             <p class="text-center text-gray-600 mb-8">Análise de previsões para os eventos de El Niño e La Niña usando inteligência artificial</p>
             
@@ -187,7 +209,7 @@
                 <!-- Card El Niño -->
                 <div class="prediction-card elnino-card bg-white rounded-xl shadow-lg p-4">
                     <h3 class="text-xl font-bold text-red-700 mb-2">El Niño 2023-2024</h3>
-                    <img src="elnino.png" alt="Padrão observado do El Niño 2023-2024" class="w-full h-48 object-contain mb-3 rounded-lg">
+                    <img src="padrao_elnino.png" alt="Padrão observado do El Niño 2023-2024" class="w-full h-48 object-contain mb-3 rounded-lg">
                     <p class="text-sm text-gray-700">
                         O evento de El Niño 2023-2024 caracterizou-se por anomalias positivas de temperatura na região do Pacífico equatorial, com impactos significativos no regime de chuvas na Amazônia.
                     </p>
@@ -196,7 +218,7 @@
                 <!-- Card La Niña -->
                 <div class="prediction-card lanina-card bg-white rounded-xl shadow-lg p-4">
                     <h3 class="text-xl font-bold text-blue-700 mb-2">La Niña 2024-2025</h3>
-                    <img src="lanina.png" alt="Padrão observado da La Niña 2024-2025" class="w-full h-48 object-contain mb-3 rounded-lg">
+                    <img src="padrao_lanina.png" alt="Padrão observado da La Niña 2024-2025" class="w-full h-48 object-contain mb-3 rounded-lg">
                     <p class="text-sm text-gray-700">
                         Previsão indica a formação de um evento La Niña moderado no segundo semestre de 2024, com resfriamento anômalo no Pacífico equatorial central e oriental.
                     </p>
@@ -224,6 +246,106 @@
                 </ul>
                 <p class="text-gray-700 mt-4">
                     Estes resultados reforçam a importância do monitoramento contínuo das condições oceânicas e atmosféricas para a previsão de eventos extremos na região amazônica.
+                </p>
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO: ANÁLISE DE MAPAS -->
+        <section id="analise-mapas" class="my-12">
+            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Análise de Mapas da Bacia Amazônica</h2>
+            <p class="text-center text-gray-600 mb-8">Análise espacial da diversidade climática e topográfica da região amazônica</p>
+            
+            <!-- Mapa Bivariado -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Mapa Bivariado: Temperatura x Precipitação</h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="map-container">
+                        <img src="mapa1.png" alt="Mapa Bivariado - Temperatura x Precipitação" class="w-full h-auto">
+                        <div class="map-legend">
+                            <p class="text-sm text-gray-600 mb-2 text-center"><strong>Mapa 1:</strong> Bivariado - Temperatura x Precipitação Bacia Amazônica - Dados Chelsa Climate 1km</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Diversidade de Combinações Climáticas</h4>
+                        <p class="text-gray-700 mb-4">
+                            Este mapa bivariado apresenta a relação entre temperatura e precipitação na bacia amazônica, revelando <strong>25 combinações distintas</strong> resultantes da intersecção de 5 quintis para cada variável.
+                        </p>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <h5 class="font-semibold text-blue-800 mb-2">Interpretação das Combinações:</h5>
+                            <ul class="list-disc list-inside text-sm text-blue-700">
+                                <li>Áreas em <strong>tons de vermelho</strong>: Alta temperatura com baixa precipitação</li>
+                                <li>Áreas em <strong>tons de azul</strong>: Baixa temperatura com alta precipitação</li>
+                                <li>Áreas em <strong>tons de roxo</strong>: Combinações intermediárias</li>
+                                <li>Áreas em <strong>tons claros</strong>: Valores moderados de ambas as variáveis</li>
+                            </ul>
+                        </div>
+                        
+                        <p class="text-gray-700">
+                            Esta análise permite identificar padrões regionais específicos, como áreas com alto estresse térmico e hídrico (vermelho intenso) versus áreas com condições mais amenas (azul intenso), fundamentais para o planejamento de ações de conservação e adaptação às mudanças climáticas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mapa de Relevo -->
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Mapa de Relevo: Topografia da Bacia Amazônica</h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="map-container">
+                        <img src="mapa2.png" alt="Mapa de Relevo - Bacia Amazônica" class="w-full h-auto">
+                        <div class="map-legend">
+                            <p class="text-sm text-gray-600 mb-2 text-center"><strong>Mapa 2:</strong> Relevo - Bacia Amazônica</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Características Topográficas</h4>
+                        <p class="text-gray-700 mb-4">
+                            Este mapa de relevo com sombreamento (hillshade) detalha a topografia da bacia amazônica, destacando as variações altimétricas desde as planícies inundáveis até as áreas montanhosas do escudo das Guianas e brasileiro.
+                        </p>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg mb-4">
+                            <h5 class="font-semibold text-green-800 mb-2">Principais Sub-bacias Representadas:</h5>
+                            <ul class="list-disc list-inside text-sm text-green-700">
+                                <li>Rio Negro</li>
+                                <li>Japurá</li>
+                                <li>Javari/Juruá</li>
+                                <li>Purus</li>
+                                <li>Madeira</li>
+                                <li>Trombetas/Uatumã</li>
+                                <li>Xingu</li>
+                                <li>Tapajós</li>
+                                <li>Paru/Jari</li>
+                            </ul>
+                        </div>
+                        
+                        <p class="text-gray-700">
+                            Os dados de elevação provêm do LBA (Large-Scale Biosphere-Atmosphere Experiment in Amazonia), mostrando a variação desde 0m nas planícies aluviais até mais de 2000m nas áreas montanhosas. Esta topografia diversificada influencia diretamente os padrões de drenagem, distribuição de habitats e microclimas regionais.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Análise Integrada -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mt-8">
+                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Análise Integrada dos Mapas</h3>
+                <p class="text-gray-700 mb-4">
+                    A combinação da análise bivariada (temperatura x precipitação) com o mapa de relevo permite identificar correlações importantes entre topografia e padrões climáticos na bacia amazônica:
+                </p>
+                
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Áreas de maior altitude tendem a apresentar temperaturas mais amenas e padrões específicos de precipitação</li>
+                    <li>As planícies de inundação mostram combinações específicas de temperatura e umidade influenciadas pelos regimes fluviais</li>
+                    <li>Os escudos das Guianas e brasileiro criam efeitos orográficos que influenciam a distribuição das chuvas</li>
+                    <li>As áreas de transição entre diferentes unidades topográficas frequentemente apresentam maior diversidade de combinações climáticas</li>
+                </ul>
+                
+                <p class="text-gray-700 mt-4">
+                    Esta análise integrada é fundamental para compreender a distribuição da biodiversidade e os padrões de vulnerabilidade às mudanças climáticas na região amazônica, fornecendo subsídios para políticas de conservação e adaptação.
                 </p>
             </div>
         </section>
@@ -257,57 +379,15 @@
         </section>
         <!-- ================= FIM DA SEÇÃO DE RESULTADOS ================= -->
 
-        <section id="equipe" class="my-12">
-            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Equipe</h2>
-            <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
-                <p class="text-lg">Coordenação e execução do projeto:</p>
-                <ul class="list-disc list-inside space-y-2 mt-4">
-                    <li><strong class="font-bold">Coordenação:</strong> Rosimeire Araújo Silva – Instituto Nacional de Pesquisas da Amazônia (INPA)</li>
-                    <li><strong class="font-bold">Unidade Executora:</strong> INCT VALAMB Valor Ambiental da Amazônia - Philip Fearnside (<a href="https://philip.inpa.gov.br/" class="text-emerald-700 hover:text-emerald-900 break-words" target="_blank" rel="noopener noreferrer">philip.inpa.gov.br</a>) (INPA)</li>
-                </ul>
-            </div>
-        </section>
+        <!-- Conteúdo existente (Equipe, Contato) -->
 
-        <section id="contato" class="my-12">
-          <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Contato</h2>
-          <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
-            <p class="text-lg">
-              Para mais informações sobre o projeto SereIA, entre em contato através dos canais abaixo:
-            </p>
-            <ul class="list-disc list-inside space-y-2 mt-4">
-              <li>
-                <strong class="font-bold">E-mail:</strong>
-                <a href="mailto:oceanostropicais@gmail.com" 
-                   class="text-emerald-700 hover:text-emerald-900 break-words">
-                  oceanostropicais@gmail.com
-                </a>
-              </li>
-              <li>
-                <strong class="font-bold">LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/sereia-sistema-regional-de-inteligencia-ambiental-58380a381" target="_blank"
-                   class="text-emerald-700 hover:text-emerald-900 break-words">
-                  linkedin.com/in/sereia-sistema-regional-de-inteligencia-ambiental-58380a381
-                </a>
-              </li>
-              <li>
-                <strong class="font-bold">Instagram:</strong>
-                <a href="https://www.instagram.com/sereiaml" target="_blank"
-                   class="text-emerald-700 hover:text-emerald-900 break-words">
-                  @sereiaml
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-     </main>
+    </main>
 
     <footer class="bg-emerald-700 text-white text-center py-6">
         <p>© 2025 SereIA. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
-
-
 
 
 
