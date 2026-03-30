@@ -374,14 +374,235 @@
                 <div class="bg-white rounded-2xl shadow-lg p-6">
                     <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Análise dos Resultados</h3>
                     <p class="text-gray-700 mb-4">
-                        A inteligência <strong>Boitatá</strong>, especializada no monitoramento de fogo, processou dados ambientais para gerar este mapa de classes de risco de incêndios florestais no município de Boca do Acre (AM) para o ano de <strong>201
+                        A inteligência <strong>Boitatá</strong>, especializada no monitoramento de fogo, processou dados ambientais para gerar este mapa de classes de risco de incêndios florestais no município de Boca do Acre (AM) para o ano de <strong>2016</strong>, considerado um ano de evento extremo. A análise considerou múltiplas contribuições ambientais para determinar a vulnerabilidade da região ao fogo.
+                    </p>
+                    
+                    <div class="bg-orange-50 p-4 rounded-lg mb-4">
+                        <h5 class="font-semibold text-orange-800 mb-2">Classes de Risco Representadas:</h5>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-orange-700">
+                            <li><strong>Baixo Risco:</strong> Áreas com menor probabilidade de ocorrência de incêndios</li>
+                            <li><strong>Médio Risco:</strong> Regiões que demandam monitoramento constante</li>
+                            <li><strong>Alto Risco:</strong> Áreas prioritárias para ações de prevenção</li>
+                            <li><strong>Muito Alto Risco:</strong> Zonas críticas com maior vulnerabilidade ao fogo</li>
+                        </ul>
+                    </div>
+                    
+                    <p class="text-gray-700 mb-4">
+                        Os resultados indicam que, durante o ano de evento extremo de 2016, as áreas com maior propensão a incêndios estão concentradas em regiões específicas do município, correlacionando-se com variáveis como:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+                        <li>Déficit hídrico acumulado durante a estação seca</li>
+                        <li>Tipos de cobertura vegetal e uso do solo</li>
+                        <li>Proximidade com áreas de desmatamento recente</li>
+                        <li>Condições de umidade do solo em múltiplas camadas</li>
+                    </ul>
+                    <p class="text-gray-700">
+                        Este mapa constitui uma ferramenta fundamental para o planejamento de ações preventivas, alocação de recursos e definição de estratégias de combate a incêndios florestais no município de Boca do Acre, contribuindo para a proteção da floresta e das comunidades locais.
+                    </p>
+                </div>
+            </div>
+        </section>
 
+        <!-- SEÇÃO DE RESULTADOS - NÚCLEO NAIÁ (TERRA) -->
+        <section id="resultados" class="my-12">
+            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Resultados: Monitoramento da Saúde da Floresta</h2>
+            <p class="text-center text-gray-600 mb-4">Núcleo <strong class="text-emerald-700">Naiá (Terra)</strong> - Análise da vegetação nas sub-bacias do Madeira, Tapajós e Xingu</p>
+            <p class="text-center text-gray-600 mb-8">Séries temporais mensais (2023-2024): EVI, LAI, umidade do solo (0-10cm e 0-200cm) e anomalias</p>
+            
+            <!-- MAPA PRINCIPAL: Anomalias de EVI - ESTAÇÃO SECA - 2023 e 2024 -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Anomalias de EVI nas ESTAÇÕES SECAS - Sub-bacias - 2023 E 2024</h3>
+                <p class="text-gray-600 mb-4">Análise das anomalias do Índice de Vegetação Melhorado (EVI) para o ano de 2023 e 2024 para a estação seca (SON - setembro/outubro/novembro) com ou sem QA.</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="map-container">
+                        <img src="evi2.png" alt="Anomalias de EVI nas sub-bacias - 2023 e 2024" class="w-full h-auto">
+                        <div class="map-legend">
+                            <p class="text-sm text-gray-600 text-center"><strong>Mapa:</strong> Análise das anomalias do Índice de Vegetação Melhorado (EVI) para os anos de 2023 e 2024, com destaque para a estação seca (SON - setembro/outubro/novembro) com ou sem QA.</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Interpretação das Anomalias</h4>
+                        <p class="text-gray-700 mb-4">
+                            O mapa apresenta quatro painéis que permitem comparar as anomalias de EVI nas diferentes sub-bacias:
+                        </p>
+                        
+                        <div class="bg-amber-50 p-4 rounded-lg mb-4">
+                            <h5 class="font-semibold text-amber-800 mb-2">Destaques por Período:</h5>
+                            <ul class="list-disc list-inside text-sm text-amber-700">
+                                <li><strong>2023 (SON):</strong> Dados sem controle de qualidade agregaram poucas diferenças nas anomalias, contudo inclui todos os dados e isso pode agregar alguns ruídos.</li>
+                                <li><strong>2024 (SON):</strong> Impacto sucessivo das secas de 2023-2024, e esse efeito é observado para ambos tratamentos dos dados com ou sem QA.</li>
+                            </ul>
+                        </div>
+                        
+                        <p class="text-gray-700">
+                            As sub-bacias do Madeira, Tapajós e Xingu apresentam as anomalias mais negativas durante a seca, confirmando a vulnerabilidade destas regiões à secas recorrentes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SÉRIES TEMPORAIS - EVI e LAI -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Índices de Vegetação - Todas as Sub-bacias</h3>
+                <p class="text-gray-600 mb-4">Séries temporais mensais (2023-2024) para EVI e LAI nas 9 sub-bacias amazônicas</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-4">
+                    <!-- EVI -->
+                    <div class="border rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-3">EVI - Índice de Vegetação Melhorado</h4>
+                        <img src="evi.png" alt="Série temporal EVI - Todas as sub-bacias" class="w-full h-auto object-contain mb-2">
+                        <p class="text-xs text-gray-500 text-center mt-2">Série temporal EVI por sub-bacia (2023-2024). Dados: MODIS.</p>
+                    </div>
+                    
+                    <!-- LAI -->
+                    <div class="border rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-3">LAI - Índice de Área Foliar</h4>
+                        <img src="lai.png" alt="Série temporal LAI - Todas as sub-bacias" class="w-full h-auto object-contain mb-2">
+                        <p class="text-xs text-gray-500 text-center mt-2">Série temporal LAI por sub-bacia (2023-2024). Dados: MODIS.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-blue-50 p-4 rounded-lg mt-2">
+                    <p class="text-sm text-blue-800">
+                        <strong>Observação:</strong> As séries temporais permitem comparar o comportamento sazonal da vegetação entre as diferentes sub-bacias, destacando os períodos de maior e menor atividade fotossintética ao longo de 2023-2024.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- UMIDADE DO SOLO - Valores Absolutos -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Umidade do Solo - Valores Absolutos</h3>
+                <p class="text-gray-600 mb-4">Séries temporais mensais (2023-2024) para umidade do solo em duas profundidades</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Solo 0-10cm -->
+                    <div class="border rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-3">Umidade do Solo - Camada Superficial (0-10 cm)</h4>
+                        <img src="solo1.png" alt="Umidade do solo 0-10cm - Todas as sub-bacias" class="w-full h-auto object-contain mb-2">
+                        <p class="text-xs text-gray-500 text-center mt-2">Umidade do solo na camada superficial (0-10 cm) - Valores mensais por sub-bacia (2023-2024).</p>
+                    </div>
+                    
+                    <!-- Solo 0-200cm -->
+                    <div class="border rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-3">Umidade do Solo - Perfil Completo (0-200 cm)</h4>
+                        <img src="solo0_200.png" alt="Umidade do solo 0-200cm - Todas as sub-bacias" class="w-full h-auto object-contain mb-2">
+                        <p class="text-xs text-gray-500 text-center mt-2">Umidade do solo no perfil (0-200 cm) - Valores mensais por sub-bacia (2023-2024).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ANOMALIAS DE UMIDADE DO SOLO -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Anomalias de Umidade do Solo</h3>
+                <p class="text-gray-600 mb-4">Séries temporais mensais (2023-2024) das anomalias de umidade do solo em duas profundidades</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Anomalias 0-10cm -->
+                    <div class="border rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-3">Anomalias - Camada Superficial (0-10 cm)</h4>
+                        <img src="anomaliassolo0_10.png" alt="Anomalias umidade solo 0-10cm" class="w-full h-auto object-contain mb-2">
+                        <p class="text-xs text-gray-500 text-center mt-2">Anomalias mensais de umidade do solo (0-10 cm) por sub-bacia (2023-2024). Valores positivos (azul) indicam solo mais úmido que a média; negativos (vermelho) indicam solo mais seco.</p>
+                    </div>
+                    
+                    <!-- Anomalias 0-200cm -->
+                    <div class="border rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-3">Anomalias - Perfil Completo (0-200 cm)</h4>
+                        <img src="anomali_solo0_200cm.png" alt="Anomalias umidade solo 0-200cm" class="w-full h-auto object-contain mb-2">
+                        <p class="text-xs text-gray-500 text-center mt-2">Anomalias mensais de umidade do solo (0-200 cm) por sub-bacia (2023-2024). Valores negativos acentuados indicam déficit hídrico profundo durante o período de estiagem.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ANÁLISE INTEGRADA: MADEIRA, TAPAJÓS E XINGU -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Análise Integrada: Sub-bacias Vulneráveis</h3>
+                <p class="text-gray-600 mb-4">Destaque para Madeira, Tapajós e Xingu - áreas com respostas devido às secas recorrentes. Ganham destaques as subbacias Paru/Jari, Juruá e leste do Rio Negro quando considerados os dados com QA.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <!-- Madeira -->
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-600">
+                        <h4 class="font-semibold text-red-800 mb-2 flex items-center"><span class="text-2xl mr-2">🌿</span> Sub-bacia do Madeira</h4>
+                        <ul class="text-sm text-red-700 space-y-1 list-disc list-inside">
+                            <li>EVI: Redução acentuada nos meses de seca principalmente na porção central e sul</li>
+                            <li>LAI: Queda na área foliar em 2023-2024</li>
+                            <li>Anomalias solo: Déficit persistente em ambas profundidades</li>
+                            <li class="font-semibold">Vulnerabilidade: Alta - secas recorrentes</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Tapajós -->
+                    <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-600">
+                        <h4 class="font-semibold text-orange-800 mb-2 flex items-center"><span class="text-2xl mr-2">🌳</span> Sub-bacia do Tapajós</h4>
+                        <ul class="text-sm text-orange-700 space-y-1 list-disc list-inside">
+                            <li>EVI: Anomalias negativas na estação seca principalmente na porção central e sul</li>
+                            <li>LAI: Comportamento sazonal abaixo da média das demais subbacias</li>
+                            <li>Anomalias solo: Déficit moderado em 0-200cm</li>
+                            <li class="font-semibold">Vulnerabilidade: Média-Alta</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Xingu -->
+                    <div class="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-600">
+                        <h4 class="font-semibold text-amber-800 mb-2 flex items-center"><span class="text-2xl mr-2">🌲</span> Sub-bacia do Xingu</h4>
+                        <ul class="text-sm text-amber-700 space-y-1 list-disc list-inside">
+                            <li>EVI: Queda significativa em toda a subbacia em 2024 principalmente quando considerados os dados do QA</li>
+                            <li>LAI: Padrão média comparado às demais bacias</li>
+                            <li>Anomalias solo: Déficit acumulado em meses específicos e abaixo da média das demais subbacias</li>
+                            <li class="font-semibold">Vulnerabilidade: Alta - seca prolongada</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h5 class="font-semibold text-gray-800 mb-2">Padrões Observados:</h5>
+                    <p class="text-gray-700 text-sm">
+                        As três sub-bacias apresentam respostas entre anomalias negativas de EVI durante a estação seca e déficit de umidade do solo desde camadas rasas até mais profundidade. O Madeira mostra o padrão mais crítico, com anomalias de solo 0-200cm atingindo valores extremamente negativos (-160) em meados de 2024, indicando esgotamento das reservas hídricas profundas. O Tapajós apresenta recuperação mais rápida da umidade superficial, enquanto o Xingu demonstra déficit persistente em ambas camadas. As subbacias como Paru/Jari, Japurá e porção leste da subbacia do Rio Negro, passam a apresentar anomalias negativas de EVI mais significativas na estação seca quando consideramos os dados com QA.
+                    </p>
+                </div>
+            </div>
+            
+            <p class="text-xs text-gray-500 mt-4 text-center border-t pt-3">
+                Dados processados pelo núcleo Naiá (Terra) do projeto SereIA. Fontes: MODIS (EVI/LAI) e modelos de umidade do solo integrados com dados GRACE.
+            </p>
+            
+            <!-- Link para mais resultados -->
+            <p class="text-center mt-8">
+                <a href="https://drive.google.com/drive/folders/1xBg0Jgml4sskTRf4VtAlildqw9EnJCnw?usp=drive_link" target="_blank" class="text-blue-600 font-semibold hover:underline">
+                📂 Acesse todos os gráficos e dados completos no Google Drive
+                </a>
+            </p>
+        </section>
 
+        <section id="contato" class="my-12">
+            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Contato</h2>
+            <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
+                <p class="text-lg">
+                    Para mais informações sobre o projeto SereIA, entre em contato através dos canais abaixo:
+                </p>
+                <ul class="list-disc list-inside space-y-2 mt-4">
+                    <li>
+                        <strong class="font-bold">E-mail:</strong>
+                        <a href="mailto:lab.sereia@gmail.com" 
+                           class="text-emerald-700 hover:text-emerald-900 break-words">
+                           lab.sereia@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <strong class="font-bold">Instagram:</strong>
+                        <a href="https://www.instagram.com/sereiaml" target="_blank"
+                           class="text-emerald-700 hover:text-emerald-900 break-words">
+                          @sereiaml
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-
-
-
-
-
-
-
+    <footer class="bg-emerald-700 text-white text-center py-6">
+        <p>© 2025 SereIA. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
