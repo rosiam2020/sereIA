@@ -4,17 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SereIA - Sistema Regional de Inteligência Ambiental</title>
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com">
-  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f0f7f0;
+    * { font-family: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    
+    /* CORES TEMÁTICAS AMAZÔNICAS */
+    :root {
+      --forest-dark: #0d2b0d;
+      --forest: #1a4a1a;
+      --forest-medium: #2d6b2d;
+      --forest-light: #4c8f4c;
+      --forest-bg: #e8f5e8;
+      --forest-bg-light: #f5faf5;
+      --terra: #6b4a2d;
+      --terra-light: #8b6a4d;
+      --fogo: #cc5500;
+      --fogo-light: #e8772a;
+      --agua: #1a6b8a;
+      --agua-light: #4a9aba;
+      --ar: #4a8a9a;
+      --ar-light: #7aaaba;
     }
+
+    body { background: var(--forest-bg-light); }
+    
     .card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       background: white;
@@ -22,185 +39,153 @@
     }
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 20px 40px -12px rgba(34, 68, 34, 0.3);
+      box-shadow: 0 20px 40px -12px rgba(26, 74, 26, 0.3);
     }
-    html {
-      scroll-behavior: smooth;
-    }
-    /* Cabeçalho com sobreposição verde */
+
+    /* HEADER */
     .header-bg {
-      background: linear-gradient(135deg, #1a3a1a 0%, #2d5a2d 40%, #3d7a3d 100%);
+      background: linear-gradient(135deg, #0d2b0d 0%, #1a4a1a 40%, #2d6b2d 100%);
       position: relative;
     }
     .header-bg::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       pointer-events: none;
     }
-    .header-content {
-      position: relative;
-      z-index: 1;
-    }
-    /* Nav com degrade verde */
+    .header-content { position: relative; z-index: 1; }
+
+    /* NAV */
     .nav-green {
-      background: linear-gradient(90deg, #1a4a1a, #2d6b2d, #1a4a1a);
+      background: linear-gradient(90deg, #0d2b0d, #1a4a1a, #2d6b2d);
       border-bottom: 3px solid #4caf50;
     }
     .nav-green a {
       transition: all 0.3s;
       border-radius: 8px;
+      padding: 8px 16px;
+      font-weight: 500;
     }
     .nav-green a:hover {
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255,255,255,0.15);
       transform: scale(1.05);
     }
-    /* Cores temáticas */
-    .bg-forest {
-      background: #1a4a1a;
-    }
-    .bg-forest-light {
-      background: #2d6b2d;
-    }
-    .bg-forest-lighter {
-      background: #e8f5e8;
-    }
-    .text-forest {
-      color: #1a4a1a;
-    }
-    .text-forest-light {
-      color: #2d6b2d;
-    }
-    .border-forest {
-      border-color: #1a4a1a;
-    }
-    /* Cards de elementos com cores específicas */
-    .element-card {
-      border-left: 5px solid;
-      padding-left: 16px;
-    }
-    .element-card.agua {
-      border-left-color: #1a6b8a;
-      background: linear-gradient(135deg, #f0f8ff, #e0f0ff);
-    }
-    .element-card.terra {
-      border-left-color: #6b4a2d;
-      background: linear-gradient(135deg, #f5f0e8, #efe5d8);
-    }
-    .element-card.ar {
-      border-left-color: #4a8a9a;
-      background: linear-gradient(135deg, #f0f8fa, #e0f0f5);
-    }
-    .element-card.fogo {
-      border-left-color: #cc5500;
-      background: linear-gradient(135deg, #fff5f0, #ffe8d8);
-    }
-    .element-card.central {
-      border-left-color: #2d6b2d;
-      background: linear-gradient(135deg, #f0f8f0, #e0f5e0);
-    }
-    /* Botões verdes */
-    .btn-green {
-      background: #1a4a1a;
+
+    /* BOTÕES */
+    .btn-forest {
+      background: var(--forest);
       color: white;
       padding: 10px 24px;
       border-radius: 30px;
       transition: all 0.3s;
       font-weight: 600;
+      display: inline-block;
     }
-    .btn-green:hover {
-      background: #2d6b2d;
+    .btn-forest:hover {
+      background: var(--forest-medium);
       transform: scale(1.05);
       box-shadow: 0 8px 20px rgba(26, 74, 26, 0.3);
     }
-    /* Seções com fundo verde claro */
+    .btn-terra {
+      background: var(--terra);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 30px;
+      transition: all 0.3s;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .btn-terra:hover {
+      background: var(--terra-light);
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(107, 74, 45, 0.3);
+    }
+    .btn-agua {
+      background: var(--agua);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 30px;
+      transition: all 0.3s;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .btn-agua:hover {
+      background: var(--agua-light);
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(26, 107, 138, 0.3);
+    }
+
     .section-forest-bg {
-      background: linear-gradient(180deg, #e8f5e8, #f5faf5);
+      background: linear-gradient(180deg, var(--forest-bg), var(--forest-bg-light));
       border-radius: 24px;
       padding: 32px;
+      border: 1px solid #c8e6c8;
     }
-    /* Estilos para previsões */
+
+    /* CARDS ELEMENTOS */
+    .element-card {
+      border-left: 5px solid;
+      padding: 20px;
+    }
+    .element-card.central { border-left-color: var(--forest); background: linear-gradient(135deg, #f0f8f0, #e0f5e0); }
+    .element-card.agua { border-left-color: var(--agua); background: linear-gradient(135deg, #f0f8ff, #e0f0ff); }
+    .element-card.terra { border-left-color: var(--terra); background: linear-gradient(135deg, #f5f0e8, #efe5d8); }
+    .element-card.ar { border-left-color: var(--ar); background: linear-gradient(135deg, #f0f8fa, #e0f0f5); }
+    .element-card.fogo { border-left-color: var(--fogo); background: linear-gradient(135deg, #fff5f0, #ffe8d8); }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 12px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    .badge-central { background: var(--forest-bg); color: var(--forest); }
+    .badge-agua { background: #1a6b8a20; color: var(--agua); }
+    .badge-terra { background: #6b4a2d20; color: var(--terra); }
+    .badge-ar { background: #4a8a9a20; color: var(--ar); }
+    .badge-fogo { background: #cc550020; color: var(--fogo); }
+
+    /* PREVISÕES */
     .prediction-card {
       transition: all 0.3s ease;
       border-left: 4px solid;
+      border-radius: 12px;
+      padding: 20px;
     }
     .prediction-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15);
     }
-    .elnino-card {
-      border-left-color: #cc5500;
-      background: linear-gradient(135deg, #fff8f0, #ffefe0);
-    }
-    .lanina-card {
-      border-left-color: #1a6b8a;
-      background: linear-gradient(135deg, #f0f8ff, #e0f0ff);
-    }
-    .ml-card {
-      border-left-color: #2d6b2d;
-      background: linear-gradient(135deg, #f0f8f0, #e0f5e0);
-    }
-    /* Footer */
+    .elnino-card { border-left-color: var(--fogo); background: linear-gradient(135deg, #fff8f0, #ffefe0); }
+    .lanina-card { border-left-color: var(--agua); background: linear-gradient(135deg, #f0f8ff, #e0f0ff); }
+    .ml-card { border-left-color: var(--forest); background: linear-gradient(135deg, #f0f8f0, #e0f5e0); }
+
     .footer-green {
       background: #0d2b0d;
       border-top: 4px solid #4caf50;
     }
-    /* Badge de elemento */
-    .element-badge {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
-    .badge-agua {
-      background: #1a6b8a20;
-      color: #1a6b8a;
-    }
-    .badge-terra {
-      background: #6b4a2d20;
-      color: #6b4a2d;
-    }
-    .badge-ar {
-      background: #4a8a9a20;
-      color: #4a8a9a;
-    }
-    .badge-fogo {
-      background: #cc550020;
-      color: #cc5500;
-    }
-    .badge-central {
-      background: #2d6b2d20;
-      color: #2d6b2d;
-    }
-    /* Scrollbar personalizada */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #d5e8d5;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #1a4a1a;
-      border-radius: 5px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #2d6b2d;
-    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #d5e8d5; }
+    ::-webkit-scrollbar-thumb { background: var(--forest); border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--forest-medium); }
+
+    .text-forest { color: var(--forest); }
+    .text-terra { color: var(--terra); }
+    .text-agua { color: var(--agua); }
+    .text-fogo { color: var(--fogo); }
+    .border-forest { border-color: var(--forest); }
   </style>
 </head>
 <body>
 
-  <!-- CABEÇALHO -->
-  <header class="header-bg w-full min-h-[320px] relative flex items-center">
+  <!-- HEADER -->
+  <header class="header-bg w-full min-h-[280px] relative flex items-center">
     <div class="header-content container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-      <!-- Logo -->
       <img src="teste_logo.png" alt="SereIA Logo" class="h-40 w-auto drop-shadow-2xl mb-4 md:mb-0">
-      <!-- Título -->
       <div class="text-center md:text-right text-white">
         <h1 class="text-5xl md:text-6xl font-bold mb-2 drop-shadow-lg">SereIA</h1>
         <h2 class="text-2xl md:text-3xl font-semibold mb-2 drop-shadow">Sistema Regional de Inteligência Ambiental</h2>
@@ -209,19 +194,19 @@
     </div>
   </header>
 
-  <!-- NAVEGAÇÃO -->
+  <!-- NAV -->
   <nav class="nav-green sticky top-0 z-50 shadow-lg">
-    <div class="container mx-auto flex flex-wrap justify-center gap-1 p-3">
-      <a href="#sobre" class="text-white px-3 py-2 text-sm font-medium hover:bg-white/20">Sobre</a>
-      <a href="#elementos" class="text-white px-3 py-2 text-sm font-medium hover:bg-white/20">Elementos</a>
-      <a href="#objetivos" class="text-white px-3 py-2 text-sm font-medium hover:bg-white/20">Objetivos</a>
-      <a href="#metodologia" class="text-white px-3 py-2 text-sm font-medium hover:bg-white/20">Metodologia</a>
-      <a href="#galeria" class="text-white px-3 py-2 text-sm font-medium hover:bg-white/20">Galeria</a>
-      <a href="#previsoes" class="text-white px-3 py-2 text-sm font-medium hover:bg-white/20">Previsões</a>
-      <a href="#analise-mapas" class="text-white px-3 py-2 text-sm font-medium hover:bg-white/20">Mapas</a>
-      <a href="#incendios" class="text-white px-3 py-2 text-sm font-medium hover:bg-white/20">Incêndios</a>
-      <a href="#resultados" class="text-white px-3 py-2 text-sm font-medium hover:bg-white/20">Resultados</a>
-      <a href="#contato" class="text-white px-3 py-2 text-sm font-medium hover:bg-white/20">Contato</a>
+    <div class="container mx-auto flex flex-wrap justify-center gap-1 p-2">
+      <a href="#sobre">Sobre</a>
+      <a href="#elementos">Elementos</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="#metodologia">Metodologia</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#previsoes">Previsões</a>
+      <a href="#analise-mapas">Mapas</a>
+      <a href="#incendios">Incêndios</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#contato">Contato</a>
     </div>
   </nav>
 
@@ -232,7 +217,7 @@
       <h2 class="text-4xl font-bold text-center text-forest mb-6">🌳 Sobre o Projeto</h2>
       <div class="section-forest-bg max-w-4xl mx-auto">
         <p class="text-lg leading-relaxed text-gray-800">
-          O <strong class="text-forest">SereIA</strong> é uma rede distribuída de monitoramento ambiental, composta por núcleos locais que coletam e processam dados hidroclimáticos e florestais na Amazônia. Cada núcleo atua como uma inteligência própria, com ferramentas específicas para análise de previsão de anomalias da temperatura da superfície do mar, variabilidade das chuvas, eventos extremos, vegetação e até o fogo. A plataforma integra essas informações usando baixo custo computacional e recursos em nuvem, garantindo escalabilidade e integração de dados geoespaciais. Devido à vastidão e diversidade da Amazônia, cada núcleo foca em aspectos regionais prioritários, permitindo uma abordagem inteligente e específica mesmo em regiões remotas.
+          O <strong class="text-forest">SereIA</strong> é uma rede distribuída de monitoramento ambiental, composta por núcleos locais que coletam e processam dados hidroclimáticos e florestais na Amazônia. Cada núcleo atua como uma inteligência própria, com ferramentas específicas para análise de previsão de anomalias da temperatura da superfície do mar, variabilidade das chuvas, eventos extremos, vegetação e até o fogo. A plataforma integra essas informações usando baixo custo computacional e recursos em nuvem, como Google Colab, Pacotes em Python, R studio, Matlab, Orange, QGIS, e Git/GitHub, garantindo escalabilidade e integração de dados geoespaciais. Devido à vastidão e diversidade da Amazônia, cada núcleo foca em aspectos regionais prioritários, permitindo uma abordagem inteligente e específica mesmo em regiões remotas e com poucos incentivos em TI.
         </p>
       </div>
     </section>
@@ -241,66 +226,41 @@
     <section id="elementos" class="my-12">
       <h2 class="text-4xl font-bold text-center text-forest mb-6">🌿 Os Elementos da Amazônia</h2>
       <p class="text-center text-gray-700 mb-8 text-lg">Cada núcleo representa um elemento da natureza, com nome de referência amazônica.</p>
-
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Central -->
-        <div class="card element-card central p-6 shadow-md">
+        <div class="card element-card central shadow-md">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-3xl">🌊</span>
-            <div>
-              <h3 class="text-xl font-bold text-forest">Central</h3>
-              <span class="element-badge badge-central">Mãe d'Água</span>
-            </div>
+            <div><h3 class="text-xl font-bold text-forest">Central</h3><span class="badge badge-central">Mãe d'Água</span></div>
           </div>
           <p class="text-gray-700 text-sm">Servidora central: integra dados de todos os elementos, executa IA e modelos de machine learning, gera painéis regionais e garante a interoperabilidade entre os núcleos.</p>
         </div>
-
-        <!-- Ar -->
-        <div class="card element-card ar p-6 shadow-md">
+        <div class="card element-card ar shadow-md">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-3xl">💨</span>
-            <div>
-              <h3 class="text-xl font-bold text-forest">Ar</h3>
-              <span class="element-badge badge-ar">Aruá</span>
-            </div>
+            <div><h3 class="text-xl font-bold text-forest">Ar</h3><span class="badge badge-ar">Aruá</span></div>
           </div>
-          <p class="text-gray-700 text-sm">Monitoramento da interação oceano-atmosfera e seus efeitos sobre os eventos de chuva. Utiliza machine learning para previsões de ENOS, Modo Atlântico Equatorial e Dipolo do Atlântico Tropical.</p>
+          <p class="text-gray-700 text-sm">Inteligência para o monitoramento da interação oceano-atmosfera em larga escala e seus efeitos sobre os eventos de chuva nas sub-bacias amazônicas. Monitora anomalias na temperatura da superfície do mar tropicais e seus efeitos na variabilidade das chuvas na Amazônia. Utiliza machine learning principalmente para previsões de anomalias do tipo ENOS (El Niño Oscilação Sul), Modo Atlântico Equatorial e Dipolo do Atlântico Tropical, fornecendo subsídios para a previsão de eventos hidrológicos extremos regionais.</p>
         </div>
-
-        <!-- Água -->
-        <div class="card element-card agua p-6 shadow-md">
+        <div class="card element-card agua shadow-md">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-3xl">💧</span>
-            <div>
-              <h3 class="text-xl font-bold text-forest">Água</h3>
-              <span class="element-badge badge-agua">Iara</span>
-            </div>
+            <div><h3 class="text-xl font-bold text-forest">Água</h3><span class="badge badge-agua">Iara</span></div>
           </div>
-          <p class="text-gray-700 text-sm">Monitoramento de secas e cheias nas 9 sub-bacias amazônicas. Analisa chuvas, cotas, vazões e o PDSI calibrado por sub-bacia para retratar a vulnerabilidade hídrica regional.</p>
+          <p class="text-gray-700 text-sm">Inteligência para o monitoramento de eventos de secas e cheias em todas as 9 sub-bacias amazônicas (Javari, Japurá, Purus, Negro, Trombetas/Uatumã, Madeira, Tapajós, Xingu e Paru/Jari). Analisa chuvas, cotas e vazões em pontos estratégicos, integrando o PDSI (Índice de Severidade de Seca de Palmer) calibrado por sub-bacias. Cada sub-bacia é avaliada individualmente, respeitando seu regime hidrológico único e permitindo retratar a vulnerabilidade hídrica de forma regionalizada.</p>
         </div>
-
-        <!-- Terra -->
-        <div class="card element-card terra p-6 shadow-md">
+        <div class="card element-card terra shadow-md">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-3xl">🌿</span>
-            <div>
-              <h3 class="text-xl font-bold text-forest">Terra</h3>
-              <span class="element-badge badge-terra">Naiá</span>
-            </div>
+            <div><h3 class="text-xl font-bold text-forest">Terra</h3><span class="badge badge-terra">Naiá</span></div>
           </div>
-          <p class="text-gray-700 text-sm">Monitoramento da saúde da floresta com dados MODIS (NDVI, EVI, LAI), umidade do solo e dados GRACE para estimar variabilidade da água nos aquíferos e demanda florestal.</p>
+          <p class="text-gray-700 text-sm">Inteligência para o monitoramento da saúde da floresta nas sub-bacias do Madeira, Tapajós e Xingu, utilizando dados de satélite MODIS para análise de NDVI, EVI, LAI, além de informações sobre umidade do solo e nas zonas de raízes. Integra dados do satélite GRACE para estimar variabilidade água nos aquíferos e a demanda florestal em anos de secas extremas. Avalia a resiliência e estabilidade da vegetação frente à mudanças climáticas, considerando o histórico de cada sub-bacia, e fornecendo subsídios para a gestão ambiental e mitigação de impactos.</p>
         </div>
-
-        <!-- Fogo -->
-        <div class="card element-card fogo p-6 shadow-md">
+        <div class="card element-card fogo shadow-md">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-3xl">🔥</span>
-            <div>
-              <h3 class="text-xl font-bold text-forest">Fogo</h3>
-              <span class="element-badge badge-fogo">Boitatá</span>
-            </div>
+            <div><h3 class="text-xl font-bold text-forest">Fogo</h3><span class="badge badge-fogo">Boitatá</span></div>
           </div>
-          <p class="text-gray-700 text-sm">Monitoramento de incêndios florestais na sub-bacia do Purus, focando nos municípios mais afetados em anos de seca extrema. Analisa umidade do solo em múltiplas camadas.</p>
+          <p class="text-gray-700 text-sm">Inteligência para o monitoramento de incêndios florestais na sub-bacia do Purus, focando nos municípios mais afetados em anos de seca extrema. Analisa a umidade do solo em múltiplas camadas permitindo compreender como a disponibilidade hodroclimática influencia a ocorrência e a intensidade dos incêndios.</p>
         </div>
       </div>
     </section>
@@ -311,9 +271,9 @@
       <div class="section-forest-bg max-w-4xl mx-auto">
         <ul class="list-disc list-inside space-y-3 text-gray-800">
           <li>Implementar uma rede distribuída de monitoramento ambiental na Amazônia, conectando núcleos locais de inteligência.</li>
-          <li>Aplicar inteligência artificial e machine learning para análise preditiva em cada núcleo especializado.</li>
-          <li>Integrar dados climáticos, hidrológicos e ecológicos, centralizando na servidora <strong class="text-forest">Mãe d'Água</strong>.</li>
-          <li>Fornecer suporte técnico-científico para pesquisadores e gestores, respeitando a diversidade de cada sub-bacia.</li>
+          <li>Aplicar inteligência artificial e machine learning para análise preditiva, com o núcleo <strong class="text-forest">Aruá</strong> prevendo anomalias oceânicas e seus efeitos na chuva, o núcleo <strong class="text-forest">Iara</strong> monitorando secas e cheias, o núcleo <strong class="text-forest">Naiá</strong> avaliando a saúde da floresta e o núcleo <strong class="text-forest">Boitatá</strong> monitorando o risco de incêndios florestais.</li>
+          <li>Integrar dados climáticos, hidrológicos e ecológicos de todos os núcleos, centralizando as informações na servidora <strong class="text-forest">Mãe d'Água</strong> para gerar painéis interativos e análises de séries temporais.</li>
+          <li>Fornecer suporte técnico-científico para pesquisadores e gestores, com cada núcleo respeitando a diversidade hidrológica e ecológica de sua sub-bacia.</li>
           <li>Documentar e disponibilizar um manual de replicação do sistema SereIA para expansão futura.</li>
         </ul>
       </div>
@@ -323,13 +283,13 @@
     <section id="metodologia" class="my-12">
       <h2 class="text-4xl font-bold text-center text-forest mb-6">⚙️ Metodologia</h2>
       <div class="section-forest-bg max-w-4xl mx-auto">
-        <p class="mb-4 text-gray-800">O SereIA opera com núcleos locais inteligentes que coletam, processam e analisam dados regionais:</p>
+        <p class="mb-4 text-gray-800">O SereIA opera com núcleos locais inteligentes que coletam, processam e analisam dados regionais com pipelines específicos:</p>
         <ul class="list-disc list-inside space-y-2 text-gray-800">
-          <li><strong class="text-forest">Mãe d'Água:</strong> Servidora central que integra dados e executa modelos de IA avançados.</li>
-          <li><strong class="text-forest">Aruá:</strong> Analisa interações oceano-atmosfera prevendo ENOS e impactos nas chuvas.</li>
-          <li><strong class="text-forest">Iara:</strong> Monitora secas e cheias com PDSI calibrado por sub-bacia.</li>
-          <li><strong class="text-forest">Naiá:</strong> Avalia saúde da vegetação com dados MODIS e GRACE.</li>
-          <li><strong class="text-forest">Boitatá:</strong> Processa dados de incêndios e umidade do solo para avaliação de risco.</li>
+          <li><strong class="text-forest">Mãe d'Água:</strong> Servidora central que integra dados de todos os elementos, executa modelos de IA e machine learning avançados para aprimorar as análises dos núcleos e gera painéis interativos para análise regional e interoperabilidade.</li>
+          <li><strong class="text-forest">Aruá:</strong> Analisa interações oceano-atmosfera aplicando machine learning para prever eventos ENOS, Modo Atlântico Equatorial e Dipolo do Atlântico Tropical, e seus impactos regionais na variabilidade das chuvas.</li>
+          <li><strong class="text-forest">Iara:</strong> Monitora eventos de secas e cheias nas 9 sub-bacias amazônicas, usando análise de chuvas, cotas, vazões e o PDSI calibrado para retratar a vulnerabilidade hídrica de forma regionalizada.</li>
+          <li><strong class="text-forest">Naiá:</strong> Avalia a saúde da vegetação nas sub-bacias do Madeira, Tapajós e Xingu, utilizando dados de satélite (NDVI, EVI, LAI), umidade do solo e zona de raízes, e dados do satélite GRACE para estimar variabilidade da água em aquíferos.</li>
+          <li><strong class="text-forest">Boitatá:</strong> Coleta e processa dados de incêndios florestais, umidade do solo em múltiplas camadas e focos MODIS para uma avaliação inteligente do risco de fogo na sub-bacia do Purus.</li>
         </ul>
       </div>
     </section>
@@ -337,148 +297,107 @@
     <!-- GALERIA -->
     <section id="galeria" class="my-12">
       <h2 class="text-4xl font-bold text-center text-forest mb-6">📸 Galeria</h2>
-      <p class="text-center text-gray-700 mb-8">Eventos extremos e a diversidade da Amazônia.</p>
+      <p class="text-center text-gray-700 mb-8">Confira imagens de eventos extremos e da diversidade da Amazônia.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="rounded-2xl overflow-hidden shadow-lg card"><img src="https://f.i.uol.com.br/fotografia/2023/10/11/1697063888652723d021d36_1697063888_3x2_rt.jpg" alt="Rio seco" class="w-full h-48 object-cover"></div>
+        <div class="rounded-2xl overflow-hidden shadow-lg card"><img src="https://f.i.uol.com.br/fotografia/2023/10/11/1697063888652723d021d36_1697063888_3x2_rt.jpg" alt="Leito de rio seco" class="w-full h-48 object-cover"></div>
         <div class="rounded-2xl overflow-hidden shadow-lg card"><img src="https://s2-extra.glbimg.com/kHzAOvNdQMt4EMjJzfgmu-6x-DI=/0x0:3125x2125/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f551ea7087a47f39ead75f64041559a/internal_photos/bs/2023/Z/K/RdOgPXRcicUsRnw1vN5Q/antes-e-depois.jpg" alt="Antes e depois seca" class="w-full h-48 object-cover"></div>
-        <div class="rounded-2xl overflow-hidden shadow-lg card"><img src="https://agazetadoacre.com/wp-content/uploads/2023/10/seca-no-lago-tefe-no-amazonas-em-fotos-de-28-e-29-de-setembro-de-2023-1696346731871_v2_900x506.jpg" alt="Seca Rio Negro" class="w-full h-48 object-cover"></div>
+        <div class="rounded-2xl overflow-hidden shadow-lg card"><img src="https://agazetadoacre.com/wp-content/uploads/2023/10/seca-no-lago-tefe-no-amazonas-em-fotos-de-28-e-29-de-setembro-de-2023-1696346731871_v2_900x506.jpg" alt="Seca histórica" class="w-full h-48 object-cover"></div>
         <div class="rounded-2xl overflow-hidden shadow-lg card"><img src="https://media.gazetadopovo.com.br/2009/11/a06e970837d3d9de08e13d4e7ad8145b-gpLarge.jpg" alt="Embarcação encalhada" class="w-full h-48 object-cover"></div>
         <div class="rounded-2xl overflow-hidden shadow-lg card"><img src="https://s2-g1.glbimg.com/3LHbpn9XlKhWCQqt8ZutF-HvUcU=/0x0:1920x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/n/g/cAmANoRpyNAu3IACU6IQ/globo-canal-4-20231005-1200-frame-252279.jpeg" alt="Botos mortos" class="w-full h-48 object-cover"></div>
         <div class="rounded-2xl overflow-hidden shadow-lg card"><img src="https://f.i.uol.com.br/folha/cotidiano/images/12136169.jpeg" alt="Cheia Manaus" class="w-full h-48 object-cover"></div>
+        <div class="rounded-2xl overflow-hidden shadow-lg card"><img src="https://wwfbrnew.awsassets.panda.org/img/original/23052021___negro_river_flood_feira_manaus_moderna__amazonas___copyright_marcio_james_.jpg" alt="Cheia Rio Negro" class="w-full h-48 object-cover"></div>
+        <div class="rounded-2xl overflow-hidden shadow-lg card"><img src="https://i0.wp.com/revistaamazonia.com.br/wp-content/uploads/2024/08/Desmatamento-na-Amazonia-entenda-as-principais-causas-e-consequencias.webp" alt="Desmatamento" class="w-full h-48 object-cover"></div>
+        <div class="rounded-2xl overflow-hidden shadow-lg card"><img src="https://ac24horas.com/wp-content/uploads/2024/06/destacada-queimada-queimadas-995x600-1.jpg" alt="Incêndio florestal" class="w-full h-48 object-cover"></div>
       </div>
     </section>
 
     <!-- PREVISÕES ENOS -->
     <section id="previsoes" class="my-12">
       <h2 class="text-4xl font-bold text-center text-forest mb-6">📊 Previsões ENOS 2023-2025</h2>
-      <p class="text-center text-gray-700 mb-8">Análise de previsões para El Niño e La Niña com inteligência artificial</p>
+      <p class="text-center text-gray-700 mb-8">Análise de previsões para os eventos de El Niño e La Niña usando inteligência artificial</p>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div class="prediction-card elnino-card rounded-xl shadow-lg p-6">
-          <h3 class="text-xl font-bold text-orange-700 mb-2">🔥 El Niño 2023-2024</h3>
+        <div class="prediction-card elnino-card shadow-lg">
+          <h3 class="text-xl font-bold text-fogo mb-2">🔥 El Niño 2023-2024</h3>
           <img src="elnino.png" alt="El Niño" class="w-full h-40 object-contain mb-3 rounded-lg">
-          <p class="text-sm text-gray-700">Anomalias positivas de temperatura no Pacífico equatorial com impactos significativos no regime de chuvas na Amazônia.</p>
+          <p class="text-sm text-gray-700">O evento de El Niño 2023-2024 caracterizou-se por anomalias positivas de temperatura na região do Pacífico equatorial, com impactos significativos no regime de chuvas na Amazônia.</p>
         </div>
-        <div class="prediction-card lanina-card rounded-xl shadow-lg p-6">
-          <h3 class="text-xl font-bold text-blue-700 mb-2">🌊 La Niña 2024-2025</h3>
+        <div class="prediction-card lanina-card shadow-lg">
+          <h3 class="text-xl font-bold text-agua mb-2">🌊 La Niña 2024-2025</h3>
           <img src="lanina.png" alt="La Niña" class="w-full h-40 object-contain mb-3 rounded-lg">
-          <p class="text-sm text-gray-700">Previsão de formação de La Niña moderada no segundo semestre de 2024, com resfriamento anômalo no Pacífico equatorial.</p>
+          <p class="text-sm text-gray-700">Previsão indica a formação de um evento La Niña moderado no segundo semestre de 2024, com resfriamento anômalo no Pacífico equatorial central e oriental.</p>
         </div>
-        <div class="prediction-card ml-card rounded-xl shadow-lg p-6">
-          <h3 class="text-xl font-bold text-green-700 mb-2">🤖 Machine Learning</h3>
+        <div class="prediction-card ml-card shadow-lg">
+          <h3 class="text-xl font-bold text-forest mb-2">🤖 Machine Learning</h3>
           <img src="previsao_ml.png" alt="ML Previsão" class="w-full h-40 object-contain mb-3 rounded-lg">
-          <p class="text-sm text-gray-700">Modelos de ML mostram transição de El Niño para La Niña ao longo de 2024-2025 nas séries de temperatura da superfície do mar.</p>
+          <p class="text-sm text-gray-700">Modelos de machine learning aplicados às séries temporais de temperatura da superfície do mar mostram a transição de El Niño para La Niña ao longo de 2024-2025.</p>
         </div>
       </div>
 
       <div class="section-forest-bg">
         <h3 class="text-2xl font-bold text-forest mb-4">Análise dos Resultados</h3>
-        <p class="text-gray-800 mb-4">Nossos modelos indicam uma transição do El Niño (2023-2024) para La Niña (2024-2025), com impactos significativos:</p>
+        <p class="text-gray-800 mb-4">Nossos modelos de previsão baseados em machine learning indicam uma transição do evento El Niño (2023-2024) para condições de La Niña (2024-2025). Esta transição terá impactos significativos no regime de chuvas na Amazônia:</p>
         <ul class="list-disc list-inside space-y-2 text-gray-800">
-          <li><strong class="text-orange-700">El Niño 2023-2024:</strong> Redução de chuvas no norte da Amazônia, aumentando risco de secas e incêndios.</li>
-          <li><strong class="text-blue-700">La Niña 2024-2025:</strong> Aumento de chuvas na região norte, com potencial recuperação dos níveis dos rios.</li>
+          <li><strong class="text-fogo">El Niño 2023-2024:</strong> Associado à redução de chuvas na região norte da Amazônia, aumentando o risco de secas e incêndios florestais</li>
+          <li><strong class="text-agua">La Niña 2024-2025:</strong> Previsão de aumento de chuvas na região norte, com potencial benefício para a recuperação dos níveis dos rios</li>
         </ul>
+        <p class="text-gray-800 mt-4">Estes resultados reforçam a importância do monitoramento contínuo das condições oceânicas e atmosféricas para a previsão de eventos extremos na região amazônica.</p>
       </div>
     </section>
 
     <!-- ANÁLISE DE MAPAS -->
     <section id="analise-mapas" class="my-12">
-      <h2 class="text-4xl font-bold text-center text-forest mb-6">🗺️ Análise de Mapas</h2>
-      <p class="text-center text-gray-700 mb-8">Análise espacial da diversidade climática e topográfica da Amazônia</p>
+      <h2 class="text-4xl font-bold text-center text-forest mb-6">🗺️ Análise de Mapas da Bacia Amazônica</h2>
+      <p class="text-center text-gray-700 mb-8">Análise espacial da diversidade climática e topográfica da região amazônica</p>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div class="bg-white rounded-2xl shadow-lg p-6 card">
-          <h3 class="text-xl font-bold text-forest mb-3">Mapa Bivariado: Temperatura x Precipitação</h3>
-          <img src="mapa1.png" alt="Mapa Bivariado" class="w-full h-auto rounded-lg mb-3">
-          <p class="text-sm text-gray-600">25 combinações climáticas distintas identificadas na Bacia Amazônica.</p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-lg p-6 card">
-          <h3 class="text-xl font-bold text-forest mb-3">Mapa de Relevo</h3>
-          <img src="mapa2.png" alt="Mapa Relevo" class="w-full h-auto rounded-lg mb-3">
-          <p class="text-sm text-gray-600">Topografia detalhada com as 9 sub-bacias amazônicas representadas.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- INCÊNDIOS -->
-    <section id="incendios" class="my-12">
-      <h2 class="text-4xl font-bold text-center text-forest mb-6">🔥 Incêndios Florestais</h2>
-      <p class="text-center text-gray-700 mb-8">Resultados do núcleo <strong class="text-orange-700">Boitatá</strong> para Boca do Acre - AM</p>
-
-      <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 card">
-        <h3 class="text-xl font-bold text-orange-700 mb-4 text-center">Mapa de Risco de Incêndios - 2016</h3>
-        <img src="risco_incendio.jpg" alt="Mapa Risco Incêndio" class="w-full max-w-2xl mx-auto h-auto rounded-lg shadow-md mb-4">
-        <p class="text-center text-gray-700">Análise de classes de risco em ano de evento extremo para o município de Boca do Acre.</p>
-        <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-sm">
-          <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full">Baixo Risco</span>
-          <span class="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full">Médio Risco</span>
-          <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full">Alto Risco</span>
-          <span class="bg-red-200 text-red-800 px-3 py-1 rounded-full">Muito Alto</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESULTADOS NAIÁ -->
-    <section id="resultados" class="my-12">
-      <h2 class="text-4xl font-bold text-center text-forest mb-6">🌿 Saúde da Floresta</h2>
-      <p class="text-center text-gray-700 mb-8">Resultados do núcleo <strong class="text-forest">Naiá (Terra)</strong> - EVI, LAI e umidade do solo</p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white rounded-2xl shadow-lg p-6 card">
-          <h3 class="text-lg font-bold text-forest mb-2">Anomalias de EVI - Seca 2023/2024</h3>
-          <img src="evi4.jpeg" alt="EVI Anomalias" class="w-full h-auto rounded-lg">
-          <p class="text-sm text-gray-600 mt-2">Sub-bacias do Madeira, Tapajós e Xingu com anomalias mais negativas.</p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-lg p-6 card">
-          <h3 class="text-lg font-bold text-forest mb-2">Séries Temporais EVI</h3>
-          <img src="evi.png" alt="EVI Série" class="w-full h-auto rounded-lg">
-          <p class="text-sm text-gray-600 mt-2">Comportamento sazonal da vegetação em todas as sub-bacias (2023-2024).</p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-lg p-6 card">
-          <h3 class="text-lg font-bold text-forest mb-2">Umidade do Solo (0-10cm)</h3>
-          <img src="solo1.png" alt="Umidade Solo" class="w-full h-auto rounded-lg">
-          <p class="text-sm text-gray-600 mt-2">Valores mensais por sub-bacia para a camada superficial.</p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-lg p-6 card">
-          <h3 class="text-lg font-bold text-forest mb-2">Anomalias de Umidade (0-200cm)</h3>
-          <img src="anomali_solo0_200cm.png" alt="Anomalias Solo" class="w-full h-auto rounded-lg">
-          <p class="text-sm text-gray-600 mt-2">Déficit hídrico profundo durante o período de estiagem.</p>
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8 card">
+        <h3 class="text-2xl font-bold text-forest mb-4">Mapa Bivariado: Temperatura x Precipitação</h3>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div>
+            <img src="mapa1.png" alt="Mapa Bivariado" class="w-full h-auto rounded-lg">
+            <p class="text-sm text-gray-500 mt-2 text-center"><strong>Mapa 1:</strong> Bivariado - Temperatura x Precipitação Bacia Amazônica - Dados Chelsa Climate 1km</p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Diversidade de Combinações Climáticas</h4>
+            <p class="text-gray-700 mb-4">Este mapa bivariado apresenta a relação entre temperatura e precipitação na bacia amazônica, revelando <strong>25 combinações distintas</strong> resultantes da intersecção de 5 quintis para cada variável.</p>
+            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+              <h5 class="font-semibold text-blue-800 mb-2">Interpretação das Combinações:</h5>
+              <ul class="list-disc list-inside text-sm text-blue-700">
+                <li>Áreas em <strong>tons de lilás</strong>: Baixa temperatura com Alta precipitação</li>
+                <li>Áreas em <strong>tons de ciano</strong>: Alta temperatura com Baixa precipitação</li>
+                <li>Áreas em <strong>tons de anil</strong>: Alta temperatura com Alta precipitação</li>
+                <li>Áreas em <strong>tons claros</strong>: Baixa temperatura com Baixa precipitação</li>
+                <li>Áreas em <strong>gradientes</strong>: Mosaicos de combinações intermediárias</li>
+              </ul>
+            </div>
+            <p class="text-gray-700">Esta análise permite identificar padrões regionais específicos, como áreas sujeitas a alto estresse térmico e hídrico, bem como zonas com condições mais amenas que funcionam como refúgios ecológicos.</p>
+          </div>
         </div>
       </div>
 
-      <div class="mt-8 text-center">
-        <a href="https://drive.google.com/drive/folders/1xBg0Jgml4sskTRf4VtAlildqw9EnJCnw?usp=drive_link" target="_blank" class="btn-green inline-block">
-          📂 Acesse todos os dados no Google Drive
-        </a>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="my-12">
-      <h2 class="text-4xl font-bold text-center text-forest mb-6">📬 Contato</h2>
-      <div class="section-forest-bg max-w-4xl mx-auto text-center">
-        <p class="text-lg text-gray-800 mb-4">Entre em contato conosco:</p>
-        <div class="flex flex-col md:flex-row justify-center gap-6">
-          <a href="mailto:lab.sereia@gmail.com" class="btn-green inline-block">
-            📧 lab.sereia@gmail.com
-          </a>
-          <a href="https://www.instagram.com/sereiaml" target="_blank" class="btn-green inline-block" style="background: #6b4a2d;">
-            📷 @sereiaml
-          </a>
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8 card">
+        <h3 class="text-2xl font-bold text-forest mb-4">Mapa de Relevo: Topografia da Bacia Amazônica</h3>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div>
+            <img src="mapa2.png" alt="Mapa Relevo" class="w-full h-auto rounded-lg">
+            <p class="text-sm text-gray-500 mt-2 text-center"><strong>Mapa 2:</strong> Relevo - Bacia Amazônica</p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Características Topográficas</h4>
+            <p class="text-gray-700 mb-4">Este mapa de relevo com sombreamento (hillshade) apresenta em detalhe a topografia da Bacia Amazônica, evidenciando desde as extensas planícies aluviais e áreas de várzea até as regiões de maior altitude localizadas no escudo das Guianas e no Brasil Central.</p>
+            <div class="bg-green-50 p-4 rounded-lg mb-4">
+              <h5 class="font-semibold text-green-800 mb-2">Principais Sub-bacias Representadas:</h5>
+              <ul class="list-disc list-inside text-sm text-green-700">
+                <li>Rio Negro, Japurá, Javari/Juruá, Purus, Madeira, Trombetas/Uatumã, Xingu, Tapajós, Paru/Jari</li>
+              </ul>
+            </div>
+            <p class="text-gray-700">Os dados utilizados são provenientes do LBA (Large-Scale Biosphere-Atmosphere Experiment in Amazonia), constituindo uma base robusta para análises de relevo e suas implicações ambientais.</p>
+          </div>
         </div>
       </div>
-    </section>
 
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer-green text-white text-center py-8">
-    <div class="container mx-auto">
-      <p class="text-lg font-semibold">🌳 SereIA - Sistema Regional de Inteligência Ambiental</p>
-      <p class="text-sm opacity-80 mt-2">© 2025 SereIA. Todos os direitos reservados.</p>
-      <p class="text-xs opacity-60 mt-1">Monitoramento hidroclimático e florestal da Amazônia com inteligência artificial.</p>
-    </div>
-  </footer>
-
-</body>
-</html>
+      <div class="section-forest-bg">
+        <h3 class="text-2xl font-bold text-forest mb-4">Análise Integrada dos Mapas</h3>
+        <p class="text-gray-800 mb-4">A combinação da análise bivariada (temperatura x precipitação) com o mapa de relevo permite identificar correlações importantes entre topografia e padrões climáticos na bacia amazônica:</p>
+        <ul class="list-disc list-inside space-y-2 text-gray-800">
+          <li>
