@@ -5,20 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SereIA - Sistema Regional de Inteligência Ambiental</title>
   <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    .card:hover { transform: scale(1.03); transition: transform 0.2s; }
-    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      transition: transform 0.2s;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
     /* Estilo para a imagem de fundo do cabeçalho */
     .header-bg {
-        background-image: url("fundo.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+      background-image: url("fundo.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
     /* Estilos para a nova seção de previsões */
     .prediction-card {
@@ -77,7 +85,7 @@
     </div>
   </header>
 
-   <!-- NAV -->
+  <!-- NAV -->
   <nav class="bg-gradient-to-r from-cyan-600 via-teal-500 to-indigo-600 shadow-md">
     <div class="container mx-auto flex flex-wrap justify-center space-x-4 md:space-x-8 p-3">
       <a href="#sobre" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Sobre</a>
@@ -93,516 +101,514 @@
       <a href="#contato" class="text-white hover:bg-white/20 px-4 py-2 rounded-lg font-medium transition">Contato</a>
     </div>
   </nav>
-    <main class="container mx-auto p-6">
-        <!-- Espaçamento reduzido -->
-        <section id="sobre" class="my-12">
-            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Sobre o Projeto</h2>
-            <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
-                <p class="text-lg leading-relaxed">
-                    O SereIA é uma rede distribuída de monitoramento ambiental, composta por núcleos locais que coletam e processam dados hidroclimáticos e florestais na Amazônia. Cada núcleo atua como uma inteligência própria, com ferramentas específicas para análise de previsão de anomalias da temperatura da superfície do mar, variabilidade das chuvas, eventos extremos, vegetação e até o fogo. A plataforma integra essas informações usando baixo custo computacional e recursos em nuvem, como Google Colab, Pacotes em Python, R studio, Matlab, Orange, QGIS, e Git/GitHub, garantindo escalabilidade e integração de dados geoespaciais. Devido à vastidão e diversidade da Amazônia, cada núcleo foca em aspectos regionais prioritários, permitindo uma abordagem inteligente e específica mesmo em regiões remotas e com poucos incentivos em TI.
-                </p>
-            </div>
-        </section>
+  <main class="container mx-auto p-6">
+    <!-- Espaçamento reduzido -->
+    <section id="sobre" class="my-12">
+      <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Sobre o Projeto</h2>
+      <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
+        <p class="text-lg leading-relaxed">
+          O SereIA é uma rede distribuída de monitoramento ambiental, composta por núcleos locais que coletam e processam dados hidroclimáticos e florestais na Amazônia. Cada núcleo atua como uma inteligência própria, com ferramentas específicas para análise de previsão de anomalias da temperatura da superfície do mar, variabilidade das chuvas, eventos extremos, vegetação e até o fogo. A plataforma integra essas informações usando baixo custo computacional e recursos em nuvem, como Google Colab, Pacotes em Python, R studio, Matlab, Orange, QGIS, e Git/GitHub, garantindo escalabilidade e integração de dados geoespaciais. Devido à vastidão e diversidade da Amazônia, cada núcleo foca em aspectos regionais prioritários, permitindo uma abordagem inteligente e específica mesmo em regiões remotas e com poucos incentivos em TI.
+        </p>
+      </div>
+    </section>
 
-        <section id="elementos" class="my-12">
-            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Os Elementos e Núcleos de Monitoramento</h2>
-            <p class="text-center text-gray-600 mb-8">Cada núcleo representa um elemento da natureza, com nome de referência amazônica, monitorando variáveis ambientais específicas.</p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
-                    <div class="text-4xl mb-2">🌊</div>
-                    <h3 class="text-xl font-bold text-emerald-700">Central</h3>
-                    <h4 class="text-lg font-medium text-gray-600">Mãe d'Água</h4>
-                    <p class="mt-4 text-sm text-gray-700">Servidora central: integra dados de todos os elementos, executa IA e modelos de machine learning, gera painéis regionais e garante a interoperabilidade entre os núcleos.</p>
-                </div>
-                <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
-                    <div class="text-4xl mb-2">💨</div>
-                    <h3 class="text-xl font-bold text-emerald-700">Ar</h3>
-                    <h4 class="text-lg font-medium text-gray-600">Aruá</h4>
-                    <p class="mt-4 text-sm text-gray-700">Inteligência para o monitoramento da interação oceano-atmosfera em larga escala e seus efeitos sobre os eventos de chuva nas sub-bacias amazônicas. Monitora anomalias na temperatura da superfície do mar tropicais e seus efeitos na variabilidade das chuvas na Amazônia. Utiliza machine learning principalmente para previsões de anomalias do tipo ENOS (El Niño Oscilação Sul), Modo Atlântico Equatorial e Dipolo do Atlântico Tropical, fornecendo subsídios para a previsão de eventos hidrológicos extremos regionais.</p>
-                </div>
-                <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
-                    <div class="text-4xl mb-2">💧</div>
-                    <h3 class="text-xl font-bold text-emerald-700">Água</h3>
-                    <h4 class="text-lg font-medium text-gray-600">Iara</h4>
-                    <p class="mt-4 text-sm text-gray-700">Inteligência para o monitoramento de eventos de secas e cheias em todas as 9 sub-bacias amazônicas (Javari, Japurá, Purus, Negro, Trombetas/Uatumã, Madeira, Tapajós, Xingu e Paru/Jari). Analisa chuvas, cotas e vazões em pontos estratégicos, integrando o PDSI (Índice de Severidade de Seca de Palmer) calibrado por sub-bacias. Cada sub-bacia é avaliada individualmente, respeitando seu regime hidrológico único e permitindo retratar a vulnerabilidade hídrica de forma regionalizada.</p>
-                </div>
-                <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
-                    <div class="text-4xl mb-2">🌿</div>
-                    <h3 class="text-xl font-bold text-emerald-700">Terra</h3>
-                    <h4 class="text-lg font-medium text-gray-600">Naiá</h4>
-                    <p class="mt-4 text-sm text-gray-700">Inteligência para o monitoramento da saúde da floresta nas sub-bacias do Madeira, Tapajós e Xingu, utilizando dados de satélite MODIS para análise de NDVI, EVI, LAI, além de informações sobre umidade do solo e nas zonas de raízes. Integra dados do satélite GRACE para estimar variabilidade água nos aquíferos e a demanda florestal em anos de secas extremas. Avalia a resiliência e estabilidade da vegetação frente à mudanças climáticas, considerando o histórico de cada sub-bacia, e fornecendo subsídios para a gestão ambiental e mitigação de impactos.</p>
-                </div>
-                <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
-                    <div class="text-4xl mb-2">🔥</div>
-                    <h3 class="text-xl font-bold text-emerald-700">Fogo</h3>
-                    <h4 class="text-lg font-medium text-gray-600">Boitatá</h4>
-                    <p class="mt-4 text-sm text-gray-700">Inteligência para o monitoramento de incêndios florestais na sub-bacia do Purus, focando nos municípios mais afetados em anos de seca extrema. Analisa a umidade do solo em múltiplas camadas permitindo compreender como a disponibilidade hodroclimática influencia a ocorrência e a intensidade dos incêndios.</p>
-                </div>
-            </div>
-        </section>
+    <section id="elementos" class="my-12">
+      <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Os Elementos e Núcleos de Monitoramento</h2>
+      <p class="text-center text-gray-600 mb-8">Cada núcleo representa um elemento da natureza, com nome de referência amazônica, monitorando variáveis ambientais específicas.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
+          <div class="text-4xl mb-2">🌊</div>
+          <h3 class="text-xl font-bold text-emerald-700">Central</h3>
+          <h4 class="text-lg font-medium text-gray-600">Mãe d'Água</h4>
+          <p class="mt-4 text-sm text-gray-700">Servidora central: integra dados de todos os elementos, executa IA e modelos de machine learning, gera painéis regionais e garante a interoperabilidade entre os núcleos.</p>
+        </div>
+        <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
+          <div class="text-4xl mb-2">💨</div>
+          <h3 class="text-xl font-bold text-emerald-700">Ar</h3>
+          <h4 class="text-lg font-medium text-gray-600">Aruá</h4>
+          <p class="mt-4 text-sm text-gray-700">Inteligência para o monitoramento da interação oceano-atmosfera em larga escala e seus efeitos sobre os eventos de chuva nas sub-bacias amazônicas. Monitora anomalias na temperatura da superfície do mar tropicais e seus efeitos na variabilidade das chuvas na Amazônia. Utiliza machine learning principalmente para previsões de anomalias do tipo ENOS (El Niño Oscilação Sul), Modo Atlântico Equatorial e Dipolo do Atlântico Tropical, fornecendo subsídios para a previsão de eventos hidrológicos extremos regionais.</p>
+        </div>
+        <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
+          <div class="text-4xl mb-2">💧</div>
+          <h3 class="text-xl font-bold text-emerald-700">Água</h3>
+          <h4 class="text-lg font-medium text-gray-600">Iara</h4>
+          <p class="mt-4 text-sm text-gray-700">Inteligência para o monitoramento de eventos de secas e cheias em todas as 9 sub-bacias amazônicas (Javari, Japurá, Purus, Negro, Trombetas/Uatumã, Madeira, Tapajós, Xingu e Paru/Jari). Analisa chuvas, cotas e vazões em pontos estratégicos, integrando o PDSI (Índice de Severidade de Seca de Palmer) calibrado por sub-bacias. Cada sub-bacia é avaliada individualmente, respeitando seu regime hidrológico único e permitindo retratar a vulnerabilidade hídrica de forma regionalizada.</p>
+        </div>
+        <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
+          <div class="text-4xl mb-2">🌿</div>
+          <h3 class="text-xl font-bold text-emerald-700">Terra</h3>
+          <h4 class="text-lg font-medium text-gray-600">Naiá</h4>
+          <p class="mt-4 text-sm text-gray-700">Inteligência para o monitoramento da saúde da floresta nas sub-bacias do Madeira, Tapajós e Xingu, utilizando dados de satélite MODIS para análise de NDVI, EVI, LAI, além de informações sobre umidade do solo e nas zonas de raízes. Integra dados do satélite GRACE para estimar variabilidade água nos aquíferos e a demanda florestal em anos de secas extremas. Avalia a resiliência e estabilidade da vegetação frente à mudanças climáticas, considerando o histórico de cada sub-bacia, e fornecendo subsídios para a gestão ambiental e mitigação de impactos.</p>
+        </div>
+        <div class="card bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center">
+          <div class="text-4xl mb-2">🔥</div>
+          <h3 class="text-xl font-bold text-emerald-700">Fogo</h3>
+          <h4 class="text-lg font-medium text-gray-600">Boitatá</h4>
+          <p class="mt-4 text-sm text-gray-700">Inteligência para o monitoramento de incêndios florestais na sub-bacia do Purus, focando nos municípios mais afetados em anos de seca extrema. Analisa a umidade do solo em múltiplas camadas permitindo compreender como a disponibilidade hodroclimática influencia a ocorrência e a intensidade dos incêndios.</p>
+        </div>
+      </div>
+    </section>
 
-        <section id="objetivos" class="my-12">
-            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Objetivos do Projeto</h2>
-            <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
-                <ul class="list-disc list-inside space-y-2">
-                    <li>Implementar uma rede distribuída de monitoramento ambiental na Amazônia, conectando núcleos locais de inteligência.</li>
-                    <li>Aplicar inteligência artificial e machine learning para análise preditiva, com o núcleo <strong class="font-bold text-emerald-700">Aruá</strong> prevendo anomalias oceânicas e seus efeitos na chuva, o núcleo <strong class="font-bold text-emerald-700">Iara</strong> monitorando secas e cheias, o núcleo <strong class="font-bold text-emerald-700">Naiá</strong> avaliando a saúde da floresta e o núcleo <strong class="font-bold text-emerald-700">Boitatá</strong> monitorando o risco de incêndios florestais.</li>
-                    <li>Integrar dados climáticos, hidrológicos e ecológicos de todos os núcleos, centralizando as informações na servidora <strong class="font-bold text-emerald-700">Mãe d'Água</strong> para gerar painéis interativos e análises de séries temporais.</li>
-                    <li>Fornecer suporte técnico-científico para pesquisadores e gestores, com cada núcleo respeitando a diversidade hidrológica e ecológica de sua sub-bacia.</li>
-                    <li>Documentar e disponibilizar um manual de replicação do sistema SereIA para expansão futura.</li>
-                </ul>
-            </div>
-        </section>
+    <section id="objetivos" class="my-12">
+      <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Objetivos do Projeto</h2>
+      <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
+        <ul class="list-disc list-inside space-y-2">
+          <li>Implementar uma rede distribuída de monitoramento ambiental na Amazônia, conectando núcleos locais de inteligência.</li>
+          <li>Aplicar inteligência artificial e machine learning para análise preditiva, com o núcleo <strong class="font-bold text-emerald-700">Aruá</strong> prevendo anomalias oceânicas e seus efeitos na chuva, o núcleo <strong class="font-bold text-emerald-700">Iara</strong> monitorando secas e cheias, o núcleo <strong class="font-bold text-emerald-700">Naiá</strong> avaliando a saúde da floresta e o núcleo <strong class="font-bold text-emerald-700">Boitatá</strong> monitorando o risco de incêndios florestais.</li>
+          <li>Integrar dados climáticos, hidrológicos e ecológicos de todos os núcleos, centralizando as informações na servidora <strong class="font-bold text-emerald-700">Mãe d'Água</strong> para gerar painéis interativos e análises de séries temporais.</li>
+          <li>Fornecer suporte técnico-científico para pesquisadores e gestores, com cada núcleo respeitando a diversidade hidrológica e ecológica de sua sub-bacia.</li>
+          <li>Documentar e disponibilizar um manual de replicação do sistema SereIA para expansão futura.</li>
+        </ul>
+      </div>
+    </section>
 
-        <section id="metodologia" class="my-12">
-            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Metodologia</h2>
-            <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
-                <p class="mb-4 text-lg">O SereIA opera com núcleos locais inteligentes que coletam, processam e analisam dados regionais com pipelines específicos:</p>
-                <ul class="list-disc list-inside space-y-2">
-                    <li><strong class="font-bold text-emerald-700">Mãe d'Água:</strong> Servidora central que integra dados de todos os elementos, executa modelos de IA e machine learning avançados para aprimorar as análises dos núcleos e gera painéis interativos para análise regional e interoperabilidade.</li>
-                    <li><strong class="font-bold text-emerald-700">Aruá:</strong> Analisa interações oceano-atmosfera aplicando machine learning para prever eventos ENOS, Modo Atlântico Equatorial e Dipolo do Atlântico Tropical, e seus impacts regionais na variabilidade das chuvas.</li>
-                    <li><strong class="font-bold text-emerald-700">Iara:</strong> Monitora eventos de secas e cheias nas 9 sub-bacias amazônicas, usando análise de chuvas, cotas, vazões e o PDSI calibrado para retratar a vulnerabilidade hídrica de forma regionalizada.</li>
-                    <li><strong class="font-bold text-emerald-700">Naiá:</strong> Avalia a saúde da vegetação nas sub-bacias do Madeira, Tapajós e Xingu, utilizando dados de satélite (NDVI, EVI, LAI), umidade do solo e zona de raízes, e dados do satélite GRACE para estimar variabilidade da água em aquíferos.</li>
-                    <li><strong class="font-bold text-emerald-700">Boitatá:</strong> Coleta e processa dados de incêndios florestais, umidade do solo em múltiplas camadas e focos MODIS para uma avaliação inteligente do risco de fogo na sub-bacia do Purus.</li>
-                </ul>
-            </div>
-        </section>
+    <section id="metodologia" class="my-12">
+      <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Metodologia</h2>
+      <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
+        <p class="mb-4 text-lg">O SereIA opera com núcleos locais inteligentes que coletam, processam e analisam dados regionais com pipelines específicos:</p>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong class="font-bold text-emerald-700">Mãe d'Água:</strong> Servidora central que integra dados de todos os elementos, executa modelos de IA e machine learning avançados para aprimorar as análises dos núcleos e gera painéis interativos para análise regional e interoperabilidade.</li>
+          <li><strong class="font-bold text-emerald-700">Aruá:</strong> Analisa interações oceano-atmosfera aplicando machine learning para prever eventos ENOS, Modo Atlântico Equatorial e Dipolo do Atlântico Tropical, e seus impactos regionais na variabilidade das chuvas.</li>
+          <li><strong class="font-bold text-emerald-700">Iara:</strong> Monitora eventos de secas e cheias nas 9 sub-bacias amazônicas, usando análise de chuvas, cotas, vazões e o PDSI calibrado para retratar a vulnerabilidade hídrica de forma regionalizada.</li>
+          <li><strong class="font-bold text-emerald-700">Naiá:</strong> Avalia a saúde da vegetação nas sub-bacias do Madeira, Tapajós e Xingu, utilizando dados de satélite (NDVI, EVI, LAI), umidade do solo e zona de raízes, e dados do satélite GRACE para estimar variabilidade da água em aquíferos.</li>
+          <li><strong class="font-bold text-emerald-700">Boitatá:</strong> Coleta e processa dados de incêndios florestais, umidade do solo em múltiplas camadas e focos MODIS para uma avaliação inteligente do risco de fogo na sub-bacia do Purus.</li>
+        </ul>
+      </div>
+    </section>
 
-        <section id="galeria" class="my-12">
-            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Galeria</h2>
-            <p class="text-center text-gray-600 mb-8">Confira imagens de eventos extremos e da diversidade da Amazônia.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="rounded-2xl overflow-hidden shadow-lg card">
-                    <img src="https://f.i.uol.com.br/fotografia/2023/10/11/1697063888652723d021d36_1697063888_3x2_rt.jpg" alt="Leito de rio seco na Amazônia durante a seca" class="w-full h-48 object-cover">
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg card">
-                    <img src="https://s2-extra.glbimg.com/kHzAOvNdQMt4EMjJzfgmu-6x-DI=/0x0:3125x2125/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f551ea7087a47f39ead75f64041559a/internal_photos/bs/2023/Z/K/RdOgPXRcicUsRnw1vN5Q/antes-e-depois.jpg" alt="Vista de antes e depois da seca na Amazônia" class="w-full h-48 object-cover">
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg card">
-                    <img src="https://agazetadoacre.com/wp-content/uploads/2023/10/seca-no-lago-tefe-no-amazonas-em-fotos-de-28-e-29-de-setembro-de-2023-1696346731871_v2_900x506.jpg" alt="Seca histórica de 2023, leito do Rio Negro exposto em Manaus" class="w-full h-48 object-cover">
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg card">
-                    <img src="https://media.gazetadopovo.com.br/2009/11/a06e970837d3d9de08e13d4e7ad8145b-gpLarge.jpg" alt="Região da seca de 2009 em Manaus, com embarcação encalhada" class="w-full h-48 object-cover">
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg card">
-                    <img src="https://s2-g1.glbimg.com/3LHbpn9XlKhWCQqt8ZutF-HvUcU=/0x0:1920x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/n/g/cAmANoRpyNAu3IACU6IQ/globo-canal-4-20231005-1200-frame-252279.jpeg" alt="Botos mortos em Tefé, Amazonas, durante a seca extrema de 2023" class="w-full h-48 object-cover">
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg card">
-                    <img src="https://f.i.uol.com.br/folha/cotidiano/images/12136169.jpeg" alt="Cheia de 2012 em Manaus com ruas alagadas" class="w-full h-48 object-cover">
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg card">
-                    <img src="https://wwfbrnew.awsassets.panda.org/img/original/23052021___negro_river_flood_feira_manaus_moderna__amazonas___copyright_marcio_james_.jpg" alt="Cheia histórica do Rio Negro de 2021 em Manaus" class="w-full h-48 object-cover">
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg card">
-                    <img src="https://i0.wp.com/revistaamazonia.com.br/wp-content/uploads/2024/08/Desmatamento-na-Amazonia-entenda-as-principais-causas-e-consequencias.webp" alt="Desmatamento na Amazônia" class="w-full h-48 object-cover">
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg card">
-                    <img src="https://ac24horas.com/wp-content/uploads/2024/06/destacada-queimada-queimadas-995x600-1.jpg" alt="Incêndio florestal na Amazônia" class="w-full h-48 object-cover">
-                </div>
-            </div>
-        </section>
+    <section id="galeria" class="my-12">
+      <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Galeria</h2>
+      <p class="text-center text-gray-600 mb-8">Confira imagens de eventos extremos e da diversidade da Amazônia.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden shadow-lg card">
+          <img src="https://f.i.uol.com.br/fotografia/2023/10/11/1697063888652723d021d36_1697063888_3x2_rt.jpg" alt="Leito de rio seco na Amazônia durante a seca" class="w-full h-48 object-cover">
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg card">
+          <img src="https://s2-extra.glbimg.com/kHzAOvNdQMt4EMjJzfgmu-6x-DI=/0x0:3125x2125/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f551ea7087a47f39ead75f64041559a/internal_photos/bs/2023/Z/K/RdOgPXRcicUsRnw1vN5Q/antes-e-depois.jpg" alt="Vista de antes e depois da seca na Amazônia" class="w-full h-48 object-cover">
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg card">
+          <img src="https://agazetadoacre.com/wp-content/uploads/2023/10/seca-no-lago-tefe-no-amazonas-em-fotos-de-28-e-29-de-setembro-de-2023-1696346731871_v2_900x506.jpg" alt="Seca histórica de 2023, leito do Rio Negro exposto em Manaus" class="w-full h-48 object-cover">
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg card">
+          <img src="https://media.gazetadopovo.com.br/2009/11/a06e970837d3d9de08e13d4e7ad8145b-gpLarge.jpg" alt="Região da seca de 2009 em Manaus, com embarcação encalhada" class="w-full h-48 object-cover">
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg card">
+          <img src="https://s2-g1.glbimg.com/3LHbpn9XlKhWCQqt8ZutF-HvUcU=/0x0:1920x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/n/g/cAmANoRpyNAu3IACU6IQ/globo-canal-4-20231005-1200-frame-252279.jpeg" alt="Botos mortos em Tefé, Amazonas, durante a seca extrema de 2023" class="w-full h-48 object-cover">
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg card">
+          <img src="https://f.i.uol.com.br/folha/cotidiano/images/12136169.jpeg" alt="Cheia de 2012 em Manaus com ruas alagadas" class="w-full h-48 object-cover">
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg card">
+          <img src="https://wwfbrnew.awsassets.panda.org/img/original/23052021___negro_river_flood_feira_manaus_moderna__amazonas___copyright_marcio_james_.jpg" alt="Cheia histórica do Rio Negro de 2021 em Manaus" class="w-full h-48 object-cover">
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg card">
+          <img src="https://i0.wp.com/revistaamazonia.com.br/wp-content/uploads/2024/08/Desmatamento-na-Amazonia-entenda-as-principais-causas-e-consequencias.webp" alt="Desmatamento na Amazônia" class="w-full h-48 object-cover">
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg card">
+          <img src="https://ac24horas.com/wp-content/uploads/2024/06/destacada-queimada-queimadas-995x600-1.jpg" alt="Incêndio florestal na Amazônia" class="w-full h-48 object-cover">
+        </div>
+      </div>
+    </section>
 
-       <section id="previsoes" class="my-12">
-            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Previsões ENOS 2023-2025</h2>
-            <p class="text-center text-gray-600 mb-8">Análise de previsões para os eventos de El Niño e La Niña usando inteligência artificial</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <!-- Card El Niño -->
-                <div class="prediction-card elnino-card bg-white rounded-xl shadow-lg p-4">
-                    <h3 class="text-xl font-bold text-red-700 mb-2">El Niño 2023-2024</h3>
-                    <img src="elnino.png" alt="Padrão observado do El Niño 2023-2024" class="w-full h-48 object-contain mb-3 rounded-lg">
-                    <p class="text-sm text-gray-700">
-                        O evento de El Niño 2023-2024 caracterizou-se por anomalias positivas de temperatura na região do Pacífico equatorial, com impactos significativos no regime de chuvas na Amazônia.
-                    </p>
-                </div>
-                
-                <!-- Card La Niña -->
-                <div class="prediction-card lanina-card bg-white rounded-xl shadow-lg p-4">
-                    <h3 class="text-xl font-bold text-blue-700 mb-2">La Niña 2024-2025</h3>
-                    <img src="lanina.png" alt="Padrão observado da La Niña 2024-2025" class="w-full h-48 object-contain mb-3 rounded-lg">
-                    <p class="text-sm text-gray-700">
-                        Previsão indica a formação de um evento La Niña moderado no segundo semestre de 2024, com resfriamento anômalo no Pacífico equatorial central e oriental.
-                    </p>
-                </div>
-                
-                <!-- Card Previsão ML -->
-                <div class="prediction-card ml-card bg-white rounded-xl shadow-lg p-4">
-                    <h3 class="text-xl font-bold text-green-700 mb-2">Previsão com Machine Learning</h3>
-                    <img src="previsao_ml.png" alt="Previsão de séries temporais com Machine Learning" class="w-full h-48 object-contain mb-3 rounded-lg">
-                    <p class="text-sm text-gray-700">
-                        Modelos de machine learning aplicados às séries temporais de temperatura da superfície do mar mostram a transição de El Niño para La Niña ao longo de 2024-2025.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Análise dos Resultados</h3>
-                <p class="text-gray-700 mb-4">
-                    Nossos modelos de previsão baseados em machine learning indicam uma transição do evento El Niño (2023-2024) para condições de La Niña (2024-2025). Esta transição terá impactos significativos no regime de chuvas na Amazônia:
-                </p>
-                <ul class="list-disc list-inside space-y-2 text-gray-700">
-                    <li><strong>El Niño 2023-2024:</strong> Associado à redução de chuvas na região norte da Amazônia, aumentando o risco de secas e incêndios florestais</li>
-                    <li><strong>Transição 2024:</strong> Período de normalização gradual das condições climáticas</li>
-                    <li><strong>La Niña 2024-2025:</strong> Previsão de aumento de chuvas na região norte, com potencial benefício para a recuperação dos níveis dos rios</li>
-                </ul>
-                <p class="text-gray-700 mt-4">
-                    Estes resultados reforçam a importância do monitoramento contínuo das condições oceânicas e atmosféricas para a previsão de eventos extremos na região amazônica.
-                </p>
-            </div>
-        </section>
+    <section id="previsoes" class="my-12">
+      <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Previsões ENOS 2023-2025</h2>
+      <p class="text-center text-gray-600 mb-8">Análise de previsões para os eventos de El Niño e La Niña usando inteligência artificial</p>
 
-        <!-- NOVA SEÇÃO: ANÁLISE DE MAPAS -->
-        <section id="analise-mapas" class="my-12">
-            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Análise de Mapas da Bacia Amazônica</h2>
-            <p class="text-center text-gray-600 mb-8">Análise espacial da diversidade climática e topográfica da região amazônica</p>
-            
-            <!-- Mapa Bivariado -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
-                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Mapa Bivariado: Temperatura x Precipitação</h3>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <div class="map-container">
-                        <img src="mapa1.png" alt="Mapa Bivariado - Temperatura x Precipitação" class="w-full h-auto">
-                        <div class="map-legend">
-                            <p class="text-sm text-gray-600 mb-2 text-center"><strong>Mapa 1:</strong> Bivariado - Temperatura x Precipitação Bacia Amazônica - Dados Chelsa Climate 1km</p>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Diversidade de Combinações Climáticas</h4>
-                        <p class="text-gray-700 mb-4">
-                            Este mapa bivariado apresenta a relação entre temperatura e precipitação na bacia amazônica, revelando <strong>25 combinações distintas</strong> resultantes da intersecção de 5 quintis para cada variável.
-                        </p>
-                        
-                        <div class="bg-blue-50 p-4 rounded-lg mb-4">
-                            <h5 class="font-semibold text-blue-800 mb-2">Interpretação das Combinações:</h5>
-                            <ul class="list-disc list-inside text-sm text-blue-700">
-                                <li>Áreas em <strong>tons de lilás</strong>: Baixa temperatura com Alta precipitação</li>
-                                <li>Áreas em <strong>tons de ciano</strong>: Alta temperatura com Baixa precipitação</li>
-                                <li>Áreas em <strong>tons de anil</strong>: Alta temperatura com Alta precipitação</li>
-                                <li>Áreas em <strong>tons claros</strong>: Baixa temperatura com Baixa precipitação</li>
-                                <li>Áreas em <strong>gradientes</strong>: Mosaicos de combinações intermediárias</li>
-                            </ul>
-                        </div>
-                        
-                        <p class="text-gray-700 mb-4">
-                            Esta análise permite identificar padrões regionais específicos, como áreas sujeitas a alto estresse térmico e hídrico, bem como zonas com condições mais amenas que funcionam como refúgios ecológicos. A detecção desses gradientes ambientais possibilita ainda a identificação de sítios prioritários para conservação e manejo adaptativo, fundamentais para o planejamento de estratégias frente às mudanças climáticas.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Mapa de Relevo -->
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Mapa de Relevo: Topografia da Bacia Amazônica</h3>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <div class="map-container">
-                        <img src="mapa2.png" alt="Mapa de Relevo - Bacia Amazônica" class="w-full h-auto">
-                        <div class="map-legend">
-                            <p class="text-sm text-gray-600 mb-2 text-center"><strong>Mapa 2:</strong> Relevo - Bacia Amazônica</p>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Características Topográficas</h4>
-                        <p class="text-gray-700 mb-4">
-                            Este mapa de relevo com sombreamento (hillshade) apresenta em detalhe a topografia da Bacia Amazônica, evidenciando desde as extensas planícies aluviais e áreas de várzea até as regiões de maior altitude localizadas no escudo das Guianas e no Brasil Central. A variação altimétrica retratada no mapa vai de 0 metros, em áreas inundáveis e planícies fluviais, a mais de 2000 metros em áreas montanhosas.
-                        </p>
-                        
-                        <div class="bg-green-50 p-4 rounded-lg mb-4">
-                            <h5 class="font-semibold text-green-800 mb-2">Principais Sub-bacias Representadas:</h5>
-                            <ul class="list-disc list-inside text-sm text-green-700">
-                                <li>Rio Negro</li>
-                                <li>Japurá</li>
-                                <li>Javari/Juruá</li>
-                                <li>Purus</li>
-                                <li>Madeira</li>
-                                <li>Trombetas/Uatumã</li>
-                                <li>Xingu</li>
-                                <li>Tapajós</li>
-                                <li>Paru/Jari</li>
-                            </ul>
-                        </div>
-                        
-                        <p class="text-gray-700">
-                           Os dados utilizados são provenientes do LBA (Large-Scale Biosphere-Atmosphere Experiment in Amazonia), constituindo uma base robusta para análises de relevo e suas implicações ambientais. A representação em hillshade facilita a visualização das formas de relevo e sua relação com os sistemas hidrográficos, fundamentais para estudos de variabilidade climática, modelagem hidrológica e planejamento territorial sustentável.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Análise Integrada -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 mt-8">
-                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Análise Integrada dos Mapas</h3>
-                <p class="text-gray-700 mb-4">
-                    A combinação da análise bivariada (temperatura x precipitação) com o mapa de relevo permite identificar correlações importantes entre topografia e padrões climáticos na bacia amazônica:
-                </p>
-                
-                <ul class="list-disc list-inside space-y-2 text-gray-700">
-                    <li>Áreas de maior altitude tendem a apresentar temperaturas mais amenas e padrões específicos de precipitação</li>
-                    <li>As planícies de inundação mostram combinações específicas de temperatura e umidade influenciadas pelos regimes fluviais</li>
-                    <li>Os escudos das Guianas e brasileiro criam efeitos orográficos que influenciam a distribuição das chuvas</li>
-                    <li>As áreas de transição entre diferentes unidades topográficas frequentemente apresentam maior diversidade de combinações climáticas</li>
-                </ul>
-                
-                <p class="text-gray-700 mt-4">
-                    Esta análise integrada é fundamental para compreender a distribuição da biodiversidade e os padrões de vulnerabilidade às mudanças climáticas na região amazônica, fornecendo subsídios para políticas de conservação e adaptação.
-                </p>
-            </div>
-        </section>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <!-- Card El Niño -->
+        <div class="prediction-card elnino-card bg-white rounded-xl shadow-lg p-4">
+          <h3 class="text-xl font-bold text-red-700 mb-2">El Niño 2023-2024</h3>
+          <img src="elnino.png" alt="Padrão observado do El Niño 2023-2024" class="w-full h-48 object-contain mb-3 rounded-lg">
+          <p class="text-sm text-gray-700">
+            O evento de El Niño 2023-2024 caracterizou-se por anomalias positivas de temperatura na região do Pacífico equatorial, com impactos significativos no regime de chuvas na Amazônia.
+          </p>
+        </div>
 
-        <!-- SEÇÃO DE INCÊNDIOS FLORESTAIS - BOITATÁ ATUALIZADA -->
-        <section id="incendios" class="my-12">
-            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Incêndios Florestais em Boca do Acre</h2>
-            <p class="text-center text-gray-600 mb-8">Resultados da inteligência Boitatá: Mapa de classes de risco de incêndios florestais para o município de Boca do Acre - AM</p>
-            
-            <div class="max-w-4xl mx-auto">
-                <!-- Mapa de Risco + Incêndios 2016 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 mb-8 flex flex-col items-center">
-                    <h3 class="text-xl font-bold text-orange-700 mb-4">Mapa de Risco de Incêndios Florestais - 2016</h3>
-                    <img src="risco_incendio.jpg" alt="Mapa de classes de risco de incêndios florestais - Boca do Acre - AM - 2016" class="w-full max-w-2xl h-auto rounded-lg shadow-md mb-4">
-                    <p class="text-center text-gray-700 font-medium">
-                        Mapa de classes de risco de incêndios florestais devido contribuições ambientais em ano de evento extremo para o município de Boca do Acre - AM
-                    </p>
-                    <p class="text-sm text-gray-500 mt-4 text-center">
-                        Ano base: 2016 | Fonte: Dados processados pelo núcleo Boitatá do projeto SereIA
-                    </p>
-                </div>
-                
-                <!-- Análise dos Resultados -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
-                    <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Análise dos Resultados</h3>
-                    <p class="text-gray-700 mb-4">
-                        A inteligência <strong>Boitatá</strong>, especializada no monitoramento de fogo, processou dados ambientais para gerar este mapa de classes de risco de incêndios florestais no município de Boca do Acre (AM) para o ano de <strong>2016</strong>, considerado um ano de evento extremo. A análise considerou múltiplas contribuições ambientais para determinar a vulnerabilidade da região ao fogo.
-                    </p>
-                    
-                    <div class="bg-orange-50 p-4 rounded-lg mb-4">
-                        <h5 class="font-semibold text-orange-800 mb-2">Classes de Risco Representadas:</h5>
-                        <ul class="list-disc list-inside space-y-1 text-sm text-orange-700">
-                            <li><strong>Baixo Risco:</strong> Áreas com menor probabilidade de ocorrência de incêndios</li>
-                            <li><strong>Médio Risco:</strong> Regiões que demandam monitoramento constante</li>
-                            <li><strong>Alto Risco:</strong> Áreas prioritárias para ações de prevenção</li>
-                            <li><strong>Muito Alto Risco:</strong> Zonas críticas com maior vulnerabilidade ao fogo</li>
-                        </ul>
-                    </div>
-                    
-                    <p class="text-gray-700 mb-4">
-                        Os resultados indicam que, durante o ano de evento extremo de 2016, as áreas com maior propensão a incêndios estão concentradas em regiões específicas do município, correlacionando-se com variáveis como:
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
-                        <li>Déficit hídrico acumulado durante a estação seca</li>
-                        <li>Tipos de cobertura vegetal e uso do solo</li>
-                        <li>Proximidade com áreas de desmatamento recente</li>
-                        <li>Condições de umidade do solo em múltiplas camadas</li>
-                    </ul>
-                    <p class="text-gray-700">
-                        Este mapa constitui uma ferramenta fundamental para o planejamento de ações preventivas, alocação de recursos e definição de estratégias de combate a incêndios florestais no município de Boca do Acre, contribuindo para a proteção da floresta e das comunidades locais.
-                    </p>
-                </div>
-            </div>
-        </section>
+        <!-- Card La Niña -->
+        <div class="prediction-card lanina-card bg-white rounded-xl shadow-lg p-4">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">La Niña 2024-2025</h3>
+          <img src="lanina.png" alt="Padrão observado da La Niña 2024-2025" class="w-full h-48 object-contain mb-3 rounded-lg">
+          <p class="text-sm text-gray-700">
+            Previsão indica a formação de um evento La Niña moderado no segundo semestre de 2024, com resfriamento anômalo no Pacífico equatorial central e oriental.
+          </p>
+        </div>
 
-        <!-- SEÇÃO DE RESULTADOS - NÚCLEO NAIÁ (TERRA) -->
-        <section id="resultados" class="my-12">
-            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Resultados: Monitoramento da Saúde da Floresta</h2>
-            <p class="text-center text-gray-600 mb-4">Núcleo <strong class="text-emerald-700">Naiá (Terra)</strong> - Análise da vegetação nas sub-bacias do Madeira, Tapajós e Xingu</p>
-            <p class="text-center text-gray-600 mb-8">Séries temporais mensais (2023-2024): EVI, LAI, umidade do solo (0-10cm e 0-200cm) e anomalias</p>
-            
-            <!-- MAPA PRINCIPAL: Anomalias de EVI - ESTAÇÃO SECA - 2023 e 2024 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
-                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Anomalias de EVI nas ESTAÇÕES SECAS - Sub-bacias - 2023 E 2024</h3>
-                <p class="text-gray-600 mb-4">Análise das anomalias do Índice de Vegetação Melhorado (EVI) para o ano de 2023 e 2024 para a estação seca (SON - setembro/outubro/novembro) com ou sem QA.</p>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <div class="map-container">
-                        <img src="evi4.jpeg" alt="Anomalias de EVI nas sub-bacias - 2023 e 2024" class="w-full h-auto">
-                        <div class="map-legend">
-                            <p class="text-sm text-gray-600 text-center"><strong>Mapa:</strong> Análise das anomalias do Índice de Vegetação Melhorado (EVI) para os anos de 2023 e 2024, com destaque para a estação seca (SON - setembro/outubro/novembro) com ou sem QA.</p>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Interpretação das Anomalias</h4>
-                        <p class="text-gray-700 mb-4">
-                            O mapa apresenta quatro painéis que permitem comparar as anomalias de EVI nas diferentes sub-bacias:
-                        </p>
-                        
-                        <div class="bg-amber-50 p-4 rounded-lg mb-4">
-                            <h5 class="font-semibold text-amber-800 mb-2">Destaques por Período:</h5>
-                            <ul class="list-disc list-inside text-sm text-amber-700">
-                                <li><strong>2023 (SON):</strong> Dados sem controle de qualidade agregaram poucas diferenças nas anomalias, contudo inclui todos os dados e isso pode agregar alguns ruídos.</li>
-                                <li><strong>2024 (SON):</strong> Impacto sucessivo das secas de 2023-2024, e esse efeito é observado para ambos tratamentos dos dados com ou sem QA.</li>
-                            </ul>
-                        </div>
-                        
-                        <p class="text-gray-700">
-                            As sub-bacias do Madeira, Tapajós e Xingu apresentam as anomalias mais negativas durante a seca, confirmando a vulnerabilidade destas regiões à secas recorrentes.
-                        </p>
-                    </div>
-                </div>
+        <!-- Card Previsão ML -->
+        <div class="prediction-card ml-card bg-white rounded-xl shadow-lg p-4">
+          <h3 class="text-xl font-bold text-green-700 mb-2">Previsão com Machine Learning</h3>
+          <img src="previsao_ml.png" alt="Previsão de séries temporais com Machine Learning" class="w-full h-48 object-contain mb-3 rounded-lg">
+          <p class="text-sm text-gray-700">
+            Modelos de machine learning aplicados às séries temporais de temperatura da superfície do mar mostram a transição de El Niño para La Niña ao longo de 2024-2025.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6">
+        <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Análise dos Resultados</h3>
+        <p class="text-gray-700 mb-4">
+          Nossos modelos de previsão baseados em machine learning indicam uma transição do evento El Niño (2023-2024) para condições de La Niña (2024-2025). Esta transição terá impactos significativos no regime de chuvas na Amazônia:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li><strong>El Niño 2023-2024:</strong> Associado à redução de chuvas na região norte da Amazônia, aumentando o risco de secas e incêndios florestais</li>
+          <li><strong>Transição 2024:</strong> Período de normalização gradual das condições climáticas</li>
+          <li><strong>La Niña 2024-2025:</strong> Previsão de aumento de chuvas na região norte, com potencial benefício para a recuperação dos níveis dos rios</li>
+        </ul>
+        <p class="text-gray-700 mt-4">
+          Estes resultados reforçam a importância do monitoramento contínuo das condições oceânicas e atmosféricas para a previsão de eventos extremos na região amazônica.
+        </p>
+      </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: ANÁLISE DE MAPAS -->
+    <section id="analise-mapas" class="my-12">
+      <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Análise de Mapas da Bacia Amazônica</h2>
+      <p class="text-center text-gray-600 mb-8">Análise espacial da diversidade climática e topográfica da região amazônica</p>
+
+      <!-- Mapa Bivariado -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Mapa Bivariado: Temperatura x Precipitação</h3>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="map-container">
+            <img src="mapa1.png" alt="Mapa Bivariado - Temperatura x Precipitação" class="w-full h-auto">
+            <div class="map-legend">
+              <p class="text-sm text-gray-600 mb-2 text-center"><strong>Mapa 1:</strong> Bivariado - Temperatura x Precipitação Bacia Amazônica - Dados Chelsa Climate 1km</p>
             </div>
-            
-            <!-- SÉRIES TEMPORAIS - EVI e LAI -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
-                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Índices de Vegetação - Todas as Sub-bacias</h3>
-                <p class="text-gray-600 mb-4">Séries temporais mensais (2023-2024) para EVI e LAI nas 9 sub-bacias amazônicas</p>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-4">
-                    <!-- EVI -->
-                    <div class="border rounded-lg p-4">
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">EVI - Índice de Vegetação Melhorado</h4>
-                        <img src="evi.png" alt="Série temporal EVI - Todas as sub-bacias" class="w-full h-auto object-contain mb-2">
-                        <p class="text-xs text-gray-500 text-center mt-2">Série temporal EVI por sub-bacia (2023-2024). Dados: MODIS.</p>
-                    </div>
-                    
-                    <!-- LAI -->
-                    <div class="border rounded-lg p-4">
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">LAI - Índice de Área Foliar</h4>
-                        <img src="lai.png" alt="Série temporal LAI - Todas as sub-bacias" class="w-full h-auto object-contain mb-2">
-                        <p class="text-xs text-gray-500 text-center mt-2">Série temporal LAI por sub-bacia (2023-2024). Dados: MODIS.</p>
-                    </div>
-                </div>
-                
-                <div class="bg-blue-50 p-4 rounded-lg mt-2">
-                    <p class="text-sm text-blue-800">
-                        <strong>Observação:</strong> As séries temporais permitem comparar o comportamento sazonal da vegetação entre as diferentes sub-bacias, destacando os períodos de maior e menor atividade fotossintética ao longo de 2023-2024.
-                    </p>
-                </div>
-            </div>
-            
-            <!-- UMIDADE DO SOLO - Valores Absolutos -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
-                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Umidade do Solo - Valores Absolutos</h3>
-                <p class="text-gray-600 mb-4">Séries temporais mensais (2023-2024) para umidade do solo em duas profundidades</p>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <!-- Solo 0-10cm -->
-                    <div class="border rounded-lg p-4">
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">Umidade do Solo - Camada Superficial (0-10 cm)</h4>
-                        <img src="solo1.png" alt="Umidade do solo 0-10cm - Todas as sub-bacias" class="w-full h-auto object-contain mb-2">
-                        <p class="text-xs text-gray-500 text-center mt-2">Umidade do solo na camada superficial (0-10 cm) - Valores mensais por sub-bacia (2023-2024).</p>
-                    </div>
-                    
-                    <!-- Solo 0-200cm -->
-                    <div class="border rounded-lg p-4">
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">Umidade do Solo - Perfil Completo (0-200 cm)</h4>
-                        <img src="solo0_200.png" alt="Umidade do solo 0-200cm - Todas as sub-bacias" class="w-full h-auto object-contain mb-2">
-                        <p class="text-xs text-gray-500 text-center mt-2">Umidade do solo no perfil (0-200 cm) - Valores mensais por sub-bacia (2023-2024).</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- ANOMALIAS DE UMIDADE DO SOLO -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
-                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Anomalias de Umidade do Solo</h3>
-                <p class="text-gray-600 mb-4">Séries temporais mensais (2023-2024) das anomalias de umidade do solo em duas profundidades</p>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <!-- Anomalias 0-10cm -->
-                    <div class="border rounded-lg p-4">
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">Anomalias - Camada Superficial (0-10 cm)</h4>
-                        <img src="anomaliassolo0_10.png" alt="Anomalias umidade solo 0-10cm" class="w-full h-auto object-contain mb-2">
-                        <p class="text-xs text-gray-500 text-center mt-2">Anomalias mensais de umidade do solo (0-10 cm) por sub-bacia (2023-2024). Valores positivos (azul) indicam solo mais úmido que a média; negativos (vermelho) indicam solo mais seco.</p>
-                    </div>
-                    
-                    <!-- Anomalias 0-200cm -->
-                    <div class="border rounded-lg p-4">
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">Anomalias - Perfil Completo (0-200 cm)</h4>
-                        <img src="anomali_solo0_200cm.png" alt="Anomalias umidade solo 0-200cm" class="w-full h-auto object-contain mb-2">
-                        <p class="text-xs text-gray-500 text-center mt-2">Anomalias mensais de umidade do solo (0-200 cm) por sub-bacia (2023-2024). Valores negativos acentuados indicam déficit hídrico profundo durante o período de estiagem.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- ANÁLISE INTEGRADA: MADEIRA, TAPAJÓS E XINGU -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
-                <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Análise Integrada: Sub-bacias Vulneráveis</h3>
-                <p class="text-gray-600 mb-4">Destaque para Madeira, Tapajós e Xingu - áreas com respostas devido às secas recorrentes. Ganham destaques as subbacias Paru/Jari, Juruá e leste do Rio Negro quando considerados os dados com QA.</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                    <!-- Madeira -->
-                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-600">
-                        <h4 class="font-semibold text-red-800 mb-2 flex items-center"><span class="text-2xl mr-2">🌿</span> Sub-bacia do Madeira</h4>
-                        <ul class="text-sm text-red-700 space-y-1 list-disc list-inside">
-                            <li>EVI: Redução acentuada nos meses de seca principalmente na porção central e sul</li>
-                            <li>LAI: Queda na área foliar em 2023-2024</li>
-                            <li>Anomalias solo: Déficit persistente em ambas profundidades</li>
-                            <li class="font-semibold">Vulnerabilidade: Alta - secas recorrentes</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Tapajós -->
-                    <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-600">
-                        <h4 class="font-semibold text-orange-800 mb-2 flex items-center"><span class="text-2xl mr-2">🌳</span> Sub-bacia do Tapajós</h4>
-                        <ul class="text-sm text-orange-700 space-y-1 list-disc list-inside">
-                            <li>EVI: Anomalias negativas na estação seca principalmente na porção central e sul</li>
-                            <li>LAI: Comportamento sazonal abaixo da média das demais subbacias</li>
-                            <li>Anomalias solo: Déficit moderado em 0-200cm</li>
-                            <li class="font-semibold">Vulnerabilidade: Média-Alta</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Xingu -->
-                    <div class="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-600">
-                        <h4 class="font-semibold text-amber-800 mb-2 flex items-center"><span class="text-2xl mr-2">🌲</span> Sub-bacia do Xingu</h4>
-                        <ul class="text-sm text-amber-700 space-y-1 list-disc list-inside">
-                            <li>EVI: Queda significativa em toda a subbacia em 2024 principalmente quando considerados os dados do QA</li>
-                            <li>LAI: Padrão média comparado às demais bacias</li>
-                            <li>Anomalias solo: Déficit acumulado em meses específicos e abaixo da média das demais subbacias</li>
-                            <li class="font-semibold">Vulnerabilidade: Alta - seca prolongada</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 p-4 rounded-lg">
-                    <h5 class="font-semibold text-gray-800 mb-2">Padrões Observados:</h5>
-                    <p class="text-gray-700 text-sm">
-                        As três sub-bacias apresentam respostas entre anomalias negativas de EVI durante a estação seca e déficit de umidade do solo desde camadas rasas até mais profundidade. O Madeira mostra o padrão mais crítico, com anomalias de solo 0-200cm atingindo valores extremamente negativos (-160) em meados de 2024, indicando esgotamento das reservas hídricas profundas. O Tapajós apresenta recuperação mais rápida da umidade superficial, enquanto o Xingu demonstra déficit persistente em ambas camadas. As subbacias como Paru/Jari, Japurá e porção leste da subbacia do Rio Negro, passam a apresentar anomalias negativas de EVI mais significativas na estação seca quando consideramos os dados com QA.
-                    </p>
-                </div>
-            </div>
-            
-            <p class="text-xs text-gray-500 mt-4 text-center border-t pt-3">
-                Dados processados pelo núcleo Naiá (Terra) do projeto SereIA. Fontes: MODIS (EVI/LAI) e modelos de umidade do solo integrados com dados GRACE.
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Diversidade de Combinações Climáticas</h4>
+            <p class="text-gray-700 mb-4">
+              Este mapa bivariado apresenta a relação entre temperatura e precipitação na bacia amazônica, revelando <strong>25 combinações distintas</strong> resultantes da intersecção de 5 quintis para cada variável.
             </p>
-            
-            <!-- Link para mais resultados -->
-            <p class="text-center mt-8">
-                <a href="https://drive.google.com/drive/folders/1xBg0Jgml4sskTRf4VtAlildqw9EnJCnw?usp=drive_link" target="_blank" class="text-blue-600 font-semibold hover:underline">
-                📂 Acesse todos os gráficos e dados completos no Google Drive
-                </a>
-            </p>
-        </section>
 
-        <section id="contato" class="my-12">
-            <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Contato</h2>
-            <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
-                <p class="text-lg">
-                    Para mais informações sobre o projeto SereIA, entre em contato através dos canais abaixo:
-                </p>
-                <ul class="list-disc list-inside space-y-2 mt-4">
-                    <li>
-                        <strong class="font-bold">E-mail:</strong>
-                        <a href="mailto:lab.sereia@gmail.com" 
-                           class="text-emerald-700 hover:text-emerald-900 break-words">
-                           lab.sereia@gmail.com
-                        </a>
-                    </li>
-                    <li>
-                        <strong class="font-bold">Instagram:</strong>
-                        <a href="https://www.instagram.com/sereiaml" target="_blank"
-                           class="text-emerald-700 hover:text-emerald-900 break-words">
-                          @sereiaml
-                        </a>
-                    </li>
-                </ul>
+            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+              <h5 class="font-semibold text-blue-800 mb-2">Interpretação das Combinações:</h5>
+              <ul class="list-disc list-inside text-sm text-blue-700">
+                <li>Áreas em <strong>tons de lilás</strong>: Baixa temperatura com Alta precipitação</li>
+                <li>Áreas em <strong>tons de ciano</strong>: Alta temperatura com Baixa precipitação</li>
+                <li>Áreas em <strong>tons de anil</strong>: Alta temperatura com Alta precipitação</li>
+                <li>Áreas em <strong>tons claros</strong>: Baixa temperatura com Baixa precipitação</li>
+                <li>Áreas em <strong>gradientes</strong>: Mosaicos de combinações intermediárias</li>
+              </ul>
             </div>
-        </section>
-    </main>
 
-    <footer class="bg-emerald-700 text-white text-center py-6">
-        <p>© 2025 SereIA. Todos os direitos reservados.</p>
-    </footer>
+            <p class="text-gray-700 mb-4">
+              Esta análise permite identificar padrões regionais específicos, como áreas sujeitas a alto estresse térmico e hídrico, bem como zonas com condições mais amenas que funcionam como refúgios ecológicos. A detecção desses gradientes ambientais possibilita ainda a identificação de sítios prioritários para conservação e manejo adaptativo, fundamentais para o planejamento de estratégias frente às mudanças climáticas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mapa de Relevo -->
+      <div class="bg-white rounded-2xl shadow-lg p-6">
+        <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Mapa de Relevo: Topografia da Bacia Amazônica</h3>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="map-container">
+            <img src="mapa2.png" alt="Mapa de Relevo - Bacia Amazônica" class="w-full h-auto">
+            <div class="map-legend">
+              <p class="text-sm text-gray-600 mb-2 text-center"><strong>Mapa 2:</strong> Relevo - Bacia Amazônica</p>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Características Topográficas</h4>
+            <p class="text-gray-700 mb-4">
+              Este mapa de relevo com sombreamento (hillshade) apresenta em detalhe a topografia da Bacia Amazônica, evidenciando desde as extensas planícies aluviais e áreas de várzea até as regiões de maior altitude localizadas no escudo das Guianas e no Brasil Central. A variação altimétrica retratada no mapa vai de 0 metros, em áreas inundáveis e planícies fluviais, a mais de 2000 metros em áreas montanhosas.
+            </p>
+
+            <div class="bg-green-50 p-4 rounded-lg mb-4">
+              <h5 class="font-semibold text-green-800 mb-2">Principais Sub-bacias Representadas:</h5>
+              <ul class="list-disc list-inside text-sm text-green-700">
+                <li>Rio Negro</li>
+                <li>Japurá</li>
+                <li>Javari/Juruá</li>
+                <li>Purus</li>
+                <li>Madeira</li>
+                <li>Trombetas/Uatumã</li>
+                <li>Xingu</li>
+                <li>Tapajós</li>
+                <li>Paru/Jari</li>
+              </ul>
+            </div>
+
+            <p class="text-gray-700">
+              Os dados utilizados são provenientes do LBA (Large-Scale Biosphere-Atmosphere Experiment in Amazonia), constituindo uma base robusta para análises de relevo e suas implicações ambientais. A representação em hillshade facilita a visualização das formas de relevo e sua relação com os sistemas hidrográficos, fundamentais para estudos de variabilidade climática, modelagem hidrológica e planejamento territorial sustentável.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Análise Integrada -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mt-8">
+        <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Análise Integrada dos Mapas</h3>
+        <p class="text-gray-700 mb-4">
+          A combinação da análise bivariada (temperatura x precipitação) com o mapa de relevo permite identificar correlações importantes entre topografia e padrões climáticos na bacia amazônica:
+        </p>
+
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li>Áreas de maior altitude tendem a apresentar temperaturas mais amenas e padrões específicos de precipitação</li>
+          <li>As planícies de inundação mostram combinações específicas de temperatura e umidade influenciadas pelos regimes fluviais</li>
+          <li>Os escudos das Guianas e brasileiro criam efeitos orográficos que influenciam a distribuição das chuvas</li>
+          <li>As áreas de transição entre diferentes unidades topográficas frequentemente apresentam maior diversidade de combinações climáticas</li>
+        </ul>
+
+        <p class="text-gray-700 mt-4">
+          Esta análise integrada é fundamental para compreender a distribuição da biodiversidade e os padrões de vulnerabilidade às mudanças climáticas na região amazônica, fornecendo subsídios para políticas de conservação e adaptação.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE INCÊNDIOS FLORESTAIS - BOITATÁ ATUALIZADA -->
+    <section id="incendios" class="my-12">
+      <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Incêndios Florestais em Boca do Acre</h2>
+      <p class="text-center text-gray-600 mb-8">Resultados da inteligência Boitatá: Mapa de classes de risco de incêndios florestais para o município de Boca do Acre - AM</p>
+
+      <div class="max-w-4xl mx-auto">
+        <!-- Mapa de Risco + Incêndios 2016 -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 mb-8 flex flex-col items-center">
+          <h3 class="text-xl font-bold text-orange-700 mb-4">Mapa de Risco de Incêndios Florestais - 2016</h3>
+          <img src="risco_incendio.jpg" alt="Mapa de classes de risco de incêndios florestais - Boca do Acre - AM - 2016" class="w-full max-w-2xl h-auto rounded-lg shadow-md mb-4">
+          <p class="text-center text-gray-700 font-medium">
+            Mapa de classes de risco de incêndios florestais devido contribuições ambientais em ano de evento extremo para o município de Boca do Acre - AM
+          </p>
+          <p class="text-sm text-gray-500 mt-4 text-center">
+            Ano base: 2016 | Fonte: Dados processados pelo núcleo Boitatá do projeto SereIA
+          </p>
+        </div>
+
+        <!-- Análise dos Resultados -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+          <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Análise dos Resultados</h3>
+          <p class="text-gray-700 mb-4">
+            A inteligência <strong>Boitatá</strong>, especializada no monitoramento de fogo, processou dados ambientais para gerar este mapa de classes de risco de incêndios florestais no município de Boca do Acre (AM) para o ano de <strong>2016</strong>, considerado um ano de evento extremo. A análise considerou múltiplas contribuições ambientais para determinar a vulnerabilidade da região ao fogo.
+          </p>
+
+          <div class="bg-orange-50 p-4 rounded-lg mb-4">
+            <h5 class="font-semibold text-orange-800 mb-2">Classes de Risco Representadas:</h5>
+            <ul class="list-disc list-inside space-y-1 text-sm text-orange-700">
+              <li><strong>Baixo Risco:</strong> Áreas com menor probabilidade de ocorrência de incêndios</li>
+              <li><strong>Médio Risco:</strong> Regiões que demandam monitoramento constante</li>
+              <li><strong>Alto Risco:</strong> Áreas prioritárias para ações de prevenção</li>
+              <li><strong>Muito Alto Risco:</strong> Zonas críticas com maior vulnerabilidade ao fogo</li>
+            </ul>
+          </div>
+
+          <p class="text-gray-700 mb-4">
+            Os resultados indicam que, durante o ano de evento extremo de 2016, as áreas com maior propensão a incêndios estão concentradas em regiões específicas do município, correlacionando-se com variáveis como:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+            <li>Déficit hídrico acumulado durante a estação seca</li>
+            <li>Tipos de cobertura vegetal e uso do solo</li>
+            <li>Proximidade com áreas de desmatamento recente</li>
+            <li>Condições de umidade do solo em múltiplas camadas</li>
+          </ul>
+          <p class="text-gray-700">
+            Este mapa constitui uma ferramenta fundamental para o planejamento de ações preventivas, alocação de recursos e definição de estratégias de combate a incêndios florestais no município de Boca do Acre, contribuindo para a proteção da floresta e das comunidades locais.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE RESULTADOS - NÚCLEO NAIÁ (TERRA) -->
+    <section id="resultados" class="my-12">
+      <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Resultados: Monitoramento da Saúde da Floresta</h2>
+      <p class="text-center text-gray-600 mb-4">Núcleo <strong class="text-emerald-700">Naiá (Terra)</strong> - Análise da vegetação nas sub-bacias do Madeira, Tapajós e Xingu</p>
+      <p class="text-center text-gray-600 mb-8">Séries temporais mensais (2023-2024): EVI, LAI, umidade do solo (0-10cm e 0-200cm) e anomalias</p>
+
+      <!-- MAPA PRINCIPAL: Anomalias de EVI - ESTAÇÃO SECA - 2023 e 2024 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Anomalias de EVI nas ESTAÇÕES SECAS - Sub-bacias - 2023 E 2024</h3>
+        <p class="text-gray-600 mb-4">Análise das anomalias do Índice de Vegetação Melhorado (EVI) para o ano de 2023 e 2024 para a estação seca (SON - setembro/outubro/novembro) com ou sem QA.</p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="map-container">
+            <img src="evi4.jpeg" alt="Anomalias de EVI nas sub-bacias - 2023 e 2024" class="w-full h-auto">
+            <div class="map-legend">
+              <p class="text-sm text-gray-600 text-center"><strong>Mapa:</strong> Análise das anomalias do Índice de Vegetação Melhorado (EVI) para os anos de 2023 e 2024, com destaque para a estação seca (SON - setembro/outubro/novembro) com ou sem QA.</p>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Interpretação das Anomalias</h4>
+            <p class="text-gray-700 mb-4">
+              O mapa apresenta quatro painéis que permitem comparar as anomalias de EVI nas diferentes sub-bacias:
+            </p>
+
+            <div class="bg-amber-50 p-4 rounded-lg mb-4">
+              <h5 class="font-semibold text-amber-800 mb-2">Destaques por Período:</h5>
+              <ul class="list-disc list-inside text-sm text-amber-700">
+                <li><strong>2023 (SON):</strong> Dados sem controle de qualidade agregaram poucas diferenças nas anomalias, contudo inclui todos os dados e isso pode agregar alguns ruídos.</li>
+                <li><strong>2024 (SON):</strong> Impacto sucessivo das secas de 2023-2024, e esse efeito é observado para ambos tratamentos dos dados com ou sem QA.</li>
+              </ul>
+            </div>
+
+            <p class="text-gray-700">
+              As sub-bacias do Madeira, Tapajós e Xingu apresentam as anomalias mais negativas durante a seca, confirmando a vulnerabilidade destas regiões à secas recorrentes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SÉRIES TEMPORAIS - EVI e LAI -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Índices de Vegetação - Todas as Sub-bacias</h3>
+        <p class="text-gray-600 mb-4">Séries temporais mensais (2023-2024) para EVI e LAI nas 9 sub-bacias amazônicas</p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-4">
+          <!-- EVI -->
+          <div class="border rounded-lg p-4">
+            <h4 class="text-lg font-semibold text-gray-700 mb-3">EVI - Índice de Vegetação Melhorado</h4>
+            <img src="evi.png" alt="Série temporal EVI - Todas as sub-bacias" class="w-full h-auto object-contain mb-2">
+            <p class="text-xs text-gray-500 text-center mt-2">Série temporal EVI por sub-bacia (2023-2024). Dados: MODIS.</p>
+          </div>
+
+          <!-- LAI -->
+          <div class="border rounded-lg p-4">
+            <h4 class="text-lg font-semibold text-gray-700 mb-3">LAI - Índice de Área Foliar</h4>
+            <img src="lai.png" alt="Série temporal LAI - Todas as sub-bacias" class="w-full h-auto object-contain mb-2">
+            <p class="text-xs text-gray-500 text-center mt-2">Série temporal LAI por sub-bacia (2023-2024). Dados: MODIS.</p>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 p-4 rounded-lg mt-2">
+          <p class="text-sm text-blue-800">
+            <strong>Observação:</strong> As séries temporais permitem comparar o comportamento sazonal da vegetação entre as diferentes sub-bacias, destacando os períodos de maior e menor atividade fotossintética ao longo de 2023-2024.
+          </p>
+        </div>
+      </div>
+
+      <!-- UMIDADE DO SOLO - Valores Absolutos -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Umidade do Solo - Valores Absolutos</h3>
+        <p class="text-gray-600 mb-4">Séries temporais mensais (2023-2024) para umidade do solo em duas profundidades</p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Solo 0-10cm -->
+          <div class="border rounded-lg p-4">
+            <h4 class="text-lg font-semibold text-gray-700 mb-3">Umidade do Solo - Camada Superficial (0-10 cm)</h4>
+            <img src="solo1.png" alt="Umidade do solo 0-10cm - Todas as sub-bacias" class="w-full h-auto object-contain mb-2">
+            <p class="text-xs text-gray-500 text-center mt-2">Umidade do solo na camada superficial (0-10 cm) - Valores mensais por sub-bacia (2023-2024).</p>
+          </div>
+
+          <!-- Solo 0-200cm -->
+          <div class="border rounded-lg p-4">
+            <h4 class="text-lg font-semibold text-gray-700 mb-3">Umidade do Solo - Perfil Completo (0-200 cm)</h4>
+            <img src="solo0_200.png" alt="Umidade do solo 0-200cm - Todas as sub-bacias" class="w-full h-auto object-contain mb-2">
+            <p class="text-xs text-gray-500 text-center mt-2">Umidade do solo no perfil (0-200 cm) - Valores mensais por sub-bacia (2023-2024).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANOMALIAS DE UMIDADE DO SOLO -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Anomalias de Umidade do Solo</h3>
+        <p class="text-gray-600 mb-4">Séries temporais mensais (2023-2024) das anomalias de umidade do solo em duas profundidades</p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Anomalias 0-10cm -->
+          <div class="border rounded-lg p-4">
+            <h4 class="text-lg font-semibold text-gray-700 mb-3">Anomalias - Camada Superficial (0-10 cm)</h4>
+            <img src="anomaliassolo0_10.png" alt="Anomalias umidade solo 0-10cm" class="w-full h-auto object-contain mb-2">
+            <p class="text-xs text-gray-500 text-center mt-2">Anomalias mensais de umidade do solo (0-10 cm) por sub-bacia (2023-2024). Valores positivos (azul) indicam solo mais úmido que a média; negativos (vermelho) indicam solo mais seco.</p>
+          </div>
+
+          <!-- Anomalias 0-200cm -->
+          <div class="border rounded-lg p-4">
+            <h4 class="text-lg font-semibold text-gray-700 mb-3">Anomalias - Perfil Completo (0-200 cm)</h4>
+            <img src="anomali_solo0_200cm.png" alt="Anomalias umidade solo 0-200cm" class="w-full h-auto object-contain mb-2">
+            <p class="text-xs text-gray-500 text-center mt-2">Anomalias mensais de umidade do solo (0-200 cm) por sub-bacia (2023-2024). Valores negativos acentuados indicam déficit hídrico profundo durante o período de estiagem.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANÁLISE INTEGRADA: MADEIRA, TAPAJÓS E XINGU -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h3 class="text-2xl font-semibold text-emerald-800 mb-4">Análise Integrada: Sub-bacias Vulneráveis</h3>
+        <p class="text-gray-600 mb-4">Destaque para Madeira, Tapajós e Xingu - áreas com respostas devido às secas recorrentes. Ganham destaques as subbacias Paru/Jari, Juruá e leste do Rio Negro quando considerados os dados com QA.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <!-- Madeira -->
+          <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-600">
+            <h4 class="font-semibold text-red-800 mb-2 flex items-center"><span class="text-2xl mr-2">🌿</span> Sub-bacia do Madeira</h4>
+            <ul class="text-sm text-red-700 space-y-1 list-disc list-inside">
+              <li>EVI: Redução acentuada nos meses de seca principalmente na porção central e sul</li>
+              <li>LAI: Queda na área foliar em 2023-2024</li>
+              <li>Anomalias solo: Déficit persistente em ambas profundidades</li>
+              <li class="font-semibold">Vulnerabilidade: Alta - secas recorrentes</li>
+            </ul>
+          </div>
+
+          <!-- Tapajós -->
+          <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-600">
+            <h4 class="font-semibold text-orange-800 mb-2 flex items-center"><span class="text-2xl mr-2">🌳</span> Sub-bacia do Tapajós</h4>
+            <ul class="text-sm text-orange-700 space-y-1 list-disc list-inside">
+              <li>EVI: Anomalias negativas na estação seca principalmente na porção central e sul</li>
+              <li>LAI: Comportamento sazonal abaixo da média das demais subbacias</li>
+              <li>Anomalias solo: Déficit moderado em 0-200cm</li>
+              <li class="font-semibold">Vulnerabilidade: Média-Alta</li>
+            </ul>
+          </div>
+
+          <!-- Xingu -->
+          <div class="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-600">
+            <h4 class="font-semibold text-amber-800 mb-2 flex items-center"><span class="text-2xl mr-2">🌲</span> Sub-bacia do Xingu</h4>
+            <ul class="text-sm text-amber-700 space-y-1 list-disc list-inside">
+              <li>EVI: Queda significativa em toda a subbacia em 2024 principalmente quando considerados os dados do QA</li>
+              <li>LAI: Padrão média comparado às demais bacias</li>
+              <li>Anomalias solo: Déficit acumulado em meses específicos e abaixo da média das demais subbacias</li>
+              <li class="font-semibold">Vulnerabilidade: Alta - seca prolongada</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h5 class="font-semibold text-gray-800 mb-2">Padrões Observados:</h5>
+          <p class="text-gray-700 text-sm">
+            As três sub-bacias apresentam respostas entre anomalias negativas de EVI durante a estação seca e déficit de umidade do solo desde camadas rasas até mais profundidade. O Madeira mostra o padrão mais crítico, com anomalias de solo 0-200cm atingindo valores extremamente negativos (-160) em meados de 2024, indicando esgotamento das reservas hídricas profundas. O Tapajós apresenta recuperação mais rápida da umidade superficial, enquanto o Xingu demonstra déficit persistente em ambas camadas. As subbacias como Paru/Jari, Japurá e porção leste da subbacia do Rio Negro, passam a apresentar anomalias negativas de EVI mais significativas na estação seca quando consideramos os dados com QA.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-xs text-gray-500 mt-4 text-center border-t pt-3">
+        Dados processados pelo núcleo Naiá (Terra) do projeto SereIA. Fontes: MODIS (EVI/LAI) e modelos de umidade do solo integrados com dados GRACE.
+      </p>
+
+      <!-- Link para mais resultados -->
+      <p class="text-center mt-8">
+        <a href="https://drive.google.com/drive/folders/1xBg0Jgml4sskTRf4VtAlildqw9EnJCnw?usp=drive_link" target="_blank" class="text-blue-600 font-semibold hover:underline">
+          📂 Acesse todos os gráficos e dados completos no Google Drive
+        </a>
+      </p>
+    </section>
+
+    <section id="contato" class="my-12">
+      <h2 class="text-4xl font-semibold text-center text-emerald-800 mb-6">Contato</h2>
+      <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-left">
+        <p class="text-lg">
+          Para mais informações sobre o projeto SereIA, entre em contato através dos canais abaixo:
+        </p>
+        <ul class="list-disc list-inside space-y-2 mt-4">
+          <li>
+            <strong class="font-bold">E-mail:</strong>
+            <a href="mailto:lab.sereia@gmail.com" class="text-emerald-700 hover:text-emerald-900 break-words">
+              lab.sereia@gmail.com
+            </a>
+          </li>
+          <li>
+            <strong class="font-bold">Instagram:</strong>
+            <a href="https://www.instagram.com/sereiaml" target="_blank" class="text-emerald-700 hover:text-emerald-900 break-words">
+              @sereiaml
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-emerald-700 text-white text-center py-6">
+    <p>© 2025 SereIA. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
