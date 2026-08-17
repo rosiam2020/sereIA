@@ -80,7 +80,6 @@
       padding: 8px 16px;
       font-weight: 500;
       font-size: 1rem;
-      /* Texto do menu ampliado */
     }
     .nav-green a:hover {
       background: rgba(255, 255, 255, 0.15);
@@ -145,7 +144,6 @@
     .element-card {
       border-left: 5px solid;
       padding: 24px;
-      /* Aumentando padding para melhor legibilidade */
     }
     .element-card.central {
       border-left-color: var(--forest);
@@ -202,7 +200,6 @@
       border-left: 4px solid;
       border-radius: 12px;
       padding: 24px;
-      /* Aumentando padding */
     }
     .prediction-card:hover {
       transform: translateY(-5px);
@@ -257,11 +254,9 @@
       border-color: var(--forest);
     }
 
-    /* Ajustes globais para aumentar o tamanho da fonte */
     body {
       font-size: 1.05rem;
     }
-
     h1 {
       font-size: 3rem !important;
     }
@@ -287,53 +282,37 @@
     .text-xs {
       font-size: 0.85rem !important;
     }
-
-    /* Cards de elementos - nomes maiores */
     .element-card h3 {
       font-size: 1.8rem !important;
       font-weight: 700;
     }
-
-    /* Badges maiores */
     .badge {
       font-size: 0.9rem !important;
       padding: 4px 16px;
     }
-
-    /* Links do menu */
     .nav-green a {
       font-size: 1.05rem;
       padding: 10px 18px;
     }
-
-    /* Botões */
     .btn-forest,
     .btn-terra,
     .btn-agua {
       font-size: 1.15rem;
       padding: 14px 32px;
     }
-
-    /* Títulos das seções de previsão */
     .prediction-card h3 {
       font-size: 1.8rem !important;
     }
-
-    /* Ajuste para cards de resultados */
     .bg-white.rounded-2xl.shadow-lg.p-6.card h3 {
       font-size: 1.8rem !important;
     }
     .bg-white.rounded-2xl.shadow-lg.p-6.card h4 {
       font-size: 1.4rem !important;
     }
-
-    /* Listas */
     ul.list-disc li {
       font-size: 1.05rem !important;
       margin-bottom: 0.5rem;
     }
-
-    /* Parágrafos do header */
     .header-content p {
       font-size: 1.3rem !important;
     }
@@ -380,10 +359,42 @@
     <!-- SOBRE -->
     <section id="sobre" class="my-12">
       <h2 class="text-4xl font-bold text-center text-forest mb-6">🌳 Sobre o Projeto</h2>
-      <div class="section-forest-bg max-w-4xl mx-auto">
-        <p class="text-lg leading-relaxed text-gray-800">
-          O <strong class="text-forest">SereIA</strong> é uma rede distribuída de monitoramento ambiental, composta por núcleos locais que coletam e processam dados hidroclimáticos e florestais na Amazônia. Cada núcleo atua como uma inteligência própria, com ferramentas específicas para análise de previsão de anomalias da temperatura da superfície do mar, variabilidade das chuvas, eventos extremos, vegetação e até o fogo. A plataforma integra essas informações usando baixo custo computacional e recursos em nuvem, como Google Colab, Pacotes em Python, R studio, Matlab, Orange, QGIS, e Git/GitHub, garantindo escalabilidade e integração de dados geoespaciais. Devido à vastidão e diversidade da Amazônia, cada núcleo foca em aspectos regionais prioritários, permitindo uma abordagem inteligente e específica mesmo em regiões remotas e com poucos incentivos em TI.
+      <div class="section-forest-bg max-w-5xl mx-auto">
+        <p class="text-lg leading-relaxed text-gray-800 mb-6">
+          O <strong class="text-forest">SereIA</strong> é uma rede distribuída de monitoramento ambiental, composta por núcleos locais que coletam e processam dados hidroclimáticos e florestais na Amazônia. Cada núcleo atua como uma inteligência própria, com ferramentas específicas para análise de previsão de anomalias da temperatura da superfície do mar, variabilidade das chuvas, eventos extremos, vegetação e fogo. A plataforma integra essas informações usando baixo custo computacional e recursos em nuvem, garantindo escalabilidade e integração de dados geoespaciais.
         </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- SEREIA -->
+          <div class="bg-white/80 p-4 rounded-xl shadow-sm border-l-4 border-forest">
+            <h4 class="text-forest font-bold text-lg flex items-center gap-2">🌊 SEREIA — Inteligência Central</h4>
+            <p class="text-gray-700 text-sm">A inteligência que conecta a Amazônia. Integra dados de clima, água, floresta e fogo em uma única arquitetura de monitoramento ambiental. Coordena modelos estatísticos, IA e machine learning para transformar dados complexos em informações úteis à gestão dos sistemas amazônicos.</p>
+          </div>
+
+          <!-- DOURADA -->
+          <div class="bg-white/80 p-4 rounded-xl shadow-sm border-l-4 border-ar">
+            <h4 class="text-ar font-bold text-lg flex items-center gap-2">🐟 Dourada — Oceano–Atmosfera</h4>
+            <p class="text-gray-700 text-sm">Da conexão entre o Atlântico e a Amazônia aos sinais que antecipam o clima. Acompanha a variabilidade da temperatura da superfície do mar e da atmosfera tropical e investiga como esses sinais se propagam até a Amazônia. Monitora padrões associados ao ENOS, à variabilidade do Atlântico e às mudanças no regime de precipitação, contribuindo para a antecipação de secas, cheias e outros eventos extremos.</p>
+          </div>
+
+          <!-- IARA -->
+          <div class="bg-white/80 p-4 rounded-xl shadow-sm border-l-4 border-agua">
+            <h4 class="text-agua font-bold text-lg flex items-center gap-2">💧 Iara — Água</h4>
+            <p class="text-gray-700 text-sm">A inteligência dos rios amazônicos. Monitora chuvas, níveis dos rios e vazões nas principais sub-bacias da Amazônia, identificando sinais de secas e cheias. Considera as particularidades hidrológicas de cada região para produzir uma visão espacialmente integrada da disponibilidade e da vulnerabilidade hídrica.</p>
+          </div>
+
+          <!-- NAIÁ -->
+          <div class="bg-white/80 p-4 rounded-xl shadow-sm border-l-4 border-terra">
+            <h4 class="text-terra font-bold text-lg flex items-center gap-2">🌿 Naiá — Terra</h4>
+            <p class="text-gray-700 text-sm">A inteligência da floresta. Monitora a resposta da vegetação às variações climáticas e à disponibilidade de água. Integra informações de satélite, umidade do solo e armazenamento de água para acompanhar a saúde, a estabilidade e a resiliência dos ecossistemas florestais amazônicos.</p>
+          </div>
+
+          <!-- BOITATÁ -->
+          <div class="bg-white/80 p-4 rounded-xl shadow-sm border-l-4 border-fogo">
+            <h4 class="text-fogo font-bold text-lg flex items-center gap-2">🔥 Boitatá — Fogo</h4>
+            <p class="text-gray-700 text-sm">A inteligência que acompanha a floresta sob estresse. Monitora a ocorrência e a dinâmica dos incêndios florestais e investiga sua relação com as condições hidroclimáticas. Integra informações sobre umidade do solo, clima e ocorrência de fogo para identificar áreas e períodos de maior suscetibilidade aos incêndios.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -478,7 +489,7 @@
 
     <!-- PREVISÕES ENOS -->
     <section id="previsoes" class="my-12">
-      <h2 class="text-4xl font-bold text-center text-forest mb-6">📊 Inteligência Dourada - Previsões ENOS 2023-2025</h2>
+      <h2 class="text-4xl font-bold text-center text-forest mb-6">📊 Previsões ENOS 2023-2025</h2>
       <p class="text-center text-gray-700 mb-8">Análise de previsões para os eventos de El Niño e La Niña usando inteligência artificial</p>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
