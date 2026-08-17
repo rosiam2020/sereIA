@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -81,7 +82,6 @@
       font-weight: 600;
       font-size: 1.05rem;
       color: white !important;
-      /* Texto do menu em branco */
     }
     .nav-green a:hover {
       background: rgba(255, 255, 255, 0.2);
@@ -141,60 +141,6 @@
       border-radius: 24px;
       padding: 32px;
       border: 1px solid #c8e6c8;
-    }
-
-    /* CARDS ELEMENTOS */
-    .element-card {
-      border-left: 5px solid;
-      padding: 24px;
-    }
-    .element-card.central {
-      border-left-color: var(--forest);
-      background: linear-gradient(135deg, #f0f8f0, #e0f5e0);
-    }
-    .element-card.agua {
-      border-left-color: var(--agua);
-      background: linear-gradient(135deg, #f0f8ff, #e0f0ff);
-    }
-    .element-card.terra {
-      border-left-color: var(--terra);
-      background: linear-gradient(135deg, #f5f0e8, #efe5d8);
-    }
-    .element-card.ar {
-      border-left-color: var(--ar);
-      background: linear-gradient(135deg, #f0f8fa, #e0f0f5);
-    }
-    .element-card.fogo {
-      border-left-color: var(--fogo);
-      background: linear-gradient(135deg, #fff5f0, #ffe8d8);
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 4px 14px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-    .badge-central {
-      background: var(--forest-bg);
-      color: var(--forest);
-    }
-    .badge-agua {
-      background: #1a6b8a20;
-      color: var(--agua);
-    }
-    .badge-terra {
-      background: #6b4a2d20;
-      color: var(--terra);
-    }
-    .badge-ar {
-      background: #4a8a9a20;
-      color: var(--ar);
-    }
-    .badge-fogo {
-      background: #cc550020;
-      color: var(--fogo);
     }
 
     /* PREVISÕES */
@@ -291,26 +237,6 @@
       font-size: 0.9rem !important;
     }
 
-    /* NOMES DAS INTELIGÊNCIAS COM MAIS DESTAQUE */
-    .element-card h3 {
-      font-size: 2rem !important;
-      font-weight: 800 !important;
-    }
-    .badge {
-      font-size: 1rem !important;
-      padding: 6px 18px;
-      font-weight: 700;
-    }
-
-    /* CARDS DAS INTELIGÊNCIAS NA SEÇÃO SOBRE */
-    .intel-card h4 {
-      font-size: 1.6rem !important;
-      font-weight: 800 !important;
-    }
-    .intel-card p {
-      font-size: 1.05rem !important;
-    }
-
     .btn-forest,
     .btn-terra,
     .btn-agua {
@@ -340,9 +266,13 @@
       font-size: 2.5rem !important;
     }
 
-    /* TÍTULOS DAS SEÇÕES EM BRANCO - JÁ ESTÃO PELO NAV */
-    .section-title-white {
-      color: white !important;
+    /* CARDS DAS INTELIGÊNCIAS NA SEÇÃO SOBRE */
+    .intel-card h4 {
+      font-size: 1.6rem !important;
+      font-weight: 800 !important;
+    }
+    .intel-card p {
+      font-size: 1.05rem !important;
     }
   </style>
 </head>
@@ -364,7 +294,6 @@
   <nav class="nav-green sticky top-0 z-50 shadow-lg">
     <div class="container mx-auto flex flex-wrap justify-center gap-1 p-2">
       <a href="#sobre" class="text-white">Sobre</a>
-      <a href="#elementos" class="text-white">Elementos</a>
       <a href="#objetivos" class="text-white">Objetivos</a>
       <a href="#metodologia" class="text-white">Metodologia</a>
       <a href="#galeria" class="text-white">Galeria</a>
@@ -386,7 +315,7 @@
           O <strong class="text-forest">SereIA</strong> é uma rede distribuída de monitoramento ambiental, composta por núcleos locais que coletam e processam dados hidroclimáticos e florestais na Amazônia. Cada núcleo atua como uma inteligência própria, com ferramentas específicas para análise de previsão de anomalias da temperatura da superfície do mar, variabilidade das chuvas, eventos extremos, vegetação e fogo. A plataforma integra essas informações usando baixo custo computacional e recursos em nuvem, garantindo escalabilidade e integração de dados geoespaciais.
         </p>
 
-        <!-- CARDS DAS INTELIGÊNCIAS - UNIFICADO E COM NOMES EM DESTAQUE -->
+        <!-- CARDS DAS INTELIGÊNCIAS -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           <!-- SEREIA -->
           <div class="intel-card bg-white/90 p-5 rounded-xl shadow-sm border-l-4 border-forest hover:shadow-md transition">
@@ -417,49 +346,6 @@
             <h4 class="text-fogo font-extrabold text-xl flex items-center gap-2">🔥 Boitatá — Fogo</h4>
             <p class="text-gray-700">A inteligência que acompanha a floresta sob estresse. Monitora a ocorrência e a dinâmica dos incêndios florestais e investiga sua relação com as condições hidroclimáticas. Integra informações sobre umidade do solo, clima e ocorrência de fogo para identificar áreas e períodos de maior suscetibilidade aos incêndios.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ELEMENTOS -->
-    <section id="elementos" class="my-12">
-      <h2 class="text-4xl font-bold text-center text-forest mb-6">🌿 Os Elementos da Amazônia</h2>
-      <p class="text-center text-gray-700 mb-8 text-lg">Cada núcleo representa um elemento da natureza, com nome de referência amazônica.</p>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="card element-card central shadow-md">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="text-3xl">🌊</span>
-            <div><h3 class="text-xl font-bold text-forest">Central</h3><span class="badge badge-central">sereiA</span></div>
-          </div>
-          <p class="text-gray-700">Servidora central: integra dados de todos os elementos, executa IA e modelos de machine learning, gera painéis regionais e garante a interoperabilidade entre os núcleos.</p>
-        </div>
-        <div class="card element-card ar shadow-md">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="text-3xl">💨</span>
-            <div><h3 class="text-xl font-bold text-forest">Ar</h3><span class="badge badge-ar">Dourada</span></div>
-          </div>
-          <p class="text-gray-700">Inteligência para o monitoramento da interação oceano-atmosfera em larga escala e seus efeitos sobre os eventos de chuva nas sub-bacias amazônicas. Monitora anomalias na temperatura da superfície do mar tropicais e seus efeitos na variabilidade das chuvas na Amazônia. Utiliza machine learning principalmente para previsões de anomalias do tipo ENOS (El Niño Oscilação Sul), Modo Atlântico Equatorial e Dipolo do Atlântico Tropical, fornecendo subsídios para a previsão de eventos hidrológicos extremos regionais.</p>
-        </div>
-        <div class="card element-card agua shadow-md">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="text-3xl">💧</span>
-            <div><h3 class="text-xl font-bold text-forest">Água</h3><span class="badge badge-agua">Iara</span></div>
-          </div>
-          <p class="text-gray-700">Inteligência para o monitoramento de eventos de secas e cheias em todas as 9 sub-bacias amazônicas (Javari, Japurá, Purus, Negro, Trombetas/Uatumã, Madeira, Tapajós, Xingu e Paru/Jari). Analisa chuvas, cotas e vazões em pontos estratégicos, integrando o PDSI (Índice de Severidade de Seca de Palmer) calibrado por sub-bacias. Cada sub-bacia é avaliada individualmente, respeitando seu regime hidrológico único e permitindo retratar a vulnerabilidade hídrica de forma regionalizada.</p>
-        </div>
-        <div class="card element-card terra shadow-md">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="text-3xl">🌿</span>
-            <div><h3 class="text-xl font-bold text-forest">Terra</h3><span class="badge badge-terra">Naiá</span></div>
-          </div>
-          <p class="text-gray-700">Inteligência para o monitoramento da saúde da floresta nas sub-bacias do Madeira, Tapajós e Xingu, utilizando dados de satélite MODIS para análise de NDVI, EVI, LAI, além de informações sobre umidade do solo e nas zonas de raízes. Integra dados do satélite GRACE para estimar variabilidade água nos aquíferos e a demanda florestal em anos de secas extremas. Avalia a resiliência e estabilidade da vegetação frente à mudanças climáticas, considerando o histórico de cada sub-bacia, e fornecendo subsídios para a gestão ambiental e mitigação de impactos.</p>
-        </div>
-        <div class="card element-card fogo shadow-md">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="text-3xl">🔥</span>
-            <div><h3 class="text-xl font-bold text-forest">Fogo</h3><span class="badge badge-fogo">Boitatá</span></div>
-          </div>
-          <p class="text-gray-700">Inteligência para o monitoramento de incêndios florestais na sub-bacia do Purus, focando nos municípios mais afetados em anos de seca extrema. Analisa a umidade do solo em múltiplas camadas permitindo compreender como a disponibilidade hodroclimática influencia a ocorrência e a intensidade dos incêndios.</p>
         </div>
       </div>
     </section>
