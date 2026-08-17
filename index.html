@@ -4,14 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SereIA - Sistema Regional de Inteligência Ambiental</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    * { font-family: 'Inter', sans-serif; }
-    html { scroll-behavior: smooth; }
-    
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
     /* CORES TEMÁTICAS AMAZÔNICAS */
     :root {
       --forest-dark: #0d2b0d;
@@ -30,8 +35,10 @@
       --ar-light: #7aaaba;
     }
 
-    body { background: var(--forest-bg-light); }
-    
+    body {
+      background: var(--forest-bg-light);
+    }
+
     .card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       background: white;
@@ -50,11 +57,17 @@
     .header-bg::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       pointer-events: none;
     }
-    .header-content { position: relative; z-index: 1; }
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
 
     /* NAV */
     .nav-green {
@@ -66,9 +79,11 @@
       border-radius: 8px;
       padding: 8px 16px;
       font-weight: 500;
+      font-size: 1rem;
+      /* Texto do menu ampliado */
     }
     .nav-green a:hover {
-      background: rgba(255,255,255,0.15);
+      background: rgba(255, 255, 255, 0.15);
       transform: scale(1.05);
     }
 
@@ -76,10 +91,11 @@
     .btn-forest {
       background: var(--forest);
       color: white;
-      padding: 10px 24px;
+      padding: 12px 28px;
       border-radius: 30px;
       transition: all 0.3s;
       font-weight: 600;
+      font-size: 1.1rem;
       display: inline-block;
     }
     .btn-forest:hover {
@@ -90,10 +106,11 @@
     .btn-terra {
       background: var(--terra);
       color: white;
-      padding: 10px 24px;
+      padding: 12px 28px;
       border-radius: 30px;
       transition: all 0.3s;
       font-weight: 600;
+      font-size: 1.1rem;
       display: inline-block;
     }
     .btn-terra:hover {
@@ -104,10 +121,11 @@
     .btn-agua {
       background: var(--agua);
       color: white;
-      padding: 10px 24px;
+      padding: 12px 28px;
       border-radius: 30px;
       transition: all 0.3s;
       font-weight: 600;
+      font-size: 1.1rem;
       display: inline-block;
     }
     .btn-agua:hover {
@@ -126,41 +144,82 @@
     /* CARDS ELEMENTOS */
     .element-card {
       border-left: 5px solid;
-      padding: 20px;
+      padding: 24px;
+      /* Aumentando padding para melhor legibilidade */
     }
-    .element-card.central { border-left-color: var(--forest); background: linear-gradient(135deg, #f0f8f0, #e0f5e0); }
-    .element-card.agua { border-left-color: var(--agua); background: linear-gradient(135deg, #f0f8ff, #e0f0ff); }
-    .element-card.terra { border-left-color: var(--terra); background: linear-gradient(135deg, #f5f0e8, #efe5d8); }
-    .element-card.ar { border-left-color: var(--ar); background: linear-gradient(135deg, #f0f8fa, #e0f0f5); }
-    .element-card.fogo { border-left-color: var(--fogo); background: linear-gradient(135deg, #fff5f0, #ffe8d8); }
+    .element-card.central {
+      border-left-color: var(--forest);
+      background: linear-gradient(135deg, #f0f8f0, #e0f5e0);
+    }
+    .element-card.agua {
+      border-left-color: var(--agua);
+      background: linear-gradient(135deg, #f0f8ff, #e0f0ff);
+    }
+    .element-card.terra {
+      border-left-color: var(--terra);
+      background: linear-gradient(135deg, #f5f0e8, #efe5d8);
+    }
+    .element-card.ar {
+      border-left-color: var(--ar);
+      background: linear-gradient(135deg, #f0f8fa, #e0f0f5);
+    }
+    .element-card.fogo {
+      border-left-color: var(--fogo);
+      background: linear-gradient(135deg, #fff5f0, #ffe8d8);
+    }
 
     .badge {
       display: inline-block;
-      padding: 2px 12px;
+      padding: 4px 14px;
       border-radius: 20px;
-      font-size: 0.7rem;
+      font-size: 0.85rem;
       font-weight: 600;
     }
-    .badge-central { background: var(--forest-bg); color: var(--forest); }
-    .badge-agua { background: #1a6b8a20; color: var(--agua); }
-    .badge-terra { background: #6b4a2d20; color: var(--terra); }
-    .badge-ar { background: #4a8a9a20; color: var(--ar); }
-    .badge-fogo { background: #cc550020; color: var(--fogo); }
+    .badge-central {
+      background: var(--forest-bg);
+      color: var(--forest);
+    }
+    .badge-agua {
+      background: #1a6b8a20;
+      color: var(--agua);
+    }
+    .badge-terra {
+      background: #6b4a2d20;
+      color: var(--terra);
+    }
+    .badge-ar {
+      background: #4a8a9a20;
+      color: var(--ar);
+    }
+    .badge-fogo {
+      background: #cc550020;
+      color: var(--fogo);
+    }
 
     /* PREVISÕES */
     .prediction-card {
       transition: all 0.3s ease;
       border-left: 4px solid;
       border-radius: 12px;
-      padding: 20px;
+      padding: 24px;
+      /* Aumentando padding */
     }
     .prediction-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
     }
-    .elnino-card { border-left-color: var(--fogo); background: linear-gradient(135deg, #fff8f0, #ffefe0); }
-    .lanina-card { border-left-color: var(--agua); background: linear-gradient(135deg, #f0f8ff, #e0f0ff); }
-    .ml-card { border-left-color: var(--forest); background: linear-gradient(135deg, #f0f8f0, #e0f5e0); }
+    .elnino-card {
+      border-left-color: var(--fogo);
+      background: linear-gradient(135deg, #fff8f0, #ffefe0);
+    }
+    .lanina-card {
+      border-left-color: var(--agua);
+      background: linear-gradient(135deg, #f0f8ff, #e0f0ff);
+    }
+    .ml-card {
+      border-left-color: var(--forest);
+      background: linear-gradient(135deg, #f0f8f0, #e0f5e0);
+    }
 
     .footer-green {
       background: #0d2b0d;
@@ -168,16 +227,122 @@
     }
 
     /* SCROLLBAR */
-    ::-webkit-scrollbar { width: 10px; }
-    ::-webkit-scrollbar-track { background: #d5e8d5; }
-    ::-webkit-scrollbar-thumb { background: var(--forest); border-radius: 5px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--forest-medium); }
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #d5e8d5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--forest);
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--forest-medium);
+    }
 
-    .text-forest { color: var(--forest); }
-    .text-terra { color: var(--terra); }
-    .text-agua { color: var(--agua); }
-    .text-fogo { color: var(--fogo); }
-    .border-forest { border-color: var(--forest); }
+    .text-forest {
+      color: var(--forest);
+    }
+    .text-terra {
+      color: var(--terra);
+    }
+    .text-agua {
+      color: var(--agua);
+    }
+    .text-fogo {
+      color: var(--fogo);
+    }
+    .border-forest {
+      border-color: var(--forest);
+    }
+
+    /* Ajustes globais para aumentar o tamanho da fonte */
+    body {
+      font-size: 1.05rem;
+    }
+
+    h1 {
+      font-size: 3rem !important;
+    }
+    h2 {
+      font-size: 2.5rem !important;
+    }
+    h3 {
+      font-size: 1.8rem !important;
+    }
+    h4 {
+      font-size: 1.4rem !important;
+    }
+    p,
+    li,
+    .text-gray-700,
+    .text-gray-800 {
+      font-size: 1.05rem !important;
+      line-height: 1.6 !important;
+    }
+    .text-sm {
+      font-size: 0.95rem !important;
+    }
+    .text-xs {
+      font-size: 0.85rem !important;
+    }
+
+    /* Cards de elementos - nomes maiores */
+    .element-card h3 {
+      font-size: 1.8rem !important;
+      font-weight: 700;
+    }
+
+    /* Badges maiores */
+    .badge {
+      font-size: 0.9rem !important;
+      padding: 4px 16px;
+    }
+
+    /* Links do menu */
+    .nav-green a {
+      font-size: 1.05rem;
+      padding: 10px 18px;
+    }
+
+    /* Botões */
+    .btn-forest,
+    .btn-terra,
+    .btn-agua {
+      font-size: 1.15rem;
+      padding: 14px 32px;
+    }
+
+    /* Títulos das seções de previsão */
+    .prediction-card h3 {
+      font-size: 1.8rem !important;
+    }
+
+    /* Ajuste para cards de resultados */
+    .bg-white.rounded-2xl.shadow-lg.p-6.card h3 {
+      font-size: 1.8rem !important;
+    }
+    .bg-white.rounded-2xl.shadow-lg.p-6.card h4 {
+      font-size: 1.4rem !important;
+    }
+
+    /* Listas */
+    ul.list-disc li {
+      font-size: 1.05rem !important;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Parágrafos do header */
+    .header-content p {
+      font-size: 1.3rem !important;
+    }
+    .header-content h1 {
+      font-size: 4rem !important;
+    }
+    .header-content h2 {
+      font-size: 2.2rem !important;
+    }
   </style>
 </head>
 <body>
@@ -232,35 +397,35 @@
             <span class="text-3xl">🌊</span>
             <div><h3 class="text-xl font-bold text-forest">Central</h3><span class="badge badge-central">sereiA</span></div>
           </div>
-          <p class="text-gray-700 text-sm">Servidora central: integra dados de todos os elementos, executa IA e modelos de machine learning, gera painéis regionais e garante a interoperabilidade entre os núcleos.</p>
+          <p class="text-gray-700">Servidora central: integra dados de todos os elementos, executa IA e modelos de machine learning, gera painéis regionais e garante a interoperabilidade entre os núcleos.</p>
         </div>
         <div class="card element-card ar shadow-md">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-3xl">💨</span>
             <div><h3 class="text-xl font-bold text-forest">Ar</h3><span class="badge badge-ar">Dourada</span></div>
           </div>
-          <p class="text-gray-700 text-sm">Inteligência para o monitoramento da interação oceano-atmosfera em larga escala e seus efeitos sobre os eventos de chuva nas sub-bacias amazônicas. Monitora anomalias na temperatura da superfície do mar tropicais e seus efeitos na variabilidade das chuvas na Amazônia. Utiliza machine learning principalmente para previsões de anomalias do tipo ENOS (El Niño Oscilação Sul), Modo Atlântico Equatorial e Dipolo do Atlântico Tropical, fornecendo subsídios para a previsão de eventos hidrológicos extremos regionais.</p>
+          <p class="text-gray-700">Inteligência para o monitoramento da interação oceano-atmosfera em larga escala e seus efeitos sobre os eventos de chuva nas sub-bacias amazônicas. Monitora anomalias na temperatura da superfície do mar tropicais e seus efeitos na variabilidade das chuvas na Amazônia. Utiliza machine learning principalmente para previsões de anomalias do tipo ENOS (El Niño Oscilação Sul), Modo Atlântico Equatorial e Dipolo do Atlântico Tropical, fornecendo subsídios para a previsão de eventos hidrológicos extremos regionais.</p>
         </div>
         <div class="card element-card agua shadow-md">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-3xl">💧</span>
             <div><h3 class="text-xl font-bold text-forest">Água</h3><span class="badge badge-agua">Iara</span></div>
           </div>
-          <p class="text-gray-700 text-sm">Inteligência para o monitoramento de eventos de secas e cheias em todas as 9 sub-bacias amazônicas (Javari, Japurá, Purus, Negro, Trombetas/Uatumã, Madeira, Tapajós, Xingu e Paru/Jari). Analisa chuvas, cotas e vazões em pontos estratégicos, integrando o PDSI (Índice de Severidade de Seca de Palmer) calibrado por sub-bacias. Cada sub-bacia é avaliada individualmente, respeitando seu regime hidrológico único e permitindo retratar a vulnerabilidade hídrica de forma regionalizada.</p>
+          <p class="text-gray-700">Inteligência para o monitoramento de eventos de secas e cheias em todas as 9 sub-bacias amazônicas (Javari, Japurá, Purus, Negro, Trombetas/Uatumã, Madeira, Tapajós, Xingu e Paru/Jari). Analisa chuvas, cotas e vazões em pontos estratégicos, integrando o PDSI (Índice de Severidade de Seca de Palmer) calibrado por sub-bacias. Cada sub-bacia é avaliada individualmente, respeitando seu regime hidrológico único e permitindo retratar a vulnerabilidade hídrica de forma regionalizada.</p>
         </div>
         <div class="card element-card terra shadow-md">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-3xl">🌿</span>
             <div><h3 class="text-xl font-bold text-forest">Terra</h3><span class="badge badge-terra">Naiá</span></div>
           </div>
-          <p class="text-gray-700 text-sm">Inteligência para o monitoramento da saúde da floresta nas sub-bacias do Madeira, Tapajós e Xingu, utilizando dados de satélite MODIS para análise de NDVI, EVI, LAI, além de informações sobre umidade do solo e nas zonas de raízes. Integra dados do satélite GRACE para estimar variabilidade água nos aquíferos e a demanda florestal em anos de secas extremas. Avalia a resiliência e estabilidade da vegetação frente à mudanças climáticas, considerando o histórico de cada sub-bacia, e fornecendo subsídios para a gestão ambiental e mitigação de impactos.</p>
+          <p class="text-gray-700">Inteligência para o monitoramento da saúde da floresta nas sub-bacias do Madeira, Tapajós e Xingu, utilizando dados de satélite MODIS para análise de NDVI, EVI, LAI, além de informações sobre umidade do solo e nas zonas de raízes. Integra dados do satélite GRACE para estimar variabilidade água nos aquíferos e a demanda florestal em anos de secas extremas. Avalia a resiliência e estabilidade da vegetação frente à mudanças climáticas, considerando o histórico de cada sub-bacia, e fornecendo subsídios para a gestão ambiental e mitigação de impactos.</p>
         </div>
         <div class="card element-card fogo shadow-md">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-3xl">🔥</span>
             <div><h3 class="text-xl font-bold text-forest">Fogo</h3><span class="badge badge-fogo">Boitatá</span></div>
           </div>
-          <p class="text-gray-700 text-sm">Inteligência para o monitoramento de incêndios florestais na sub-bacia do Purus, focando nos municípios mais afetados em anos de seca extrema. Analisa a umidade do solo em múltiplas camadas permitindo compreender como a disponibilidade hodroclimática influencia a ocorrência e a intensidade dos incêndios.</p>
+          <p class="text-gray-700">Inteligência para o monitoramento de incêndios florestais na sub-bacia do Purus, focando nos municípios mais afetados em anos de seca extrema. Analisa a umidade do solo em múltiplas camadas permitindo compreender como a disponibilidade hodroclimática influencia a ocorrência e a intensidade dos incêndios.</p>
         </div>
       </div>
     </section>
@@ -311,7 +476,7 @@
       </div>
     </section>
 
-    <!-- PREVISÕES ENOS -->
+    <!-- Inteligência Dourada -->
     <section id="previsoes" class="my-12">
       <h2 class="text-4xl font-bold text-center text-forest mb-6">📊 Previsões ENOS 2023-2025</h2>
       <p class="text-center text-gray-700 mb-8">Análise de previsões para os eventos de El Niño e La Niña usando inteligência artificial</p>
@@ -320,17 +485,17 @@
         <div class="prediction-card elnino-card shadow-lg">
           <h3 class="text-xl font-bold text-fogo mb-2">🔥 El Niño 2023-2024</h3>
           <img src="elnino.png" alt="El Niño" class="w-full h-40 object-contain mb-3 rounded-lg">
-          <p class="text-sm text-gray-700">O evento de El Niño 2023-2024 caracterizou-se por anomalias positivas de temperatura na região do Pacífico equatorial, com impactos significativos no regime de chuvas na Amazônia.</p>
+          <p class="text-gray-700">O evento de El Niño 2023-2024 caracterizou-se por anomalias positivas de temperatura na região do Pacífico equatorial, com impactos significativos no regime de chuvas na Amazônia.</p>
         </div>
         <div class="prediction-card lanina-card shadow-lg">
           <h3 class="text-xl font-bold text-agua mb-2">🌊 La Niña 2024-2025</h3>
           <img src="lanina.png" alt="La Niña" class="w-full h-40 object-contain mb-3 rounded-lg">
-          <p class="text-sm text-gray-700">Previsão indica a formação de um evento La Niña moderado no segundo semestre de 2024, com resfriamento anômalo no Pacífico equatorial central e oriental.</p>
+          <p class="text-gray-700">Previsão indica a formação de um evento La Niña moderado no segundo semestre de 2024, com resfriamento anômalo no Pacífico equatorial central e oriental.</p>
         </div>
         <div class="prediction-card ml-card shadow-lg">
           <h3 class="text-xl font-bold text-forest mb-2">🤖 Machine Learning</h3>
           <img src="previsao_ml.png" alt="ML Previsão" class="w-full h-40 object-contain mb-3 rounded-lg">
-          <p class="text-sm text-gray-700">Modelos de machine learning aplicados às séries temporais de temperatura da superfície do mar mostram a transição de El Niño para La Niña ao longo de 2024-2025.</p>
+          <p class="text-gray-700">Modelos de machine learning aplicados às séries temporais de temperatura da superfície do mar mostram a transição de El Niño para La Niña ao longo de 2024-2025.</p>
         </div>
       </div>
 
