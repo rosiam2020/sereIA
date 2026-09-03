@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -34,6 +33,8 @@
       --agua-light: #4a9aba;
       --ar: #4a8a9a;
       --ar-light: #7aaaba;
+      --pub-roxo: #4a2d6b;
+      --pub-roxo-light: #7a5aa0;
     }
 
     body {
@@ -135,6 +136,21 @@
       transform: scale(1.05);
       box-shadow: 0 8px 20px rgba(26, 107, 138, 0.3);
     }
+    .btn-pub {
+      background: var(--pub-roxo);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 30px;
+      transition: all 0.3s;
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: inline-block;
+    }
+    .btn-pub:hover {
+      background: var(--pub-roxo-light);
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(74, 45, 107, 0.3);
+    }
 
     .section-forest-bg {
       background: linear-gradient(180deg, var(--forest-bg), var(--forest-bg-light));
@@ -165,6 +181,46 @@
     .ml-card {
       border-left-color: var(--forest);
       background: linear-gradient(135deg, #f0f8f0, #e0f5e0);
+    }
+
+    /* PUBLICAÇÕES */
+    .pub-card {
+      transition: all 0.3s ease;
+      border-radius: 14px;
+      border: 1px solid #e5e0ee;
+      background: white;
+      padding: 20px 22px;
+    }
+    .pub-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px -8px rgba(74, 45, 107, 0.25);
+      border-color: var(--pub-roxo-light);
+    }
+    .pub-tag {
+      display: inline-block;
+      font-size: 0.78rem !important;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 999px;
+      letter-spacing: .02em;
+    }
+    .pub-link {
+      font-weight: 600;
+      color: var(--pub-roxo);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color .2s;
+    }
+    .pub-link:hover {
+      color: var(--pub-roxo-light);
+      text-decoration: underline;
+    }
+    .nota-tecnica-card {
+      background: linear-gradient(135deg, #f3eefa, #fff8f0);
+      border: 2px solid var(--pub-roxo);
+      border-radius: 20px;
     }
 
     .footer-green {
@@ -198,6 +254,9 @@
     }
     .text-fogo {
       color: var(--fogo);
+    }
+    .text-pub {
+      color: var(--pub-roxo);
     }
     .border-forest {
       border-color: var(--forest);
@@ -239,7 +298,8 @@
 
     .btn-forest,
     .btn-terra,
-    .btn-agua {
+    .btn-agua,
+    .btn-pub {
       font-size: 1.2rem;
       padding: 14px 32px;
     }
@@ -274,6 +334,16 @@
     .intel-card p {
       font-size: 1.05rem !important;
     }
+
+    .pub-card h4 {
+      font-size: 1.15rem !important;
+      font-weight: 700 !important;
+      line-height: 1.4 !important;
+    }
+    .pub-card p {
+      font-size: 0.98rem !important;
+      line-height: 1.55 !important;
+    }
   </style>
 </head>
 <body>
@@ -301,6 +371,7 @@
       <a href="#analise-mapas" class="text-white">Mapas</a>
       <a href="#incendios" class="text-white">Incêndios</a>
       <a href="#resultados" class="text-white">Resultados</a>
+      <a href="#publicacoes" class="text-white">Publicações</a>
       <a href="#contato" class="text-white">Contato</a>
     </div>
   </nav>
@@ -643,6 +714,162 @@
         <a href="https://drive.google.com/drive/folders/1xBg0Jgml4sskTRf4VtAlildqw9EnJCnw?usp=drive_link" target="_blank" class="btn-forest">
           📂 Acesse todos os gráficos e dados completos no Google Drive
         </a>
+      </div>
+    </section>
+
+    <!-- PUBLICAÇÕES -->
+    <section id="publicacoes" class="my-12">
+      <h2 class="text-4xl font-bold text-center text-pub mb-4">📚 Publicações Científicas</h2>
+      <p class="text-center text-gray-700 mb-10 max-w-3xl mx-auto">Artigos, notas técnicas, trabalhos em anais de eventos, textos de divulgação e apresentações produzidos pela equipe do projeto sereIA.</p>
+
+      <!-- NOTA TÉCNICA EM DESTAQUE -->
+      <div class="nota-tecnica-card shadow-lg p-8 mb-12 max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+          <div class="text-6xl">📄</div>
+          <div class="flex-1 text-center md:text-left">
+            <span class="pub-tag bg-pub-roxo text-white" style="background:var(--pub-roxo)">NOTA TÉCNICA — 2026</span>
+            <h3 class="text-2xl font-bold text-pub mt-2 mb-2">Nota Técnica: Seca Amazônica 2026-2027</h3>
+            <p class="text-gray-700 mb-4">Documento técnico produzido pela equipe do projeto sereIA com o diagnóstico e as projeções para a seca amazônica no biênio 2026-2027, reunindo indicadores hidroclimáticos monitorados pelos núcleos Dourado, Iara, Naiá e Boitatá.</p>
+            <a href="Nota_Tecnica_Seca_Amazonica_2026_2027.pdf" target="_blank" class="btn-pub">
+              📥 Baixar Nota Técnica (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ARTIGOS COMPLETOS EM PERIÓDICOS -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold text-pub mb-5 flex items-center gap-2">🔬 Artigos Completos Publicados em Periódicos</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="pub-card">
+            <span class="pub-tag bg-purple-100 text-purple-800">Frontiers in Climate · 2025</span>
+            <h4 class="text-gray-900 mt-2 mb-1">The roots of Amazonia's droughts and floods: Complex interactions of Pacific and Atlantic sea-surface temperatures</h4>
+            <p class="text-gray-600 mb-3">Silva, R. A.; Fearnside, P. M. v.7, p.01–16, 2025.</p>
+            <a href="https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2025.1656283/full" target="_blank" class="pub-link">🔗 Acessar artigo</a>
+          </div>
+          <div class="pub-card">
+            <span class="pub-tag bg-purple-100 text-purple-800">Cadernos de Saúde Pública · 2019</span>
+            <h4 class="text-gray-900 mt-2 mb-1">Variabilidade dos casos de malária e sua relação com a precipitação e nível d'água dos rios no Estado do Amazonas, Brasil</h4>
+            <p class="text-gray-600 mb-3">Wolfarth-Couto, B.; Silva, R. A.; Filizola, N. v.35, p.1–15, 2019. Citações: 14 | 15</p>
+            <a href="https://doi.org/10.1590/0102-311x00020218" target="_blank" class="pub-link">🔗 Acessar artigo (DOI)</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRABALHOS EM ANAIS DE EVENTOS -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold text-pub mb-5 flex items-center gap-2">🎤 Trabalhos Publicados em Anais de Eventos (completo)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="pub-card">
+            <span class="pub-tag bg-indigo-100 text-indigo-800">Congresso · 2025</span>
+            <h4 class="text-gray-900 mt-2 mb-1">Forecasting Ocean Heat Content (OHC) in the Subpolar North Atlantic Using Random Forest with Internal and External Validation</h4>
+            <p class="text-gray-600 mb-3">Melo, J. M. S.; Palhares Junior, E.; Silva, R. A. II Congresso Internacional de Tecnologias Emergentes, São Paulo, 2025.</p>
+            <a href="https://scholar.google.com/scholar?q=Forecasting+Ocean+Heat+Content+OHC+Subpolar+North+Atlantic+Random+Forest+Melo+Silva" target="_blank" class="pub-link">🔗 Buscar publicação</a>
+          </div>
+          <div class="pub-card">
+            <span class="pub-tag bg-indigo-100 text-indigo-800">Simpósio · 2025</span>
+            <h4 class="text-gray-900 mt-2 mb-1">Previsão de Anomalias na Temperatura da Superfície do Mar no Pacífico Tropical para 2024-2025: uma comparação entre modelos estatísticos e de aprendizado de máquina para eventos ENOS</h4>
+            <p class="text-gray-600 mb-3">Fearnside, P. M.; Silva, R. A. XVI Simpósio Brasileiro de Climatologia Geográfica, Crato, 2025.</p>
+            <a href="https://scholar.google.com/scholar?q=Previs%C3%A3o+Anomalias+Temperatura+Superf%C3%ADcie+Mar+Pac%C3%ADfico+Tropical+2024-2025+ENOS+Fearnside+Silva" target="_blank" class="pub-link">🔗 Buscar publicação</a>
+          </div>
+          <div class="pub-card">
+            <span class="pub-tag bg-indigo-100 text-indigo-800">Simpósio · 2025</span>
+            <h4 class="text-gray-900 mt-2 mb-1">Previsão Numérica de Precipitação na América do Sul com WRF-7km: uma abordagem prognóstica e operacional para o Rio Grande do Sul</h4>
+            <p class="text-gray-600 mb-3">Silva, R. A.; Fearnside, P. LVII Simpósio Brasileiro de Pesquisa Operacional, 2025.</p>
+            <a href="https://scholar.google.com/scholar?q=Previs%C3%A3o+Num%C3%A9rica+Precipita%C3%A7%C3%A3o+Am%C3%A9rica+do+Sul+WRF-7km+Rio+Grande+do+Sul+Silva+Fearnside" target="_blank" class="pub-link">🔗 Buscar publicação</a>
+          </div>
+          <div class="pub-card">
+            <span class="pub-tag bg-indigo-100 text-indigo-800">SBSR · Anais</span>
+            <h4 class="text-gray-900 mt-2 mb-1">Índice de Severidade de Seca de Palmer (PDSI): conexões com anomalias nos oceanos tropicais e impactos em sub-bacias da região amazônica</h4>
+            <p class="text-gray-600 mb-3">Silva, R. A.; Fearnside, P. M. Anais do XXI Simpósio Brasileiro de Sensoriamento Remoto. ISBN: 978-65-80968-29-9</p>
+            <a href="https://www.gov.br/inpe/pt-br/eventos/sbsr" target="_blank" class="pub-link">🔗 Acessar anais do SBSR</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ARTIGOS EM JORNAL DE NOTÍCIAS -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold text-pub mb-5 flex items-center gap-2">📰 Artigos em Jornal de Notícias</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="pub-card">
+            <span class="pub-tag bg-amber-100 text-amber-800">Amazônia Real · 2025</span>
+            <h4 class="text-gray-900 mt-2 mb-1">A Avaliação Ambiental Estratégica da BR-319: a AAE e os impactos da rodovia</h4>
+            <p class="text-gray-600 mb-3">Fearnside, P. M.; Silva, R. A.; Yanai, A.; Ziccardi, L.; Graça, P. M.; Romero, F. M.; Cabral, B. Amazônia Real, 2025.</p>
+            <a href="https://amazoniareal.com.br/a-avaliacao-ambiental-estrategica-da-br-319/" target="_blank" class="pub-link">🔗 Ler artigo</a>
+          </div>
+          <div class="pub-card">
+            <span class="pub-tag bg-amber-100 text-amber-800">Amazônia Real · 2025</span>
+            <h4 class="text-gray-900 mt-2 mb-1">A Avaliação Ambiental Estratégica da BR-319: 2 – um desfile de falsos argumentos para justificar a BR-319</h4>
+            <p class="text-gray-600 mb-3">Silva, R. A.; Ziccardi, L.; Romero, F. M.; Cabral, B.; Fearnside, P. M.; Graça, P. M. Amazônia Real, 2025.</p>
+            <a href="https://amazoniareal.com.br/?s=Avalia%C3%A7%C3%A3o+Ambiental+Estrat%C3%A9gica+BR-319" target="_blank" class="pub-link">🔗 Buscar no Amazônia Real</a>
+          </div>
+          <div class="pub-card">
+            <span class="pub-tag bg-amber-100 text-amber-800">Amazônia Real · 2025</span>
+            <h4 class="text-gray-900 mt-2 mb-1">A Avaliação Ambiental Estratégica da BR-319: 3 – o colapso da Floresta Amazônica e a responsabilidade dos participantes</h4>
+            <p class="text-gray-600 mb-3">Silva, R. A.; Fearnside, P. M.; Yanai, A.; Ziccardi, L.; Graça, P. M.; Romero, F. M.; Cabral, B. Amazônia Real, 2025.</p>
+            <a href="https://amazoniareal.com.br/?s=Avalia%C3%A7%C3%A3o+Ambiental+Estrat%C3%A9gica+BR-319" target="_blank" class="pub-link">🔗 Buscar no Amazônia Real</a>
+          </div>
+          <div class="pub-card">
+            <span class="pub-tag bg-amber-100 text-amber-800">Amazônia Real · 2023</span>
+            <h4 class="text-gray-900 mt-2 mb-1">A seca de 2023 na Amazônia terá muito estrago pela frente</h4>
+            <p class="text-gray-600 mb-3">Silva, R. A.; Fearnside, P. M. Amazônia Real, Manaus - Amazonas, 2023.</p>
+            <a href="https://amazoniareal.com.br/?s=a+seca+de+2023+na+amazonia+tera+muito+estrago+pela+frente" target="_blank" class="pub-link">🔗 Buscar no Amazônia Real</a>
+          </div>
+          <div class="pub-card">
+            <span class="pub-tag bg-amber-100 text-amber-800">The Conversation · 2023</span>
+            <h4 class="text-gray-900 mt-2 mb-1">Seca de 2023 indica futuro desastroso para a Amazônia e seu povo</h4>
+            <p class="text-gray-600 mb-3">Fearnside, P. M.; Silva, R. A. The Conversation, Manaus - Amazonas, 2023.</p>
+            <a href="https://theconversation.com/br/search?q=seca+de+2023+Amaz%C3%B4nia+Fearnside" target="_blank" class="pub-link">🔗 Buscar em The Conversation</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ARTIGOS EM REVISTA -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold text-pub mb-5 flex items-center gap-2">🗞️ Artigos em Revistas (Magazine)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="pub-card">
+            <span class="pub-tag bg-teal-100 text-teal-800">IHU · Unisinos · 2024</span>
+            <h4 class="text-gray-900 mt-2 mb-1">Surpresas climáticas: a Amazônia e as lições da enchente catastrófica no Rio Grande do Sul</h4>
+            <p class="text-gray-600 mb-3">Fearnside, P. M.; Silva, R. A. IHU - Instituto Humanitas Unisinos, São Leopoldo - RS, 2024.</p>
+            <a href="https://www.ihu.unisinos.br/categorias" target="_blank" class="pub-link">🔗 Buscar no IHU</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- APRESENTAÇÕES -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold text-pub mb-5 flex items-center gap-2">🎙️ Apresentação de Trabalho e Palestra</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="pub-card">
+            <span class="pub-tag bg-rose-100 text-rose-800">Seminário · 2025</span>
+            <h4 class="text-gray-900 mt-2 mb-1">Índice de Severidade de Seca de Palmer (PDSI): conexões com anomalias nos oceanos tropicais e impactos em sub-bacias da região amazônica</h4>
+            <p class="text-gray-600">Silva, R. A.; Fearnside, P. M. Apresentação de Trabalho, 2025.</p>
+          </div>
+          <div class="pub-card">
+            <span class="pub-tag bg-rose-100 text-rose-800">Simpósio · 2025</span>
+            <h4 class="text-gray-900 mt-2 mb-1">Previsão de Anomalias na Temperatura da Superfície do Mar no Pacífico Tropical para 2024-2025: uma comparação entre modelos estatísticos e de aprendizado de máquina para eventos ENOS</h4>
+            <p class="text-gray-600">Silva, R. A.; Fearnside, P. M. Apresentação de Trabalho, 2025.</p>
+          </div>
+          <div class="pub-card">
+            <span class="pub-tag bg-rose-100 text-rose-800">Congresso · 2024</span>
+            <h4 class="text-gray-900 mt-2 mb-1">Índice de Severidade de Seca de Palmer (PDSI): conexões com anomalias nos oceanos tropicais e impactos em sub-bacias da região amazônica</h4>
+            <p class="text-gray-600">Silva, R. A.; Fearnside, P. M. Apresentação de Trabalho, 2024.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUÇÃO TÉCNICA -->
+      <div>
+        <h3 class="text-2xl font-bold text-pub mb-5 flex items-center gap-2">🌐 Produção Técnica — Redes Sociais, Websites, Blogs</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="pub-card">
+            <span class="pub-tag bg-gray-200 text-gray-800">Website · 2026</span>
+            <h4 class="text-gray-900 mt-2 mb-1">Publicações Científicas — Instituto Nacional de Pesquisas da Amazônia — Dr Philip Fearnside</h4>
+            <p class="text-gray-600 mb-3">Silva, R. A.; Fearnside, P. M. 2026.</p>
+            <a href="https://philip.inpa.gov.br" target="_blank" class="pub-link">🔗 Acessar site</a>
+          </div>
+        </div>
       </div>
     </section>
 
